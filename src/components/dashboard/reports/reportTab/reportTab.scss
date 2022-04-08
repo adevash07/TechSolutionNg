@@ -1,0 +1,42 @@
+@use "styles/index" as *; 
+ 
+
+
+.reportTab--lists{
+    top: 1.65em;
+    left: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
+    z-index: 3;
+    .reportTab--list{
+        width: 80px;
+
+        display: flex;
+        justify-content: center;
+        &:not(:first-child){
+            margin-left: 1em;
+        }
+        button{
+        font-size: 1rem !important;
+        padding: 0 0.35em;
+        border-radius: 20px;
+        background-color: #e9e5e5;
+        border: transparent;
+        outline: none;
+        color: color(black, lighter);
+        width: 100%;
+        text-align: center;
+        color: inherit;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    &.text-blue{
+        color: color(blue)
+    }
+
+}
+    
+}

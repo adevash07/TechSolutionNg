@@ -1,0 +1,65 @@
+@use "styles" as *;
+* {
+  box-sizing: border-box;
+}
+.connectedLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 30px;
+}
+
+.connectedLinks__social {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  // width: 50%;
+  .connectedLinks__title {
+    font-size: 10px;
+    padding-bottom: 10px;
+    color: color(black, light);
+    opacity: 0.8;
+  }
+}
+
+// unconnectedLinks start here
+.unconnectedLinks {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  & p:nth-child(1) {
+    font-size: 10px;
+    padding-bottom: 10px;
+    color: color(black, light);
+    opacity: 0.8;
+  }
+
+  .unconnectedLinks__list {
+    display: flex;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    background-color: #00abed;
+    i {
+      border-radius: 15px;
+      padding: 3px 4px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+    }
+    & p {
+      color: white;
+      text-align: center;
+      width: 85%;
+    }
+  }
+  .unconnectedLinks_status {
+    font-size: 10px;
+    font-weight: weight(thick);
+    color: color(black, light);
+    opacity: 0.8;
+  }
+}
+// unconnectedLinks end here

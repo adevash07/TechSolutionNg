@@ -1,0 +1,151 @@
+@use "styles" as *;
+
+/**************************************
+Start: Styles for all project card component
+**************************************/
+.allprojectCard {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px 0;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  z-index: 3;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    // background-color: #e9edf7;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 100%;
+      top: -28%;
+      left: -17%;
+      transform: rotate(4deg);
+      border-radius: 102px;
+      background-color: white;
+      z-index: 2;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #e9edf7;
+      z-index: 1;
+    }
+  }
+
+  .allprojectCard__container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    width: 95%;
+    z-index: 3;
+
+    @include maxQ(1023px) {
+      // grid-template-columns: repeat(9, 1fr);
+      grid-template-columns: 1fr 7fr 1fr;
+      grid-gap: 15px;
+    }
+  }
+
+  .allprojectCard__iconDiv {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      font-size: 1.6rem;
+      color: grey;
+    }
+  }
+
+  // .allprojectCard__content {
+  //   grid-column: 2/7;
+
+  //   @include maxQ(1023px) {
+  //     grid-column: 2/8;
+  //   }
+  // }
+
+  .allprojectCard__header {
+    margin-bottom: 10px;
+  }
+
+  .allprojectCard__paragraph {
+    line-height: 150%;
+    margin-bottom: 10px;
+  }
+
+  .allprojectCard__contentIcons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .allprojectCard__contentIcon {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      grid-column: 1/3;
+    }
+  }
+
+  .allprojectCard__contentText {
+    font-size: 0.8rem;
+    color: #455a64;
+  }
+
+  .allprojectCard__contentImg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    // box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    margin-right: 10px;
+    // overflow: hidden;
+
+    svg {
+      transform: translate(-9px, -6px);
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .allprojectCard__budget {
+    // grid-column: 6/7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .allprojectCard__budgetHeader {
+    color: #455a64;
+    font-weight: 500;
+  }
+
+  .allprojectCard__budgetHour {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}
+/**************************************
+End: Styles for all project card component
+**************************************/

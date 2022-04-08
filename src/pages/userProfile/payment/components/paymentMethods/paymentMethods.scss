@@ -1,0 +1,43 @@
+@use "styles" as *;
+.payment-methods {
+    margin-bottom: 3%;
+    width: 70%;
+    @include maxQ($tablet) {
+      width: 95%;
+    }
+  section:nth-child(2) {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 10px 30px;
+    margin-top: 2%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    div:first-child {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+    }
+    small {
+      font-size: 0.7rem;
+      color: #051f64;
+    }
+  }
+  section:nth-child(3) {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 10px 30px;
+    color: #051f64;
+    margin-top: 3%;
+  }
+  section:last-child {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+  }
+  .methods {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 8%;
+  }
+}

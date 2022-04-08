@@ -1,0 +1,122 @@
+@use "styles/index" as *;
+.head {
+  font-size: 2rem;
+  margin: 1em 0;
+  color: color(blue, deep);
+}
+.analysisBox {
+  display: flex;
+  margin-bottom: 5em;
+  color: #051f64;
+  @include minQmaxQ(768px, 1024px) {
+    flex-direction: column;
+  }
+
+  & > div:not(:first-child) {
+    margin-left: 1.7em;
+
+    @include minQmaxQ(768px, 1024px) {
+      margin-left: unset;
+    }
+  }
+  .card-body {
+    background: #ffffff;
+    box-shadow: 0px 10px 40px #004cff0d;
+    padding: 1.5em;
+    border-radius: 30px;
+  }
+
+  .card-small {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    flex-basis: 35%;
+    & > span {
+      margin-bottom: 1em;
+    }
+
+    & > span:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      :is(span:first-child) {
+        color: #a2a2a2;
+      }
+      span:first-child {
+        font-weight: weight(thick);
+        letter-spacing: 1px;
+      }
+    }
+
+    & > span:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+
+      span {
+        display: flex;
+        gap: 0.5em;
+        color: #ffc400;
+      }
+
+      h1 {
+        font-size: fontSize("header-1");
+        font-family: cera_pro_medium, sans-serif;
+      }
+    }
+
+    & > span:nth-child(3) {
+      color: #00ca4e;
+    }
+
+    & > span:nth-child(4) {
+      display: flex;
+      flex-direction: column;
+      //styling for children elements
+      & > span {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1em;
+
+        .numberOfStarsLikes {
+          color: color(blue, deep);
+          font-weight: weight(bolder);
+          font-family: cera_pro_medium, sans-serif;
+        }
+      }
+    }
+  }
+
+  .card-medium {
+    @include minQmaxQ(768px, 1024px) {
+      margin-top: 2em;
+    }
+    position: relative;
+    font-size: 1.25rem;
+    flex-basis: 45%;
+    :is(.otherMenu, .reportTab--lists) {
+      position: absolute;
+    }
+
+    .otherMenu {
+      top: 1.25em;
+      right: 1.25em;
+      z-index: 2;
+    }
+  }
+
+  .filterButtonBox {
+    position: relative;
+    width: 15%;
+    button {
+      position: absolute;
+      width: 300px;
+    }
+
+    @include minQmaxQ(768px, 1024px) {
+      display: none;
+    }
+  }
+}

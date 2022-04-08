@@ -1,0 +1,10 @@
+.success-pop {
+    display: flex;
+    p:first-child {
+        opacity: 0.5;
+        margin-right: 3px;
+    }
+    p:last-child {
+       color: blue;
+    }
+}

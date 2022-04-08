@@ -1,0 +1,19 @@
+@use "styles" as *;
+.file-card {
+    display: flex;
+    margin-bottom: 10px;
+    @include maxQ($tablet) {
+      padding-left: 10px;
+    }
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  small {
+      color: #455A64;
+      font-weight: 600;
+      font-size: 0.7rem;
+  }
+}

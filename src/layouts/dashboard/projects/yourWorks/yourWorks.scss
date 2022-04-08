@@ -1,0 +1,21 @@
+@use "styles" as *;
+
+.yourWorks__btnSection {
+  position: relative;
+  margin: 25px 0;
+  // background-color: rgba(0, 0, 0, 0.02);
+
+  // > div {
+  //   overflow-x: auto;
+  //   position: relative;
+  //   padding: 20px 0;
+
+  //   /* Hide scrollbar for IE, Edge and Firefox */
+  //   -ms-overflow-style: none; /* IE and Edge */
+  //   scrollbar-width: none; /* Firefox */
+
+  //   &::-webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
+}

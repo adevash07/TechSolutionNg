@@ -1,0 +1,453 @@
+@use "styles" as *;
+
+.landingExperience {
+  display: flex;
+  justify-content: center;
+
+  @include maxQ(992px) {
+    overflow: hidden;
+  }
+
+  .landingExperience__container {
+    width: 90%;
+    display: flex;
+    padding: 50px 0;
+    justify-content: space-between;
+    background-color: lighten(color(blue, light), 35%);
+    border-radius: 30px;
+
+    @include maxQ(1199px) {
+      flex-direction: column;
+      align-items: center;
+
+      @include minQ(992px) {
+        @include maxHeight(768px) {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  .landingExperience__avatar {
+    width: 52%;
+    position: relative;
+
+    svg {
+      position: absolute;
+      width: 91%;
+      left: 0;
+      top: -2%;
+
+      .blueBg {
+        position: absolute;
+        transform-origin: center;
+        transition: 0.7s ease-in-out;
+      }
+
+      @include maxQ(1199px) {
+        width: 100%;
+
+        @include minQ(992px) {
+          @include maxHeight(768px) {
+            top: -22%;
+          }
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      transition: 0.7s ease-in-out;
+
+      &:nth-child(2) {
+        top: 18%;
+      }
+
+      &:nth-child(3) {
+        bottom: -15%;
+      }
+    }
+
+    &:hover {
+      svg {
+        .blueBg {
+          transform: rotate(360deg);
+        }
+      }
+
+      img {
+        &:nth-child(2) {
+          transform: scale(1.1) translate(25px, -6px);
+        }
+      }
+    }
+
+    @include maxQ(1950px) {
+      img {
+        &:nth-child(3) {
+          bottom: -5%;
+        }
+      }
+    }
+
+    @include maxQ(1800px) {
+      img {
+        &:nth-child(3) {
+          bottom: 3%;
+        }
+      }
+    }
+
+    @include maxQ(1670px) {
+      img {
+        &:nth-child(2) {
+          top: 21%;
+        }
+
+        &:nth-child(3) {
+          bottom: 5%;
+          width: 66%;
+        }
+      }
+    }
+
+    @include maxQ(1440px) {
+      top: -11%;
+
+      img {
+        &:nth-child(2) {
+          top: 25%;
+        }
+
+        &:nth-child(3) {
+          bottom: 6%;
+        }
+      }
+    }
+
+    @include maxQ(1370px) {
+      top: -17%;
+    }
+
+    @include maxQ(1250px) {
+      img {
+        &:nth-child(2) {
+          top: 30%;
+        }
+
+        &:nth-child(3) {
+          bottom: 8%;
+        }
+      }
+    }
+
+    // @include maxQ(1150px) {
+    //   img {
+    //     &:nth-child(2) {
+    //       top: 32%;
+    //     }
+
+    //     &:nth-child(3) {
+    //       bottom: 11%;
+    //     }
+    //   }
+    // }
+
+    // @include maxQ(1050px) {
+    //   img {
+    //     &:nth-child(2) {
+    //       top: 32%;
+    //     }
+
+    //     &:nth-child(3) {
+    //       bottom: 18%;
+    //     }
+    //   }
+    // }
+
+    // @include maxQ(1023px) {
+    //   img {
+    //     &:nth-child(3) {
+    //       top: 53%;
+    //       bottom: 0;
+    //     }
+    //   }
+    // }
+
+    @include maxQ(1199px) {
+      width: 700px;
+      height: 700px;
+      top: -7%;
+
+      img {
+        &:nth-child(3) {
+          bottom: -18%;
+        }
+      }
+
+      @include minQ(992px) {
+        @include maxHeight(768px) {
+          width: 450px;
+          height: 500px;
+        }
+      }
+    }
+
+    @include maxQ(992px) {
+      width: 600px;
+      height: 600px;
+      top: 1%;
+
+      svg {
+        top: -25%;
+      }
+
+      img {
+        &:nth-child(2) {
+          top: 15%;
+        }
+
+        &:nth-child(3) {
+          top: 70%;
+        }
+      }
+    }
+
+    @include maxQ(850px) {
+      width: 500px;
+      height: 500px;
+
+      svg {
+        top: -48%;
+      }
+
+      img {
+        &:nth-child(2) {
+          top: 12%;
+        }
+
+        &:nth-child(3) {
+          top: 65%;
+        }
+      }
+    }
+  }
+
+  .landingExperience__info {
+    width: 48%;
+    padding: 20px;
+
+    @include maxQ(1199px) {
+      width: 90%;
+
+      @include minQ(992px) {
+        @include maxHeight(768px) {
+          width: 50%;
+        }
+      }
+    }
+
+    @include maxQ(992px) {
+      width: 90%;
+      margin-top: 35px;
+    }
+
+    > div {
+      &:nth-child(1) {
+        .landingExperience__subHeader {
+          margin-bottom: 15px;
+          font-size: 0.9rem;
+          font-size: 1.2rem;
+          font-family: cera_pro_medium;
+          display: flex;
+          align-items: center;
+
+          span {
+            border-radius: 10px;
+            display: inline-flex;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 5px 10px #004cff26;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin-left: 10px;
+          }
+        }
+
+        .landingExperience__mainHeader {
+          font-size: 3.5rem;
+          display: flex;
+          flex-direction: column;
+          font-family: cera_pro_medium;
+          letter-spacing: 2px;
+          line-height: 1.2;
+
+          span {
+            &:nth-child(2) {
+              color: color(blue);
+            }
+          }
+
+          @include maxQ(1500px) {
+            font-size: 3rem;
+          }
+
+          @include maxQ(1199px) {
+            display: block;
+          }
+        }
+
+        .landingExperience__paragraphs {
+          display: flex;
+          flex-direction: column;
+          margin-top: 30px;
+
+          @include maxQ(1199px) {
+            display: block;
+
+            span {
+              margin-right: 10px;
+            }
+          }
+        }
+
+        @include maxQ(1500px) {
+          .landingExperience__mainHeader {
+            font-size: 3rem;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        margin-top: 50px;
+
+        &:hover {
+          &:before {
+            top: 50%;
+          }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 50%;
+          border-radius: 20px;
+          width: 85%;
+          transition: 0.5s ease-out;
+          background-color: lighten(color(blue, light), 20%);
+
+          @include maxQ(1500px) {
+            width: 90%;
+          }
+
+          @include maxQ(1199px) {
+            width: 100%;
+          }
+        }
+        .landingExperience__shuffle {
+          display: flex;
+          padding: 20px 10px;
+          width: 85%;
+          min-height: 200px;
+          position: relative;
+          z-index: 2;
+
+          div {
+            &:nth-child(1) {
+              width: 60px;
+              margin-right: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              span {
+                border-radius: 50%;
+                display: inline-flex;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 5px 10px #004cff26;
+                background-color: rgba(255, 255, 255, 0.3);
+                // margin-left: 10px;
+
+                img {
+                  width: 100%;
+                }
+              }
+
+              @include maxQ(992px) {
+                align-items: flex-start;
+              }
+            }
+
+            &:nth-child(2) {
+              width: calc(100% - 60px);
+
+              h4 {
+                font-size: 2.5rem;
+                font-family: cera_pro_medium;
+                margin-bottom: 15px;
+                line-height: 1.3;
+
+                @include maxQ(1500px) {
+                  font-size: 2rem;
+                }
+
+                @include maxQ(992px) {
+                  margin-bottom: 20px;
+                }
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            div {
+              &:nth-child(1) {
+                span {
+                  img {
+                    width: 95%;
+                    transform: translate(0, 5px);
+                  }
+                }
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            div {
+              &:nth-child(1) {
+                span {
+                  img {
+                    width: 69%;
+                  }
+                }
+              }
+            }
+          }
+
+          @include maxQ(1200px) {
+            width: 90%;
+          }
+
+          @include maxQ(1199px) {
+            width: 100%;
+            min-height: fit-content;
+          }
+
+          @include maxQ(992px) {
+            min-height: 0%;
+          }
+        }
+      }
+    }
+    .landingExperience__button {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 25px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "styles" as *;
+.user-profile {
+  .user-profile__container-lg {
+    display: flex;
+    background-color: #f9fcfc;
+    aside {
+      width: 20%;
+
+      @include maxQ($tablet) {
+        z-index: 1;
+        width: 10%;
+      }
+    }
+    main {
+      width: 76%;
+      margin-top: 10%;
+      @include maxQ($tablet) {
+        margin-top: 15%;
+        margin-left: 10%;
+        width: 75%;
+      }
+    }
+  }
+}

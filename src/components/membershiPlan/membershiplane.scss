@@ -1,0 +1,56 @@
+@use "../../styles/" as *;
+//  membershiplan start here
+.membershipPlan {
+  display: flex;
+  // justify-content: space-between;
+}
+.membershipPlan__Div p:nth-child(1) {
+  color: rgba(0, 0, 0, 0.493);
+}
+.membershipPlan__Div {
+  width: 60%;
+}
+
+.membershipPlan__DivIcon {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+.membershipPlan__DivIcon i {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 5px;
+  color: blue;
+  font-size: 15px;
+}
+
+.membershipPlan__IconRed i {
+  color: red;
+}
+
+.membershipPlan__IconTwo {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+.membershipPlan__IconTwo i {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 5px;
+  color: blue;
+  font-size: 15px;
+}
+
+//  membershiplan end here
+
+// destop view start here
+
+
+
+// destop view end here

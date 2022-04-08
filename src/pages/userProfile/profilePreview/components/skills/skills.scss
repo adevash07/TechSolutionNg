@@ -1,0 +1,11 @@
+.skills {
+  .skills-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    .tag-ctn {
+      margin-bottom: 10px;
+    }
+  }
+}

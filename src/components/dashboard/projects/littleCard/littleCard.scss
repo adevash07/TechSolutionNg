@@ -1,0 +1,52 @@
+@use "styles" as *;
+
+/**************************************
+Start: Styles for littleCard component
+**************************************/
+.littleCard {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0 17px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: lighten(color(black), 55%);
+
+  .littleCard__icon {
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 10px;
+
+      path {
+        transition: 0.4s;
+      }
+    }
+  }
+
+  .littleCard__text {
+    font-family: muli;
+    color: color(black);
+    transition: 0.4s;
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: color(blue);
+      }
+    }
+
+    .littleCard__text {
+      color: color(blue);
+    }
+  }
+}
+/**************************************
+End: Styles for littleCard component
+**************************************/

@@ -1,0 +1,66 @@
+.verification-form {
+  display: flex;
+  flex-direction: column;
+  .verification-form__label {
+    display: flex;
+    p {
+      font-size: 0.7rem;
+      opacity: 0.5;
+      margin-right: 2px;
+    }
+    small {
+      font-size: 0.7rem;
+      color: #004CFF;
+      margin-left: 1px;
+      position: static;
+      width: fit-content;
+    }
+  }
+  
+  .verification-form__digits-ctn {
+    display: flex;
+    margin-top: 20px;
+    input {
+      text-align: center;
+      max-width: 30px;
+      border: none;
+      border-bottom: 1px solid #85979f;
+      margin-right: 5px;
+      font-size: 0.6rem;
+      color: #051f64;
+      outline: none;
+    }
+    input.active {
+      border-bottom: 1px solid #051f64;
+    }
+  }
+  .verification-form__action-btns {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-self: flex-end;
+  }
+  .verification-form__note {
+    display: flex;
+    max-width: 60%;
+    p {
+      opacity: 0.5;
+      font-size: 0.6rem;
+     
+      line-height: 10px;
+      button {
+        border: none;
+        outline: none;
+        color: #051f64;
+        background: #ffffff;
+        padding: 0px;
+        margin: 5px;
+        opacity: 1;
+        font-size: 0.7rem;
+        top: 0px;
+        width: fit-content;
+      }
+    }
+
+    
+  }
+}

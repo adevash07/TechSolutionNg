@@ -1,0 +1,12 @@
+.profile-award {
+  display: flex;
+  justify-content: space-between;
+  .profile-award__ctn {
+    width: 50%;
+    .award {
+      color: #051f64;
+      font-size: 0.6rem;
+      font-weight: 600;
+    }
+  }
+}

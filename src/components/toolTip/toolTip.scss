@@ -1,0 +1,53 @@
+@use "styles" as *;
+
+.toolTip {
+  background-color: color(white);
+  padding: 15px 10px;
+  position: absolute;
+  top: -300%;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  right: 0;
+  transition: 0.5s ease-in-out;
+
+  .toolTip__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 20px solid color(white);
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      bottom: -30px;
+    }
+
+    div {
+      font-size: 0.9rem;
+    }
+  }
+
+  .toolTip__share {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  &.active {
+    z-index: 2;
+
+    opacity: 1;
+  }
+}

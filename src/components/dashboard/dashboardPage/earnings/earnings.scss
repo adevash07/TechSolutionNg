@@ -1,0 +1,145 @@
+@use "styles" as *;
+
+/**************************************
+*********** Styles for Earnings component
+**************************************/
+.earnings {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: $btnShadow2;
+
+  // @include maxQ(1024px) {
+  //   grid-column: 1/3;
+  //   margin-right: 20px;
+  // }
+
+  @include maxQ(992px) {
+    grid-column: 1/3;
+    margin-right: 20px;
+  }
+
+  .earnings__header {
+    font-family: muli;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: color(black, light);
+  }
+
+  .earnings__details {
+    padding: 0 10%;
+
+    @include maxQ(1400px) {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .earnings__paragraph {
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: muli;
+    color: color(blue, deep);
+  }
+
+  .earnings__arrowIcon {
+    font-family: muli;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: $btnShadow2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      color: green;
+      font-size: large;
+
+      &.loss {
+        color: color(red);
+      }
+    }
+  }
+
+  .earnings__amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .earnings__amountContainer {
+    color: color(blue);
+    font-weight: 600;
+    font-family: muli;
+    margin-bottom: 5px;
+  }
+
+  .earnings__amountCurrency {
+    font-family: muli;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      width: 120%;
+      height: 1px;
+      background-color: $deepBlue;
+      position: absolute;
+      left: -10%;
+    }
+
+    &:before {
+      top: 43%;
+    }
+
+    &:after {
+      top: 58%;
+    }
+  }
+
+  .earnings__amountFigure {
+    font-family: muli;
+    font-size: 2rem;
+
+    @include maxQ(1200px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .earnings__amountInfo {
+    font-size: 0.8rem;
+    font-family: muli;
+    font-weight: 500;
+    color: color(black, light);
+  }
+
+  .earnings__btn {
+    text-align: right;
+  }
+
+  .earnings__link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    font-family: muli;
+
+    a {
+      color: color(blue);
+      // color: color(black, light);
+      width: fit-content;
+    }
+  }
+}

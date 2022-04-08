@@ -1,0 +1,43 @@
+.slide-comp {
+  display: flex;
+  background: #ffffff;
+  section:first-child {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    :first-child {
+      align-self: flex-end;
+      width: 50px;
+      margin-bottom: 0px;
+    }
+    :last-child {
+      position: relative;
+      width: 120px;
+      margin-top: 0px;
+      :hover {
+        top: 20px;
+      }
+    }
+  }
+  section:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: 45px;
+    width: 25%;
+    height: 250px;
+
+    label {
+      color: #001243;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    p {
+      font-size: 0.7rem;
+      color: #001243;
+      text-align: left;
+      margin-top: 10px;
+    }
+  }
+}

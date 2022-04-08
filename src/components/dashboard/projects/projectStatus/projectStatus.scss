@@ -1,0 +1,74 @@
+@use "styles" as *;
+
+/**************************************
+Start: Styles for projectStatus component
+**************************************/
+.projectStatus {
+  display: flex;
+  align-items: center;
+
+  .projectStatus__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .projectStatus__circle {
+    width: 10px;
+    height: 10px;
+    background-color: color(black);
+    border-radius: 50%;
+    position: relative;
+    transition: 0.4s ease-in-out;
+
+    &:before {
+      width: 16px;
+      height: 16px;
+      content: "";
+      border: 2px solid color(black);
+      top: -3px;
+      left: -3px;
+      position: absolute;
+      transition: 0.4s ease-in-out;
+      border-radius: 50%;
+    }
+  }
+
+  .projectStatus__dash {
+    width: calc(95% - 15px);
+    margin-left: 5px;
+    transition: 0.4s ease-in-out;
+    border-bottom: 2px dashed color(black);
+  }
+
+  .projectStatus__name {
+    position: absolute;
+    transition: 0.4s ease-in-out;
+    bottom: -22px;
+    left: -15px;
+    font-size: 0.8rem;
+  }
+
+  &.active {
+    .projectStatus__circle {
+      background-color: color(blue);
+
+      &:before {
+        border-color: color(blue);
+      }
+    }
+
+    .projectStatus__dash {
+      border-color: color(blue);
+    }
+
+    .projectStatus__name {
+      color: color(blue);
+    }
+  }
+}
+/**************************************
+End: Styles for projectStatus component
+**************************************/

@@ -1,0 +1,200 @@
+@use "styles/index" as *;
+
+.reportsTable {
+  background-color: color(white);
+  box-shadow: 0px 10px 40px #004cff1a;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  font-weight: weight(bolder);
+  padding: 1em 2em;
+  font-size: 1.15rem;
+
+  .reportsTable__data {
+    flex-basis: 25%;
+    padding-block-start: 1em;
+    margin-bottom: 2em;
+  }
+  .reportsTable__row {
+    display: flex;
+  }
+
+  .reportsTable__head {
+    margin-bottom: 1em;
+
+    .reportsTable__row {
+      :is(span:nth-child(1), span:nth-child(2), span:nth-child(3), span:nth-child(4)) {
+        color: rgb(180, 177, 177);
+      }
+      span:nth-child(2) {
+        margin-left: 13.5em;
+      }
+      span:nth-child(3) {
+        margin-left: 4em;
+      }
+      span:nth-child(4) {
+        margin-left: 12em;
+      }
+    }
+  }
+
+  .reportsTable__body {
+    //styling for the reviewers profile image, name, city and country location
+    .reviewer {
+      display: flex;
+      align-items: flex-start;
+      flex-basis: 35%;
+
+      & > span:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.75em;
+
+        & > span:first-child {
+          font-size: 0.9em;
+        }
+
+        & > span:last-child {
+          color: color(black, lighter);
+        }
+      }
+    }
+
+    //styling for the date and time in the reviews table
+    .date {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 15%;
+
+      span:last-child {
+        color: rgb(165, 162, 162);
+      }
+    }
+
+    //styling for the stars symbolizing rating
+    .ratings {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 40%;
+      margin-left: 1.5em;
+
+      & > :not(:last-child) {
+        color: color(yellow);
+        max-width: 6em;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5em;
+      }
+    }
+
+    //styling for the image that represent the projects a freelance has done
+    //in the reviews table
+    .projectThumbnail {
+      display: flex;
+      margin-left: 1em;
+      align-items: center;
+      margin-left: 3em;
+      span:last-child {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.45em;
+
+        & > span:last-child {
+          text-transform: capitalize;
+          color: rgb(165, 162, 162);
+          font-size: 1.05rem;
+        }
+      }
+    }
+  }
+}
+
+//style: report table for table view
+.reportsTable__tablet {
+  &__dataContent {
+    border-radius: 8px;
+
+    &:not(:first-child) {
+      margin-top: 2em;
+    }
+  }
+  &__dataContentContanier {
+    padding: 1.5em 1.5em 1.5em 1.85em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #072a88;
+  }
+
+  &__nameLocationBox,
+  &__projectBox,
+  &__commentRatingBox,
+  &__dateBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__projectBox,
+  &__commentRatingBox,
+  &__dateBox {
+    margin-top: 1em;
+  }
+
+  &__identityBox {
+    display: flex;
+    align-items: center;
+  }
+
+  &__imgBox {
+    margin-right: 0.85em;
+  }
+
+  &__commentRatingBox {
+    flex-basis: 68%;
+    padding-left: 5em;
+    text-align: justify;
+
+    & > span:not(:first-child) {
+      margin-top: 0.45em;
+    }
+  }
+
+  &__head {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: color(black, lighter);
+  }
+
+  &__projectName,
+  &__projectSubmitDate {
+    font-size: 1.25rem;
+  }
+
+  &__projectStatus,
+  &__projectSubmitTime,
+  &__location {
+    font-size: 1.05rem;
+    color: color(black, lighter);
+  }
+
+  .ratings {
+    color: color(yellow);
+    display: flex;
+    & > span {
+      display: flex;
+
+      svg:not(:first-child) {
+        margin-left: 0.45em;
+      }
+    }
+  }
+
+  .comment {
+    line-height: 1.35;
+  }
+}
+
+.borderBlue {
+  border: 1.5px solid $lightBlue;
+}

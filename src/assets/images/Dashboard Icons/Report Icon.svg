@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="184" height="184" viewBox="0 0 184 184">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00d4ff"/>
+      <stop offset="1" stop-color="#004cff"/>
+    </linearGradient>
+    <filter id="Rectangle_1046" x="0" y="0" width="184" height="184" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#004cff" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Report_Icon" data-name="Report Icon" transform="translate(1079 -453)">
+    <g transform="matrix(1, 0, 0, 1, -1079, 453)" filter="url(#Rectangle_1046)">
+      <rect id="Rectangle_1046-2" data-name="Rectangle 1046" width="64" height="64" rx="17" transform="translate(60 55)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="report" transform="translate(-1066.729 525)">
+      <g id="Group_1605" data-name="Group 1605" transform="translate(68.729)">
+        <g id="Group_1604" data-name="Group 1604" transform="translate(0)">
+          <path id="Path_6853" data-name="Path 6853" d="M88.086,1.961H85.973A2.386,2.386,0,0,0,83.626,0H75.832a2.386,2.386,0,0,0-2.347,1.961H71.372A2.643,2.643,0,0,0,68.729,4.6V27.363A2.643,2.643,0,0,0,71.372,30H88.086a2.643,2.643,0,0,0,2.643-2.637V4.6A2.643,2.643,0,0,0,88.086,1.961Zm-12.876.418a.622.622,0,0,1,.622-.621h7.795a.622.622,0,0,1,.622.621V4.217a.622.622,0,0,1-.622.621H75.832a.622.622,0,0,1-.622-.621V2.379ZM88.086,28.242H71.372a.881.881,0,0,1-.881-.879V4.6a.881.881,0,0,1,.881-.879h2.075v.5A2.384,2.384,0,0,0,75.832,6.6h7.795a2.384,2.384,0,0,0,2.384-2.379v-.5h2.075a.881.881,0,0,1,.881.879V27.363h0A.881.881,0,0,1,88.086,28.242Z" transform="translate(-68.729)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_1607" data-name="Group 1607" transform="translate(79.064 11.393)">
+        <g id="Group_1606" data-name="Group 1606" transform="translate(0)">
+          <path id="Path_6854" data-name="Path 6854" d="M253.2,194.666h-6.065a.9.9,0,1,0,0,1.791H253.2a.9.9,0,1,0,0-1.791Z" transform="translate(-246.241 -194.666)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_1609" data-name="Group 1609" transform="translate(72.608 8.191)">
+        <g id="Group_1608" data-name="Group 1608" transform="translate(0)">
+          <path id="Path_6855" data-name="Path 6855" d="M140.471,140.573a.9.9,0,0,0-1.246.227l-2,2.895-.422-.721a.9.9,0,1,0-1.546.9l1.132,1.933a.9.9,0,0,0,.739.442h.034a.9.9,0,0,0,.736-.386l2.8-4.051A.9.9,0,0,0,140.471,140.573Z" transform="translate(-135.134 -140.414)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_1611" data-name="Group 1611" transform="translate(79.064 17.293)">
+        <g id="Group_1610" data-name="Group 1610" transform="translate(0)">
+          <path id="Path_6856" data-name="Path 6856" d="M253.2,295.487h-6.065a.9.9,0,1,0,0,1.791H253.2a.9.9,0,1,0,0-1.791Z" transform="translate(-246.241 -295.487)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_1613" data-name="Group 1613" transform="translate(72.608 14.072)">
+        <g id="Group_1612" data-name="Group 1612" transform="translate(0)">
+          <path id="Path_6857" data-name="Path 6857" d="M140.471,241.394a.9.9,0,0,0-1.246.227l-2,2.895-.422-.721a.9.9,0,0,0-1.546.9l1.132,1.933a.9.9,0,0,0,.739.442h.034a.9.9,0,0,0,.736-.386l2.8-4.051A.9.9,0,0,0,140.471,241.394Z" transform="translate(-135.134 -241.235)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_1615" data-name="Group 1615" transform="translate(79.064 14.321)">
+        <g id="Group_1614" data-name="Group 1614" transform="translate(0)">
+          <path id="Path_6858" data-name="Path 6858" d="M253.2,244.7h-6.065a.9.9,0,1,0,0,1.791H253.2a.9.9,0,1,0,0-1.791Z" transform="translate(-246.241 -244.702)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

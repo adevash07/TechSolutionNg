@@ -1,0 +1,51 @@
+@use "styles/index.scss" as *;
+.linkComponent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+
+  .linkComponent__Text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    //  icon start here
+    .icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px;
+      margin-right: 10px;
+      border-radius: 50px;
+    }
+    .icon-black {
+      @extend .icon;
+      border: 1px solid #3b5998;
+      color: #3b5998;
+    }
+    .icon-blue {
+      @extend .icon;
+      border: 1px solid #0d75a7;
+      color: #0d75a7;
+    }
+    .icon-red {
+      @extend .icon;
+      border: 1px solid #f24336;
+    }
+  }
+  //  icon end here
+  //  linkComponent__Paragraph start here
+
+  .linkComponent__Paragraph p:nth-child(1) {
+    font-size: fontSize(header-6);
+    font-weight: weight(thick);
+    color: $textColor;
+  }
+  .linkComponent__Paragraph p:nth-child(2) {
+    font-size: 10px;
+    color: color(black, light);
+    opacity: 0.8;
+  }
+}
+//  linkComponent__Paragraph end here

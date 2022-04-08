@@ -1,0 +1,102 @@
+@use "styles/" as *;
+//placeholder for popTagPosition style
+%sideStyle {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+//placeholder for popUp slide animation
+%slidePopStyle {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  display: flex;
+}
+
+//popUp main container style
+.popUp {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  min-height: 4rem;
+  min-width: 8rem;
+  box-shadow: 0px 5px 40px #004cff1a;
+  display: none;
+
+  //pop onShow State
+
+  &.show {
+    animation-name: SlideInPopUp--tablet;
+    @extend %slidePopStyle;
+
+    @include minQ(1350px) {
+      animation-name: SlideInPopUp;
+      @extend %slidePopStyle;
+    }
+  }
+
+  &.left::after {
+    @extend %sideStyle;
+    right: 100%;
+    top: 20%;
+    margin-left: -10px;
+    border-width: 10px;
+  }
+  &.bottom::after {
+    @extend %sideStyle;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    transform: rotate(270deg);
+  }
+  &.right::after {
+    @extend %sideStyle;
+    top: 60%;
+    left: 100%;
+    margin-left: 0px;
+    border-width: 10px;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes SlideInPopUp {
+  0% {
+    transform: translate(-100%, 100%) scale(0.7);
+    // -webkit-transform: translateZ(-4rem);
+    // -moz-transform: translateZ(-4rem);
+    // -o-transform: translateZ(-4rem);
+  }
+
+  90% {
+    transform: translate(-20%, 0) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    // -webkit-transform: translateZ(0rem);
+    // -moz-transform: translateZ(0rem);
+    // -o-transform: translateZ(0rem);
+  }
+}
+
+@keyframes SlideInPopUp--tablet {
+  0% {
+    transform: translate(20%, 10%) scale(0.7);
+    // -webkit-transform: translateZ(-4rem);
+    // -moz-transform: translateZ(-4rem);
+    // -o-transform: translateZ(-4rem);
+  }
+
+  90% {
+    transform: translate(-20%, 0) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    // -webkit-transform: translateZ(0rem);
+    // -moz-transform: translateZ(0rem);
+    // -o-transform: translateZ(0rem);
+  }
+}

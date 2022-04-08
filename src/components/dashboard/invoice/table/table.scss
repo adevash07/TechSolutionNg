@@ -1,0 +1,64 @@
+@use "styles/index" as *;
+@use "styles/sass/base/typography";
+
+.dataTable__invoice {
+  background-color: color(white);
+  border-collapse: collapse;
+  box-shadow: 0px 10px 40px #004cff1a;
+  border-radius: 4px;
+
+  //media query
+  @include minQ(1440px) {
+    width: 94.5%;
+  }
+
+  overflow: hidden;
+  font-weight: weight(bolder);
+
+  .dataTable__body {
+    &__row {
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: color(white);
+        box-shadow: 0px 10px 40px #004cff1a;
+        transform: scale(1.005);
+        border-bottom: none;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1.5px solid rgba(82, 81, 81, 0.068);
+      }
+    }
+  }
+
+  th,
+  td {
+    padding: 1em;
+    text-align: left;
+  }
+
+  th {
+    color: color(black, light);
+  }
+
+  @include minQmaxQ(768px, 1024px) {
+    width: 100%;
+    :is(.dataTable__invoiceNumber, .dataTable__invoiceDate, .dataTable__invoiceAmount) {
+      display: none;
+    }
+
+    .dataTable__invoice {
+      width: 100%;
+    }
+
+    .dataTable__clientName {
+      width: 41%;
+    }
+
+    .dataTable__invoiceStatus {
+      width: 35%;
+    }
+  }
+}

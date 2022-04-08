@@ -1,0 +1,135 @@
+// @use "../../styles/" as *;
+@use "styles/index" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.membershipSetting {
+  background-color: #f9fcfc;
+  padding-top: 10rem;
+  .membershipSetting__Search {
+    padding: 0 20px 0 30px;
+  }
+  // membershipSetting__Premium start here
+  .membershipSetting__Premium {
+    background-color: #e6edff;
+    padding: 0 20px 0 100px;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .membershipSetting__PremiumHeader {
+      padding: 30px 0;
+      .membershipSetting__PremiumHeader h4 {
+        font-weight: bold;
+      }
+    }
+    // membershipSetting__Premium end here
+
+    // membershipSetting__DivImg start here
+
+    .membershipSetting__DivImg {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 30%;
+      //   height: 100%;
+
+      .membershipSetting__ImgGirl {
+        width: inherit;
+      }
+    }
+  }
+  // membershipSetting__DivImg end here
+}
+
+// membershipSetting__HeadComponent start here
+
+.membershipSetting__HeadComponent p:nth-child(1) {
+  font-weight: bold;
+}
+
+.container-fluid-con-flex,
+.membershipSetting__flex {
+  display: flex;
+  align-items: center;
+}
+.membershipSetting__HeadComponent {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  margin: 30px 90px;
+  padding: 30px 20px;
+  background-color: white;
+}
+
+.membershipSetting__HeadComponentParagraph {
+  margin-top: 70px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.membershipSetting__HeadMember {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  width: 50%;
+  margin: 40px;
+  padding: 25px 30px;
+  .membershipSetting__Head4 {
+    display: flex;
+    justify-content: flex-end;
+    h4 {
+      width: 20%;
+      text-align: center;
+    }
+  }
+}
+
+.membershipSetting__TextPlanIcon {
+  margin: 50px 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// membershipSetting__HeadComponent end here
+
+// destop view start here
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .membershipSetting {
+    .membershipSetting__Search {
+      padding: 0 20px 0 90px;
+    }
+  }
+  .membershipSetting__PremiumHeader p {
+    width: 70%;
+  }
+  .container-fluid-con-flex,
+  .membershipSetting__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membershipSetting__HeadMember {
+    width: 86%;
+  }
+
+  .membershipSetting__HeadMember {
+    width: 93%;
+  }
+
+  .membershipSetting__TextPlanIcon {
+    // margin: 50px 150px;
+    // display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+// destop view ends here

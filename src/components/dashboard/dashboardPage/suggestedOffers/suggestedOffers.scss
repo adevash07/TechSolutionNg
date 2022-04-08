@@ -1,0 +1,120 @@
+@use "styles" as *;
+
+/**************************************
+*********** Styles for Suggested Offers component
+**************************************/
+.suggestedOffer {
+  background-color: white;
+  height: 91%;
+  border-radius: 10px;
+  box-shadow: $btnShadow2;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: color(blue, deep);
+
+  .suggestedOffer__imgContainer {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .suggestedOffer__img {
+    width: 100%;
+  }
+
+  .suggestedOffer__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: calc(100% - 70px);
+    justify-content: space-between;
+  }
+
+  .suggestedOffer__bodyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .suggestedOffer__time {
+    font-size: 0.7rem;
+    font-family: muli;
+    color: color(black, light);
+  }
+
+  .suggestedOffer__name {
+    font-size: 1.1rem;
+    font-family: muli;
+  }
+
+  .suggestedOffer__designation {
+    background-color: lighten(#1a9fff, 25%);
+    line-height: 30px;
+    font-weight: 600;
+    font-family: muli;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    height: 30px;
+    text-align: center;
+    width: 80px;
+  }
+
+  .suggestedOffer__header {
+    line-height: 150%;
+    font-family: muli;
+    font-size: 1.1rem;
+  }
+
+  .suggestedOffer__message {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    line-height: 150%;
+    font-weight: 500;
+    font-family: muli;
+    font-weight: 600;
+  }
+
+  .suggestedOffer__info {
+    background-color: $dashboardLightBlue;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .suggestedOffer__amount {
+    font-weight: 600;
+    font-family: muli;
+  }
+
+  .suggestedOffer__month {
+    font-size: 0.7rem;
+    font-family: muli;
+    color: color(black, light);
+  }
+
+  .suggestedOffer__infoTime {
+    font-size: 0.7rem;
+    border: 1px solid $deepBlue;
+    border-radius: 5px;
+    color: $deepBlue;
+    padding: 5px 10px;
+    font-family: muli;
+  }
+
+  .suggestedOffer__btnContainer {
+    text-align: right;
+  }
+
+  .suggestedOffer__btn {
+    font-size: 0.8rem;
+    color: color(blue);
+    font-family: muli;
+    font-weight: 600;
+  }
+}

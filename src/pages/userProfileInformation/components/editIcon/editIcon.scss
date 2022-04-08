@@ -1,0 +1,14 @@
+@use "styles/index" as *;
+
+.editIcon {
+  background-color: color(white);
+  box-shadow: 0px 10px 30px #004cff1a;
+  border-radius: 50%;
+  // width: 2.65em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em 0.75em;
+  cursor: pointer;
+}

@@ -1,0 +1,142 @@
+@use "../../../styles" as *;
+
+.loginAside__Header {
+  display: flex;
+  flex-direction: row;
+  background-color: #ebfffc;
+  box-shadow: 10px 0 20px #ebfffc;
+  padding: 7rem 2rem 0 3rem;
+  position: relative;
+  justify-content: space-between;
+
+  @include minQ(1023px) {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  @include maxQ(1023px) {
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  h1 {
+    span {
+      color: color(blue);
+    }
+
+    @include maxQ(1023px) {
+      font-size: 3.25rem;
+    }
+  }
+
+  // loginAside__Svg start here
+  .loginAside__Svg {
+    width: 14rem;
+    height: 10rem;
+
+    @include minQ(1023px) {
+      height: 80%;
+      width: unset;
+    }
+
+    @include maxQ(992px) {
+      width: 21rem;
+      height: 18rem;
+    }
+  }
+  .loginAside__Svg svg {
+    width: 100%;
+    height: 100%;
+    @include minQ(1023px) {
+      width: inherit;
+      height: inherit;
+    }
+
+    #clockHand {
+      transition: 0.5s ease-in-out;
+    }
+    &:hover {
+      #clockHand {
+        transform: translate(62px, -21px) rotate(58deg);
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    #boy {
+      transition: 0.5s ease-in-out;
+    }
+
+    &:hover {
+      #boy {
+        transform: translateX(-10px);
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    #firstRec {
+      transition: 0.5s ease-in-out;
+    }
+    &:hover {
+      #firstRec {
+        transform: translate(5px);
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    #secondRec {
+      transition: 0.5s ease-in-out;
+    }
+    &:hover {
+      #secondRec {
+        transform: translate(15px);
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    #thridRec {
+      transition: 0.5s ease-in-out;
+    }
+    &:hover {
+      #thridRec {
+        transform: translate(5px);
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    #fourthRec {
+      transition: 0.5s ease-in-out;
+    }
+    &:hover {
+      #fourthRec {
+        transform: translate(5px);
+        transition: 0.5s ease-in-out;
+      }
+    }
+    // loginAside__Svg end here
+
+    h1 {
+      //   font-size: function.fontSize(header-3);
+      font-size: fontSize(header-3);
+      font-weight: weight(bold);
+      //   font-weight: function.weight(bold);
+    }
+    span {
+      color: $darkbluecolor;
+    }
+  }
+
+  .loginAside__Img {
+    display: none;
+    @include minQ(1023px) {
+      display: inline-block;
+    }
+    img {
+      position: absolute;
+      bottom: -2rem;
+      display: none;
+      justify-content: right;
+      height: 110px;
+    }
+  }
+}
+// }

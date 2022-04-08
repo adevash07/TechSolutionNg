@@ -1,0 +1,78 @@
+@use "styles" as *;
+
+.yourOffersBtnSection {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  transition: 0.5s;
+  &:before {
+    position: absolute;
+    height: 100%;
+    width: 110px;
+    // right: 0;
+    // left: 176px;
+    box-shadow: 0px 5px 10px #71747a26;
+    content: "";
+    transition: 0.5s;
+    background-image: linear-gradient(#00aaff, color(blue));
+  }
+  .projectBtn:nth-child(1),
+  .projectBtn:nth-child(2) {
+    margin-right: 40px;
+
+    @include maxQ(992px) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.yourOffersBtnSection.active1 {
+  &:before {
+    left: 6px;
+    width: 135px;
+
+    @include maxQ(1400px) {
+      left: 6px;
+      width: 132px;
+    }
+
+    @include maxQ(1000px) {
+      left: 6px;
+      width: 124px;
+    }
+  }
+}
+
+.yourOffersBtnSection.active2 {
+  &:before {
+    left: 200px;
+    width: 165px;
+
+    @include maxQ(1400px) {
+      left: 191px;
+      width: 162px;
+    }
+
+    @include maxQ(1000px) {
+      left: 161px;
+      width: 159px;
+    }
+  }
+}
+
+.yourOffersBtnSection.active3 {
+  &:before {
+    left: 419px;
+    width: 135px;
+
+    @include maxQ(1400px) {
+      left: 404px;
+      width: 131px;
+    }
+
+    @include maxQ(1000px) {
+      left: 350px;
+      width: 123px;
+    }
+  }
+}

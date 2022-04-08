@@ -1,0 +1,63 @@
+@use "styles" as *;
+
+.sortComponent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+
+  @include maxQ(992px) {
+    grid-column: 3/5;
+  }
+
+  .sortComponent__span {
+    @include maxQ(1279px) {
+      position: absolute;
+      top: -29px;
+    }
+
+    @include maxQ(992px) {
+      position: static;
+    }
+  }
+
+  .formgroup {
+    margin: 0 0 0 15px;
+    width: 150px;
+    height: 100%;
+    background-color: transparent;
+
+    @include maxQ(1400px) {
+      width: 130px;
+      margin: 0 0 0 6px;
+    }
+
+    @include maxQ(1279px) {
+      width: 100%;
+      margin: 0;
+    }
+
+    @include maxQ(1279px) {
+      width: calc(100% - 60px);
+      margin-left: 10px;
+    }
+
+    input {
+      padding: 12px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .formgroup--input {
+      padding: 12px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@use "styles" as *;
+
+/**************************************
+Start: Styles for yourOfferCard component
+**************************************/
+.yourOffersCard {
+  background-color: color(white);
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 30px color(blue, lightdeep);
+  padding: 20px 15px;
+  border-radius: 5px;
+
+  .yourOffersCard__header {
+    margin-bottom: 15px;
+    font-family: cera_pro_bold;
+  }
+
+  .yourOffersCard__paragraph {
+    font-size: 1rem;
+    color: color(black);
+    margin-bottom: 15px;
+  }
+
+  .yourOffersCard__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin-bottom: 15px;
+
+    .yourOffersCard__gridContainer:nth-child(1) {
+      > span {
+        color: color(red);
+      }
+    }
+  }
+
+  .yourOffersCard__gridContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .yourOffersCard__gridHeader {
+    font-family: cera_pro_medium;
+  }
+
+  .yourOffersCard__gridDetail {
+    display: flex;
+    align-items: center;
+  }
+
+  .yourOffersCard__icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+}
+
+.yourOffersCard__skills {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  span {
+    color: color(black);
+  }
+}
+
+.yourOffersCard__skillsIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: color(white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.yourOffersCard__skillsHeader {
+  margin-right: 10px;
+  font-family: cera_pro_bold;
+}
+
+.yourOffersCard__client {
+  .yourOffersCard__clientHeader {
+    font-family: cera_pro_bold;
+  }
+
+  > div:nth-of-type(1) {
+    display: flex;
+    margin-bottom: 10px;
+
+    .yourOffersCard__location {
+      margin-right: 35px;
+    }
+    svg {
+      margin-right: 10px;
+      font-size: 0.8rem;
+      transform: translateY(4px);
+    }
+
+    span {
+      font-size: 00.8rem;
+    }
+  }
+
+  div.yourOffersCard__rating {
+    display: block;
+  }
+
+  > div:nth-of-type(2),
+  > div:nth-of-type(3) {
+    padding-left: 26px;
+    margin-bottom: 10px;
+
+    span {
+      font-size: 0.8rem;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 7px;
+        border-radius: 50%;
+        background-color: color(blue, deep);
+        left: -22px;
+      }
+    }
+  }
+}
+
+.yourOffersCard__btn {
+  display: flex;
+  justify-content: flex-end;
+
+  .button {
+    padding: 5px 21px;
+  }
+}
+/**************************************
+End: Styles for yourOfferCard component
+**************************************/

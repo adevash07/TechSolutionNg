@@ -1,0 +1,117 @@
+@use "styles" as *;
+.picture-preview {
+  width: 70%;
+  height: 100vh;
+  @include maxQ($tablet) {
+    width: 100%;
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-weight: 600;
+    width: 100%;
+    @include maxQ($tablet) {
+      margin-bottom: 20px;
+    }
+  }
+  .picture-preview__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    background: #ffffff;
+    margin-top: 2%;
+    padding: 10px 30px;
+    width: 100%;
+    
+  }
+  .picture-preview__action-btns {
+    display: flex;
+    justify-content: flex-start;
+    //align-items: center;
+    justify-self: flex-start;
+    margin-top: 2%;
+    margin-bottom: 20px;
+    width: 100%;
+    button {
+      font-size: 0.9rem;
+      padding: 5px 20px
+    }
+  }
+  .profile-user {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    width: 100%;
+  }
+  .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    background: #ffffff;
+    font-weight: 600;
+    color: #051f64;
+    margin-top: 3%;
+    span:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -30px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+      z-index: 5;
+      small {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background: #0000000a;
+      }
+    }
+    .user-info {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+      small {
+        font-size: 0.6rem;
+        color: #a2a2a2;
+        margin-bottom: 8px;
+      }
+    }
+    label {
+      font-weight: 600;
+      color: #051f64;
+      font-size: 1rem;
+    }
+    @include maxQ($tablet) {
+      width: 80%;
+    }
+  }
+}

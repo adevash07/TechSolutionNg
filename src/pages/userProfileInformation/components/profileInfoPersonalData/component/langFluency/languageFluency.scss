@@ -1,0 +1,11 @@
+.language__proficiency {
+  display: flex;
+
+  & > span:first-child {
+    margin-right: 10em;
+  }
+}
+
+.languageSelection {
+  display: flex;
+}

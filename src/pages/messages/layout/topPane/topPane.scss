@@ -1,0 +1,53 @@
+.top-pane {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-left: 1px solid #00000029;
+  .top-pane__info {
+    display: flex;
+  }
+  .top-main {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    position: relative;
+    span {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #00C206;
+      border-radius: 50%;
+      bottom: 2px;
+      left: -21px;
+    }
+  }
+  h5,
+  small {
+    color: #030b20;
+    margin-bottom: 0px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0px;
+  }
+  small {
+    margin-top: 1px;
+    color: #00c206;
+    padding: 0px;
+    font-size: 0.6rem;
+  }
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .top-pane__menu {
+    border: none;
+    outline: none;
+    background: none;
+    svg {
+      font-size: 1.5rem;
+      color: #455A64
+    }
+  }
+}

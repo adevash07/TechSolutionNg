@@ -1,0 +1,72 @@
+@use "styles" as *;
+.verify-slide {
+    margin-bottom: 3%;
+    width: 70%;
+    @include maxQ($tablet) {
+      width: 95%;
+    }
+  .verify-slide__main {
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    margin-top: 1%;
+    div:last-child {
+      display: flex;
+      justify-content: center;
+    }
+    div.verify-btn-ctn {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 3%;
+      button.btn-verify {
+        display: flex;
+        justify-content: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+        border: none;
+        outline: none;
+        padding: 12px;
+        padding-bottom: 2px;
+        border-radius: 8px;
+        small,
+        span {
+          position: relative;
+          transition: 2s;
+        }
+        small {
+          color: #051f64;
+          margin-right: 10px;
+        }
+        span {
+          align-self: center;
+          svg {
+            color: #0043ff;
+            font-size: 25px;
+          }
+        }
+        &:hover {
+          small {
+            left: -2px;
+          }
+          span {
+            right: -2px;
+          }
+        }
+      }
+    }
+  }
+  div.heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8%;
+    h4 {
+      font-size: 0.9rem;
+      span {
+        color: #004cff;
+      }
+    }
+  }
+  .action-btns {
+    margin-top: 20px;
+  }
+}

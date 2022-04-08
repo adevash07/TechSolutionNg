@@ -1,0 +1,28 @@
+.certifications {
+  width: 100%;
+  .certifications__info {
+      width: 100%;
+  }
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    .form-group {
+      width: 40%;
+    }
+    small {
+      font-size: 0.6rem;
+      color: #A2A2A2
+    }
+    p {
+      background: #f4f5f7;
+      padding: 5px;
+      border: 1px solid #f4f5f7;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.7rem;
+      width: fit-content;
+    }
+  }
+}

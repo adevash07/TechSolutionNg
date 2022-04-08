@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+// profileComponent start here
+.profileComponent {
+  padding-bottom: 10px;
+
+  .spancolor {
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.123);
+  }
+  .spancolor-blue {
+    @extend .spancolor;
+    background-color: #00ca4e;
+  }
+  .spancolor-black {
+    @extend .spancolor;
+    background-color: rgba(0, 0, 0, 0.438);
+  }
+  .spancolor-red {
+    @extend .spancolor;
+    background-color: rgba(255, 0, 0, 0.35);
+  }
+  .spancolor-light-red {
+    @extend .spancolor;
+    background-color: #ff4e2b;
+  }
+  p {
+    color: #2f3133;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+// profileComponent end here
+
+// profileComponent__resetDiv start here
+.profileComponent__resetDiv {
+  cursor: pointer;
+
+  .profileComponent__resetIcon {
+    font-size: 10px;
+    margin-right: 10px;
+  }
+  p {
+    font-weight: bold;
+    color: #2f3133;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+  .profileComponent__spanArrowdownIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+
+    .profileComponent__arrowdownIcon {
+      font-size: 16px;
+      transition: 0.5s ease;
+    }
+    .rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
+// profileComponent__resetDiv end here
+
+//  profileComponent__day start here
+.profileComponent__day {
+  p {
+    font-size: 13px;
+  }
+  .spancolor {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.041);
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.363);
+  }
+  .spancolor-blue {
+    @extend .spancolor;
+    border: 1px solid blue;
+  }
+}
+//  profileComponent__day end here
+
+// profileComponent__durationForm  start here
+.profileComponent__durationForm {
+  //   position: relative;
+  p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #2f3133;
+  }
+  input {
+    margin: 20px 0;
+    background-color: #2f313313;
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+  }
+  input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 0;
+    border-radius: 30px;
+    font-size: 10px;
+  }
+}
+// profileComponent__durationForm  end here

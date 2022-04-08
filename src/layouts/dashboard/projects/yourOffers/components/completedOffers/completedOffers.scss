@@ -1,0 +1,24 @@
+@use "styles" as *;
+
+.completedoffers {
+  display: none;
+  > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: auto auto auto;
+    grid-gap: 40px;
+    margin-bottom: 40px;
+
+    @include maxQ(1199px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include maxQ(991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.completedoffers.active {
+  display: block;
+}

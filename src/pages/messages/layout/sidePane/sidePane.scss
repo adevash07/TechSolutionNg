@@ -1,0 +1,29 @@
+@use "styles" as *;
+.side-pane {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 5px;
+  overflow: scroll;
+  height: 100vh;
+  width: 23%;
+  @include maxQ($tablet) {
+    width: 25%;
+    padding: 0px;
+  }
+
+  .side-pane__search {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    position: sticky;
+    width: 70%;
+    @include maxQ($tablet) {
+      height: 10%;
+    }
+  }
+  .side-pane__users {
+    margin-top: 20%;
+    overflow-y: scroll;
+  }
+}

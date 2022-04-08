@@ -1,0 +1,166 @@
+@use "styles/index" as *;
+.recentTransaction {
+  overflow-x: hidden;
+  padding: 1rem;
+  width: 105%;
+  h4 {
+    font-size: fontSize(header-4);
+    color: $textColor3;
+    margin: 2rem 0px;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      span {
+        padding: 0.2rem 0.5rem;
+        background-color: $deepBlue;
+        color: white;
+        font-size: fontSize(header-5);
+        border-radius: 5px;
+      }
+    }
+    div.arrow {
+      width: 3rem;
+      height: 1.5rem;
+      background-color: color(blue);
+      position: relative;
+      text-align: center;
+      border-radius: 5px;
+
+      &:hover {
+        background: linear-gradient(rgb(0, 204, 255), blue);
+
+        #arrowForward {
+          transform: translateX(5px);
+        }
+        #arrowBackward {
+          transform: translateX(-5px);
+        }
+      }
+
+      #arrow {
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+  #carousel {
+    display: flex;
+    justify-content: space-between;
+    width: 295%;
+
+    @include minQ(915px) {
+      width: 190%;
+    }
+    transition: 2s ease-in-out;
+    gap: 2rem;
+
+    &.first {
+      animation-name: firstMove;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+    &.second {
+      animation-name: secondMove;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+    &.true {
+      animation-name: thridMove;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+    &.zero {
+      animation-name: comeBack;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes firstMove {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-35%);
+  }
+}
+
+//Transition Keys for Tablet and above
+@include minQ(915px) {
+  @keyframes firstMove {
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(-17.5%);
+    }
+  }
+}
+
+@keyframes secondMove {
+  from {
+    transform: translateX(-35%);
+  }
+
+  to {
+    transform: translateX(-52.5%);
+  }
+}
+@include minQ(915px) {
+  @keyframes secondMove {
+    from {
+      transform: translateX(-17.5%);
+    }
+
+    to {
+      transform: translateX(-35%);
+    }
+  }
+}
+
+@keyframes thridMove {
+  from {
+    transform: translateX(-52.5%);
+  }
+
+  to {
+    transform: translateX(-65%);
+  }
+}
+
+@include minQ(915px) {
+  @keyframes thridMove {
+    from {
+      transform: translateX(-35%);
+    }
+
+    to {
+      transform: translateX(-49.5%);
+    }
+  }
+}
+
+@keyframes comeBack {
+  from {
+    transform: translateX(-65%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@include minQ(915px) {
+  @keyframes comeBack {
+    from {
+      transform: translateX(-52.5%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
+  }
+}

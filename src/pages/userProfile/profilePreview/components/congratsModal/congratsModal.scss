@@ -1,0 +1,37 @@
+.congrats-modal {
+    display: flex;
+    width: fit-content;
+    padding: 20px;
+}
+.congrats-modal__content {
+    position: relative;
+    width: 100%;
+    img {
+        height: 50px;
+    }
+    h4 {
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        font-size: 1.3rem;
+    }
+    .body {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        p {
+            font-size: 0.7rem;
+            font-weight: 600;
+            
+        }
+    }
+}
+.action {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    button {
+        padding: 5px;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,23 @@
+@use "styles" as *;
+.certification-form {
+  .certification-form__form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    div > {
+      width: 90%
+    }
+    @include maxQ($tablet) {
+      flex-direction: column;
+      .form-group  {
+        width: 60%;
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .btn-add-ctn  small{
+      color: #004CFF;
+  }
+}

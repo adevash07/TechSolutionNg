@@ -1,0 +1,137 @@
+@use "styles" as *;
+
+.instantOffersCard {
+  padding: 20px;
+  box-shadow: 0 5px 20px color(blue, base10);
+  border-radius: 10px;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.4s;
+  max-width: 320px;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  &:hover {
+    transform: scaleY(1.1);
+    backface-visibility: hidden;
+  }
+
+  .instantOffersCard__clip {
+    position: absolute;
+    right: 15px;
+    top: -15px;
+    width: 70px;
+    height: 100px;
+    background-image: linear-gradient(color(blue, lighter), color(blue));
+    color: color(white);
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    padding: 15px 0 0 13px;
+    align-items: center;
+    clip-path: polygon(
+      0 15px,
+      10px 0,
+      70px 0,
+      70px 100px,
+      40px 70px,
+      10px 100px,
+      10px 15px
+    );
+    transform: scale(0.8) translate(18px, -9px);
+
+    span {
+      font-size: 0.9rem;
+    }
+
+    @include maxQ(1400px) {
+      transform: scale(0.7) translate(26px, -14px);
+    }
+
+    @include maxQ(1400px) {
+      transform: scale(0.6) translate(42px, -24px);
+    }
+  }
+
+  .instantOffersCard__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    // height: 20%;
+  }
+
+  .instantOffersCard__img {
+    width: 60px;
+  }
+
+  .instantOffersCard__name {
+    font-family: cera_pro_medium;
+    display: flex;
+    align-items: center;
+
+    svg {
+      color: white;
+      background-image: linear-gradient(color(blue, light), color(blue));
+      border-radius: 50%;
+      //   box-shadow: 0 0 15px color(blue, lighter);
+      margin-left: 10px;
+    }
+  }
+
+  .instantOffersCard__rating,
+  .instantOffersCard__jobs,
+  .instantOffersCard__reviews {
+    span:nth-child(1) {
+      font-size: 0.8rem;
+      margin-right: 10px;
+    }
+
+    span:nth-child(2) {
+      font-size: 0.8rem;
+      font-family: cera_pro_medium;
+      svg {
+        font-size: 0.6rem;
+        color: color(yellow);
+        margin-right: 3px;
+      }
+    }
+  }
+
+  .instantOffersCard__project {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .instantOffersCard__price {
+    font-size: 0.8rem;
+  }
+
+  > div:nth-of-type(2) {
+    display: flex;
+    margin: 10px 0;
+
+    div {
+      font-size: 0.8rem;
+    }
+
+    .instantOffersCard__days {
+      margin-right: 20px;
+    }
+  }
+
+  .instantOffersCard__paragraph {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    height: 40%;
+  }
+
+  .instantOffersCard__button {
+    .button-large {
+      padding: 5px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "styles" as *;
+
+.pastProjects {
+  display: none;
+
+  > div:nth-child(1) {
+    margin-bottom: 40px;
+  }
+}
+
+.pastProjects.active {
+  display: block;
+}

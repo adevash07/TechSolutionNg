@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="184" height="184" viewBox="0 0 184 184">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00d4ff"/>
+      <stop offset="1" stop-color="#004cff"/>
+    </linearGradient>
+    <filter id="Rectangle_1045" x="0" y="0" width="184" height="184" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#004cff" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Invoice_Icon" data-name="Invoice Icon" transform="translate(1104 -211)">
+    <g transform="matrix(1, 0, 0, 1, -1104, 211)" filter="url(#Rectangle_1045)">
+      <rect id="Rectangle_1045-2" data-name="Rectangle 1045" width="64" height="64" rx="17" transform="translate(60 55)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="invoice" transform="translate(-1064.218 283)">
+      <g id="Group_1601" data-name="Group 1601" transform="translate(40.218 0)">
+        <g id="Group_1600" data-name="Group 1600" transform="translate(0 0)">
+          <path id="Path_6849" data-name="Path 6849" d="M122.422,156.066h4.5a.7.7,0,0,0,0-1.406h-4.5a.7.7,0,0,0,0,1.406Z" transform="translate(-116.511 -144.388)" fill="#fff"/>
+          <path id="Path_6850" data-name="Path 6850" d="M131.136,222.579h-8.714a.7.7,0,0,0,0,1.406h8.714a.7.7,0,0,0,0-1.406Z" transform="translate(-116.589 -207.795)" fill="#fff"/>
+          <path id="Path_6851" data-name="Path 6851" d="M131.136,290.5h-8.714a.7.7,0,0,0,0,1.406h8.714a.7.7,0,0,0,0-1.406Z" transform="translate(-116.589 -271.202)" fill="#fff"/>
+          <path id="Path_6852" data-name="Path 6852" d="M64.216,24.514V2.64A2.508,2.508,0,0,0,61.853,0q-.086,0-.172,0H47.147A2.779,2.779,0,0,0,44.274,2.64V3.82H43.091A2.979,2.979,0,0,0,40.218,6.7V28.611a1.214,1.214,0,0,0,.676.972,1.027,1.027,0,0,0,1.149-.208l2.062-1.91,2.467,2.257a1,1,0,0,0,.676.278,1.066,1.066,0,0,0,.676-.278l2.434-2.257,2.434,2.257a.994.994,0,0,0,1.352,0l2.467-2.257,2.028,1.91a.8.8,0,0,0,1.014.208,1.049,1.049,0,0,0,.507-.972v-4.93l.406-.312,2.062,1.91a.966.966,0,0,0,.71.278.594.594,0,0,0,.338-.069A1.012,1.012,0,0,0,64.216,24.514Zm-5.408,3.333-1.589-1.6a.929.929,0,0,0-1.318-.035l-2.467,2.257-2.4-2.257a1.059,1.059,0,0,0-1.352,0l-2.434,2.257-2.467-2.257a1.093,1.093,0,0,0-1.453.035l-1.758,1.6V6.7a1.608,1.608,0,0,1,1.521-1.493H57.625A1.34,1.34,0,0,1,58.808,6.7ZM62.864,2.64V23.75l-1.69-1.6c-.27-.278-.338-.347-1.014-.243V6.7A2.707,2.707,0,0,0,57.625,3.82h-12V2.64a1.414,1.414,0,0,1,1.521-1.25H61.681a1.126,1.126,0,0,1,1.185,1.069A1.167,1.167,0,0,1,62.864,2.64Z" transform="translate(-40.218 0)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

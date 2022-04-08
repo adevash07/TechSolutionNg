@@ -1,0 +1,12 @@
+.talent-level {
+  display: flex;
+  justify-content: space-between;
+  .talent-level__ctn {
+    width: 45%;
+    .level {
+      color: #051f64;
+      font-size: 0.6rem;
+      font-weight: 600;;
+    }
+  }
+}

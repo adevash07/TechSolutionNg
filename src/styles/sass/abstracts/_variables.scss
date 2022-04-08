@@ -1,0 +1,110 @@
+// major colors
+
+$primary-color: #2f3133;
+// $liner-gradient: (
+// );
+
+$darkbluecolor: #004cff;
+$lightbluecolor: #1aa0ff;
+// minor colors
+
+$homesignupcolor: #38445e;
+
+$font-size: (
+  "header-1": 3.25rem,
+  "header-3": 2.3rem,
+);
+
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "bolder": 900,
+);
+
+$lightBlue: #1ab3ff;
+$lighterBlue: #d8f6ff;
+$deepBlue: #004cff;
+$textColor: #2f3133;
+$textColor2: #001243;
+$textColor3: #051f64;
+$lightBg: #f9fcfc;
+$deepBg: #38445e;
+$dashboardLightBlue: #ecf3fb;
+
+// $h1size
+// $h2size
+// $h3size
+// $h4size
+// $h5size
+// $h6size
+// $normalsize
+// $smallsize
+
+$btnShadow: 0 20px 50px #004cff33;
+$btnShadow2: 0 10px 30px #004cff1a;
+
+$colors: (
+  blue: (
+    base: #004cff,
+    light: #1ab3ff,
+    light-1: #00aaff,
+    lighter: #1ad9ff,
+    base5: rgba(0, 76, 255, 0.05),
+    base10: rgba(0, 76, 255, 0.1),
+    base70: rgba(0, 76, 255, 0.7),
+    dark: #38445e,
+    deep: #051f64,
+    deeper: #001243,
+    lightdeep: rgba(0, 18, 67, 0.05),
+  ),
+  white: (
+    base: #fff,
+    dark1: #f9fcfc,
+    dark2: #f4f5f7,
+    dark3: #ecf3fb,
+  ),
+  green: (
+    base: #00ca4e,
+    lightbase: #00ca4e33,
+    light: #00d65d,
+    lighter: #ebfffc,
+  ),
+  red: (
+    base: #ff2b2b,
+    light: #ff4e2b,
+    lighter: rgba(255, 0, 0, 0.35),
+    pinkish: #e73a5e,
+  ),
+  black: (
+    base: #455a64,
+    light: #85979f,
+    shade: #d7d8d8,
+    lighter: #a2a2a2,
+    lightest: #a2a2a24d,
+  ),
+  yellow: (
+    base: #faa515,
+    medium: #ffcc00,
+    lightbase: #faa51533,
+  ),
+);
+
+$font-sizes: (
+  "header-1": 3.25rem,
+  "header-2": 2.3rem,
+  "header-3": 2rem,
+  "header-4": 1.15rem,
+  "header-5": 1.05rem,
+);
+
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "thick": 600,
+  "bold": 700,
+  "bolder": 900,
+);
+
+// Screen sizes
+$tablet: 768px;

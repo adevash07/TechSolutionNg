@@ -1,0 +1,68 @@
+@use "../../styles" as *;
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 40px #004cff1a;
+  z-index: 6;
+
+  .header__container {
+    width: 93%;
+    // max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -2%;
+    align-items: center;
+    z-index: 4;
+
+    @include maxQ(1200px) {
+      margin-left: -3%;
+      width: 95%;
+    }
+
+    @include maxQ(1024px) {
+      margin-left: -2%;
+      width: 96%;
+    }
+  }
+
+  .header__brand {
+    display: flex;
+    align-items: center;
+
+    @include maxQ(1024px) {
+      width: 160px;
+    }
+
+    img {
+      transform: translateY(7px);
+
+      @include maxQ(1024px) {
+        transform: translateY(3px);
+      }
+    }
+  }
+}
+
+.header.none {
+  box-shadow: none;
+  background-color: transparent;
+
+  @include maxQ(992px) {
+    position: static;
+    background-color: #ebfffc;
+    padding: 40px 0;
+
+    .header__container {
+      width: 85%;
+    }
+  }
+}

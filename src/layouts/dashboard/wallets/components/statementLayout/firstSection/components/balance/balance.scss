@@ -1,0 +1,79 @@
+@use "styles" as *;
+.balance {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding: 3rem;
+  box-shadow: 5px 10px 44px -14px rgba(100, 100, 100, 0.3);
+  border-radius: 30px;
+  opacity: 1;
+  background-color: white;
+  color: color(black, lighter);
+
+  @include minQ(1023px) {
+    padding: 1rem;
+  }
+
+  .balance__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: fontSize(header-6);
+
+    span:nth-child(2) svg {
+      vertical-align: middle;
+    }
+  }
+
+  .balance__figure {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1rem;
+    color: $textColor3;
+
+    span:nth-child(1) {
+      font-weight: weight(thick);
+    }
+    span:nth-child(2) {
+      font-weight: weight(bolder);
+      font-size: fontSize(header-2);
+    }
+  }
+
+  .balance__difference {
+    color: color(green, base);
+  }
+  hr {
+    margin: 0.5rem 0;
+    width: 70%;
+    align-self: center;
+
+    @include minQ(1023px) {
+      width: unset;
+      align-self: unset;
+    }
+  }
+
+  p {
+    width: 70%;
+    align-self: center;
+    text-align: center;
+    @include minQ(1023px) {
+      width: unset;
+      align-self: unset;
+      text-align: unset;
+    }
+  }
+
+  button {
+    margin: 1rem 0px;
+    width: 10rem;
+    padding: 13px 15px;
+    align-self: flex-end;
+    @include minQ(1023px) {
+      align-self: center;
+    }
+  }
+}

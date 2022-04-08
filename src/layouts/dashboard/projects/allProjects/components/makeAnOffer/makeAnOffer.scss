@@ -1,0 +1,338 @@
+@use "styles" as *;
+
+.makeAnOffer {
+  .makeAnOffer__arrowContainer {
+    margin-bottom: 20px;
+    div {
+      width: 40px;
+      height: 40px;
+      background-color: color(white);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 10px 20px #004cff0d;
+
+      svg {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .makeAnOffer__contentContainer {
+    background-color: color(white);
+    padding: 20px 40px;
+    border-radius: 15px;
+  }
+
+  .makeAnOffer__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .makeAnOffer__header {
+    font-family: muli;
+    font-size: 1.7rem;
+  }
+
+  .makeAnOffer__headDetails {
+    display: flex;
+
+    > div {
+      &:nth-child(2) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .makeAnOffer__report {
+    background-color: lighten(color(blue), 45%);
+    color: color(blue);
+    padding: 5px 20px;
+    display: flex;
+    font-family: muli;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .makeAnOffer__headerTime {
+    background-color: lighten(color(red), 35%);
+    color: color(red);
+    padding: 5px 20px;
+  }
+
+  .makeAnOffer__info {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeAnOffer__infoHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .makeAnOffer__paragraph {
+    color: color(black);
+    font-family: muli;
+  }
+
+  .makeAnOffer__skills {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeAnOffer__skillsHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 20px;
+      color: color(black);
+      transform: translate(0px, -2px);
+    }
+  }
+
+  .makeAnOffer__skillsContent {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+  }
+
+  .makeAnOffer__priceFormat {
+    display: flex;
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeAnOffer__price,
+  .makeAnOffer__format {
+    display: flex;
+
+    @include maxQ(991px) {
+      width: 50%;
+    }
+  }
+
+  .makeAnOffer__price {
+    width: 25%;
+
+    @include maxQ(991px) {
+      width: 50%;
+    }
+  }
+
+  .makeAnOffer__priceIcon,
+  .makeAnOffer__formatIcon {
+    color: color(black);
+    margin-right: 24px;
+  }
+
+  .makeAnOffer__priceHeader,
+  .makeAnOffer__formatHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .makeAnOffer__priceAmount,
+  .makeAnOffer__formatAmount {
+    color: color(black);
+    font-family: muli;
+  }
+
+  .makeAnOffer__files {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeAnOffer__filesHeader {
+    display: flex;
+    align-items: center;
+    font-family: muli;
+    color: color(black);
+
+    svg {
+      transform: translate(10px, 4px);
+    }
+  }
+
+  .makeAnOffer__client {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeAnOffer__clientHeader {
+    font-family: muli;
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+  .makeAnOffer__clientdetails {
+    display: flex;
+    align-items: center;
+  }
+
+  .makeAnOffer__clientPlace,
+  .makeAnOffer__rating,
+  .makeAnOffer__clientJobOpenings,
+  .makeAnOffer__clientMembershipDate {
+    color: color(black);
+    font-family: muli;
+    margin: 7px 0;
+  }
+
+  .makeAnOffer__clientLocation {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 24px;
+    }
+
+    @include maxQ(991px) {
+      width: 50%;
+    }
+  }
+
+  .makeAnOffer__clientRating {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 24px;
+    }
+
+    @include maxQ(991px) {
+      width: 50%;
+    }
+  }
+
+  .makeAnOffer__verification {
+    padding: 15px 0;
+  }
+
+  .makeAnOffer__verificationHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .makeAnOffer__verificationItem {
+    position: relative;
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+    margin: -1px 0;
+    width: 33%;
+    justify-content: space-between;
+
+    @include maxQ(991px) {
+      width: 50%;
+    }
+
+    svg {
+      width: 33px;
+      height: 33px;
+      transform: translate(0, 9px);
+    }
+
+    &:before {
+      content: "";
+      top: calc(50% - 3px);
+      left: 3px;
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background-color: color(blue, deeper);
+      border-radius: 50%;
+    }
+  }
+
+  .makeAnOffer__verificationName {
+    color: color(black);
+  }
+
+  .makeAnOffer__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 25px 0;
+
+    .button {
+      &:last-child {
+        margin-left: 80px;
+      }
+    }
+  }
+
+  .blackColor {
+    fill: color(blue, deeper);
+  }
+}

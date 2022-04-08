@@ -1,0 +1,58 @@
+@use "styles/index" as *;
+
+.statusCard {
+  position: absolute;
+  background-color: color(white);
+  box-shadow: 0 10px 30px #004cff1a;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1.25em 1em 1.5em;
+  right: -1em;
+  z-index: 2;
+  width: 12rem;
+  border-radius: 20px;
+
+  //each present status
+  &__item {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  &__lists {
+    width: 100%;
+  }
+
+  //present status indicator
+  &__indicator {
+    width: 21px;
+    height: 19px;
+    border-radius: 50%;
+    margin-right: 15px;
+
+    &--busy {
+      background-color: color(red);
+    }
+    &--online {
+      background-color: color(green);
+    }
+    &--offline {
+      background-color: #85979f;
+    }
+    &--away {
+      background-color: #f08f20;
+    }
+  }
+
+  &__label {
+    width: 90px;
+  }
+
+  &__link {
+    color: color(blue);
+    font-size: calc(100% - 0.15rem);
+  }
+}

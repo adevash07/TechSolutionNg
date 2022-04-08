@@ -1,0 +1,72 @@
+@use "styles" as *;
+
+.linkCardSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 30px;
+  padding: 0 15px;
+  position: relative;
+
+  // @include maxQ(1023px) {
+  //   width: 150%;
+  // }
+
+  @include maxQ(992px) {
+    width: 150%;
+  }
+
+  @include maxQ(800px) {
+    width: 160%;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: -15px;
+    background-color: color(blue, base5);
+    width: 25%;
+    left: 0;
+    height: calc(100% + 30px);
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .linkcard:nth-child(1) {
+    .linkcard__child1 {
+      position: relative;
+    }
+
+    .linkcard__textSmall {
+      position: absolute;
+      right: 0;
+      bottom: -15px;
+      color: #00ca4e;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.linkCardSection.card1 {
+  &:before {
+    left: 0;
+  }
+}
+
+.linkCardSection.card2 {
+  &:before {
+    left: 25%;
+  }
+}
+
+.linkCardSection.card3 {
+  &:before {
+    left: 50%;
+  }
+}
+
+.linkCardSection.card4 {
+  &:before {
+    left: 75%;
+  }
+}

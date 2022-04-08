@@ -1,0 +1,100 @@
+@use "styles" as *;
+
+.landingSign {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  margin: 50px 0;
+  .landingSign__container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #38445e;
+    border-radius: 20px;
+    color: color(white);
+    box-shadow: 0px 10px 25px #004cff26;
+
+    @include maxQ(1199px) {
+      width: 100%;
+      border-radius: 0;
+      padding: 60px 0;
+    }
+
+    @include maxQ(992px) {
+      width: 100%;
+      border-radius: 0;
+      padding: 60px 0;
+    }
+  }
+
+  .landingSign__header {
+    font-size: 2rem;
+    font-family: cera_pro_Bold;
+    margin-bottom: 15px;
+  }
+
+  .landingSign__paragraph {
+    margin-bottom: 15px;
+  }
+
+  .landingSign__btn {
+    .button {
+      padding: 10px 48px;
+    }
+
+    .button__icon {
+      svg {
+        background: white;
+        color: #004cff;
+        border-radius: 50%;
+        width: 23px;
+        height: 23px;
+        padding: 4px;
+      }
+    }
+
+    &:hover {
+      .button {
+        // min-width: 150px;
+        .button__text1 {
+          display: none;
+        }
+        .button__text2Container {
+          display: flex;
+        }
+
+        .button__text2 {
+          animation: btnOpacity 0.5s ease-in-out forwards;
+        }
+      }
+
+      // animation starts for animateBtn
+      @keyframes btnOpacity {
+        0% {
+          transform: translateX(10px);
+          opacity: 0.2;
+        }
+
+        100% {
+          transform: translateX(-15px);
+          opacity: 1;
+        }
+      }
+
+      @keyframes btnLeft {
+        0% {
+          right: 10px;
+          top: 4px;
+        }
+
+        100% {
+          right: -35px;
+          top: 4px;
+        }
+      }
+    }
+  }
+}

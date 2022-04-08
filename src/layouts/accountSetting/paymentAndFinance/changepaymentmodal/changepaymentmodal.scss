@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.changePayment {
+  .changePayment__Modal {
+    background-color: white;
+    padding: 20px;
+
+    width: 75%;
+    border-radius: 15px;
+    // changepayment__Header start here
+    .changepayment__Header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h4 {
+        border-bottom: 2px solid #004cff;
+      }
+      i {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.041);
+        padding: 5px;
+        background-color: white;
+        border-radius: 50%;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+    p {
+      margin-top: 20px;
+      font-size: 13px;
+      span {
+        color: #004cff;
+      }
+    }
+    // changepayment__Header end here
+
+    //  changepayment__Button start here
+    .changepayment__Button {
+      display: flex;
+      justify-content: flex-end;
+      margin: 10px 0;
+      .button {
+        padding: 3px 15px;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        font-size: 12px;
+      }
+      .btn__brown {
+        @extend .button;
+        margin-right: 40px;
+
+        background-color: rgba(0, 0, 0, 0.356);
+      }
+      .btn__blue {
+        @extend .button;
+
+        background-image: linear-gradient(#1ab3ff, #004cff);
+      }
+    }
+  }
+  //  changepayment__Button end here
+}

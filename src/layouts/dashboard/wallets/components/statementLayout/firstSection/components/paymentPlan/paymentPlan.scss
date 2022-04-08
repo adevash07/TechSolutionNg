@@ -1,0 +1,54 @@
+@use "styles" as *;
+.paymentPlan {
+  background-color: white;
+  box-shadow: 5px 10px 44px -14px rgba(100, 100, 100, 0.3);
+  padding: 1rem 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-radius: 30px;
+  opacity: 1;
+  color: color(black, lighter);
+  margin-top: 4rem;
+  align-items: center;
+
+  h6 {
+    font-size: fontSize(header-4);
+  }
+
+  @include minQ(1349px) {
+    flex-direction: column;
+    margin-top: 0px;
+    align-items: unset;
+    width: fit-content;
+
+    h6 {
+      font-size: 0.67em;
+    }
+  }
+  .paymentPlan__current {
+    p {
+      margin: 8px 0px;
+
+      &:nth-child(2) {
+        color: $textColor3;
+        font-weight: 600;
+      }
+    }
+    img {
+      height: 15px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  button {
+    margin: 0px 0px 0px 0px;
+    width: 10rem;
+    padding: 13px 15px;
+    align-self: center;
+
+    @include minQ(1349px) {
+      margin-bottom: 2rem;
+    }
+  }
+}

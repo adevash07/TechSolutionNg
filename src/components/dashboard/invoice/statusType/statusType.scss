@@ -1,0 +1,53 @@
+@use "styles/index" as *;
+
+.pending {
+  background-color: color(yellow, medium);
+}
+.cancelled {
+  background-color: lighten(#ff2b2b, 25%);
+}
+.confirmed {
+  background-color: color(blue, light-1);
+}
+.all {
+  background-color: color(blue, deeper);
+}
+
+.pending,
+.cancelled,
+.confirmed,
+.all {
+  box-shadow: 0px 10px 40px #004cff1a;
+  border-radius: 5px;
+  padding: 4px 0.95em;
+  width: 100px;
+}
+
+.resend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #004cff1a;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #004cff1a;
+  text-transform: capitalize;
+  gap: 0.65em;
+  padding: 0.3em 0.75em;
+  width: 100px;
+
+  &__icon {
+    background-color: color(blue);
+    border-radius: 50%;
+    color: color(white);
+    height: 20px;
+    align-self: center;
+    padding-bottom: 1.35em;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+    font-weight: 900;
+  }
+
+  &__text {
+    color: color(blue);
+  }
+}

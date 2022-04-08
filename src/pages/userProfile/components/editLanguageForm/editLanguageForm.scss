@@ -1,0 +1,12 @@
+.edit-lang {
+    width: 50%;
+  .flex-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  small {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,22 @@
+@use "styles/index.scss" as *;
+// privacy__element start here
+.privacy__element {
+  background-color: white;
+  color: color(black, light);
+  text-align: center;
+  padding: 15px 40px;
+  border-radius: 62px;
+  margin: 0 0 30px 0;
+  font-size: fontSize(header-6);
+  font-weight: weight(thick);
+  cursor: pointer;
+
+  @include minQ(1023px) {
+    text-align: left;
+  }
+  &.privacy__element--active {
+    color: blue;
+    box-shadow: 10px 10px 30px #004cff0d;
+  }
+}
+// privacy__element end here

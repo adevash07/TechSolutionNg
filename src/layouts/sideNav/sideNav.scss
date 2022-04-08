@@ -1,0 +1,12 @@
+.sidenav {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 250px;
+  padding: 130px 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 1px 0 40px rgba(14, 14, 73, 0.274);
+  overflow-y: auto;
+}

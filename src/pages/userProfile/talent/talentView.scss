@@ -1,0 +1,108 @@
+@use "styles" as *;
+.talent-view {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 20px;
+  margin-bottom: 2%;
+}
+.talent-view__main {
+  width: 100%;
+  form {
+    width: 100%;
+    @include maxQ($tablet) {
+      .action-btns {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .page-heading {
+    width: 75%;
+    @include maxQ($tablet) {
+      width: 100%;
+    }
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    @include maxQ($tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+  form .container-first {
+    margin-top: 2%;
+    padding: 30px;
+    width: 75%;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    small {
+      color: 001243;
+      font-weight: 600;
+    }
+    @include maxQ($tablet) {
+      width: 100%;
+    }
+  }
+  .container-second {
+    margin-top: 2%;
+    width: 75%;
+    @include maxQ($tablet) {
+      width: 100%;
+    }
+  }
+}
+.talent-view aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 6%;
+}
+.talent-view .skills-container {
+  margin-top: 20px;
+}
+.talent-view .skills {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.form-group--lg {
+  width: 100%;
+  margin-top: 20px;
+}
+.talent-note,
+.video-note {
+  margin-top: 12px;
+  p,
+  li {
+    font-size: 0.7rem;
+    color: #051f64;
+    font-weight: 600;
+    span {
+      color: #004cff;
+    }
+  }
+}
+.note-col {
+  width: 20%;
+  margin-top: 2%;
+  @include maxQ($tablet) {
+    width: 100%;
+    margin: 10px 0px;
+  }
+}
+.video-note ul {
+  padding: 10px;
+  li::before {
+    content: "\2022";
+    color: #051f64;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.3rem;
+
+    font-size: 1.3em;
+  }
+}

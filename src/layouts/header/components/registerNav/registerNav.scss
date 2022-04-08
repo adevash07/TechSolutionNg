@@ -1,0 +1,21 @@
+@use "styles" as *;
+
+.registerNav {
+  display: flex;
+  cursor: pointer;
+
+  @include maxQ(992px) {
+    display: none;
+  }
+
+  .registerNav__span {
+    font-family: muli;
+    font-weight: 500;
+    color: color(blue, deeper);
+
+    &:nth-child(2) {
+      margin-left: 10px;
+      color: color(blue);
+    }
+  }
+}

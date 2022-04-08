@@ -1,0 +1,148 @@
+@use "styles" as *;
+
+.currentProjectsModalBody {
+  background-color: color(white);
+  display: flex;
+  font-family: muli;
+  width: 65%;
+  border-radius: 20px;
+
+  .currentProjectsModalBody__aside {
+    width: 25%;
+    padding-top: 37px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .currentProjectsModalBody__imgContainer {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .currentProjectsModalBody__asideDetails {
+    margin-top: 20px;
+    width: 130px;
+  }
+
+  .currentProjectsModalBody__chat,
+  .currentProjectsModalBody__reviews,
+  .currentProjectsModalBody__membership {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+
+  .currentProjectsModalBody__reviews,
+  .currentProjectsModalBody__membership {
+    position: relative;
+    padding-left: 20px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      background-color: color(blue);
+      border-radius: 50%;
+      left: 0;
+      top: calc(50% - 3px);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .currentProjectsModalBody__body {
+    padding: 30px 30px 30px 20px;
+    border-left: 1px solid lighten(color(black, light), 30%);
+  }
+
+  .currentProjectsModalBody__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .currentProjectsModalBody__headClose {
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .currentProjectsModalBody__paragraph {
+    margin-bottom: 10px;
+  }
+
+  .currentProjectsModalBody__details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .currentProjectsModalBody__detailsHeader {
+    font-weight: 600;
+  }
+
+  .currentProjectsModalBody__detailsBody {
+    font-size: 0.8rem;
+    color: color(black);
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    svg {
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+  }
+
+  .currentProjectsModalBody__status {
+    margin: 10px 0 30px;
+  }
+
+  .currentProjectsModalBody__statusHeader {
+    font-weight: 600;
+  }
+
+  .currentProjectsModalBody__statusDetails {
+    display: grid;
+    margin: 10px 0 10px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+
+    .projectStatus {
+      &:last-child {
+        .projectStatus__dash {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .currentProjectsModalBody__updateHeader {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .currentProjectsModalBody__updateCheckbox {
+    .formgroup.check {
+      margin-bottom: 10px;
+    }
+
+    .formgroup--label {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .currentProjectsModalBody__btn {
+    display: flex;
+    margin: 20px 0;
+    justify-content: flex-end;
+  }
+}

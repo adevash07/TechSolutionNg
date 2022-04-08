@@ -1,0 +1,188 @@
+@use "styles" as *;
+
+.dashboardSideNav {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: white;
+  width: 300px;
+  padding: 120px 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  // box-shadow: 1px 2px 10px rgba(14, 14, 73, 0.274);
+  box-shadow: 10px 0px 40px #004cff1a;
+  overflow-y: auto;
+  z-index: 1;
+
+  @include maxQ(1500px) {
+    width: 250px;
+  }
+
+  @include maxQ(1200px) {
+    width: 200px;
+  }
+
+  @include maxQ(1199px) {
+    width: 90px;
+    transition: 0.3s ease-in-out;
+    padding: 105px 10px 10px;
+
+    &.showNav {
+      width: 235px;
+      z-index: 4;
+    }
+  }
+
+  // @include maxQ(1024px) {
+  //   width: 90px;
+  //   transition: 0.3s ease-in-out;
+  //   padding: 105px 10px 10px;
+
+  //   &.showNav {
+  //     width: 235px;
+  //     z-index: 4;
+  //   }
+  // }
+
+  .dashboardSideNav__container {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    height: fit-content;
+    justify-content: space-between;
+
+    // @include maxHeight(1024px) {
+    //   height: 60vh;
+    // }
+
+    @include maxHeight(750px) {
+      height: 90vh;
+    }
+
+    @include maxHeight(650px) {
+      height: 100vh;
+    }
+
+    // @include maxQH(1024px, 1400px) {
+    //   height: 70vh;
+    // }
+
+    // @include maxQH(1024px, 900px) {
+    //   height: 80vh;
+
+    //   &.showNav {
+    //     height: fit-content;
+    //   }
+    // }
+
+    // @include maxQH(1024px, 700px) {
+    //   height: 70vh;
+
+    //   // &.showNav {
+    //   //   height: fit-content;
+    //   // }
+    // }
+
+    @include maxQH(1199px, 1400px) {
+      height: 70vh;
+    }
+
+    @include maxQH(1199px, 900px) {
+      height: 80vh;
+
+      &.showNav {
+        height: fit-content;
+      }
+    }
+
+    @include maxQH(1199px, 700px) {
+      height: 70vh;
+
+      // &.showNav {
+      //   height: fit-content;
+      // }
+    }
+
+    .dashboardSideNav__hamburger {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      margin-left: 10px;
+
+      svg {
+        cursor: pointer;
+        width: 46px;
+        height: 45px;
+        transition: 0.3s ease-in-out;
+      }
+
+      &.showNav {
+        justify-content: flex-start;
+      }
+    }
+
+    .dashboardSideNav__links {
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .dashboardnavLink:nth-child(1) {
+        .dashboardnavLink--container {
+          .info {
+            span:nth-child(1) {
+              img {
+                transform: translateY(10px);
+              }
+            }
+          }
+        }
+      }
+
+      @include minHeight(900px) {
+        height: 80%;
+      }
+
+      @include minHeight(1000px) {
+        height: 70%;
+      }
+    }
+
+    .dashboardSideNav__contact {
+      height: 20%;
+      padding-left: 35px;
+
+      span {
+        display: inline-block;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        color: color(black, light);
+      }
+
+      h4 {
+        font-family: cera_pro_medium;
+        font-size: 1.4rem;
+      }
+
+      // @include maxQ(1024px) {
+      //   display: none;
+      //   margin: 15px 0 30px;
+
+      //   &.showNav {
+      //     display: block;
+      //   }
+      // }
+
+      @include maxQ(1199px) {
+        display: none;
+        margin: 15px 0 30px;
+
+        &.showNav {
+          display: block;
+        }
+      }
+    }
+  }
+}

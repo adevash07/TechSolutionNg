@@ -1,0 +1,56 @@
+.customCheckBox {
+  --active: #ebebeb;
+  --input-border: #d4d4d4;
+  --background: #fff;
+  --active-inner: #004cff;
+  --shadow-inner: rgba(18, 22, 33, 0.1);
+  height: 21px;
+  outline: none;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  height: 21px;
+  width: 21px;
+  border: 1px solid var(--input-border);
+  background-color: var(--background);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border-radius: 50%;
+
+  //after used for the effect of the checkbox mark
+  &::after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.2s ease, filter 0.3s ease;
+    opacity: 0;
+
+    width: 5px;
+    height: 12px;
+    border: 2px solid var(--active-inner);
+    //gives the checked mark
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    transform: rotate(20deg);
+  }
+
+  &:checked {
+    background: var(--active);
+    border-color: var(--active);
+    &::after {
+      // filter: drop-shadow(0 1px 2px var(--shadow-inner));
+      transition: opacity 0.3s ease, filter 0.3s ease,
+        transform 0.6s cubic-bezier(0.175, 0.88, 0.32, 1.2);
+      transform: rotate(43deg);
+      opacity: 1;
+    }
+
+    & + label {
+      color: #d4d4d4;
+    }
+  }
+}

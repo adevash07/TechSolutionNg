@@ -1,0 +1,15 @@
+.link {
+  color: black;
+  font-weight: 600;
+  list-style: none;
+}
+
+.link.nav {
+  font-weight: 700;
+}
+
+.link-blue {
+  @extend .link;
+
+  color: blue;
+}

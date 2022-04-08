@@ -1,0 +1,12 @@
+.over-view {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  p.overview {
+    font-size: 0.7rem;
+    color: #001243;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,219 @@
+@use "styles" as *;
+
+/**************************************
+Start: Styles for dasboard side nav component
+**************************************/
+.dashboardnavLink {
+  display: flex;
+  margin-bottom: 18px;
+  justify-content: flex-end;
+  transition: 0.4s;
+  color: #051f64;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+
+  @include maxQ(1200px) {
+    justify-content: flex-start;
+    padding-left: 8px;
+  }
+
+  // @include maxQ(1024px) {
+  //   padding-left: 0;
+  //   // margin-bottom: 14px;
+
+  //   @include minHeight(900px) {
+  //     margin-bottom: 30px;
+  //   }
+  // }
+
+  @include maxQ(1199px) {
+    padding-left: 0;
+    // margin-bottom: 14px;
+
+    @include minHeight(900px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include minHeight(900px) {
+    margin-bottom: 30px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: transparent;
+    z-index: 2;
+    left: 0;
+  }
+
+  .dashboardnavLink__container {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 75px;
+
+    @include maxQ(1200px) {
+      width: 100%;
+    }
+
+    // @include maxQ(1024px) {
+    //   width: 60px;
+    //   height: 60px;
+
+    //   &.showNav {
+    //     width: 100%;
+    //   }
+    // }
+
+    @include maxQ(1199px) {
+      width: 60px;
+      height: 60px;
+
+      &.showNav {
+        width: 100%;
+      }
+    }
+  }
+
+  .dashboardnavLink__content {
+    display: flex;
+    align-items: center;
+
+    // @include maxQ(1024px) {
+    //   justify-content: center;
+    //   width: 100%;
+
+    //   &.showNav {
+    //     justify-content: flex-start;
+    //     padding-left: 10px;
+    //   }
+    // }
+
+    @include maxQ(1199px) {
+      justify-content: center;
+      width: 100%;
+
+      &.showNav {
+        justify-content: flex-start;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .dashboardnavLink__image {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(0, 204, 255), blue);
+
+    img {
+      transform: translateY(5px);
+      max-width: none;
+
+      // @include maxQ(1024px) {
+      //   transform: translate(1px, 8px);
+      // }
+      transform: translate(1px, 8px);
+
+      @include maxQ(1199px) {
+        transform: translate(1px, 8px);
+      }
+    }
+
+    // @include maxQ(1024px) {
+    //   width: 50px;
+    //   height: 50px;
+    //   margin-right: -7px;
+
+    //   &.showNav {
+    //     margin-right: 10px;
+    //   }
+    // }
+
+    @include maxQ(1199px) {
+      width: 50px;
+      height: 50px;
+      margin-right: -7px;
+
+      &.showNav {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .dashboardnavLink__text {
+    // color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: cera_pro_medium;
+
+    // @include maxQ(1024px) {
+    //   display: none;
+
+    //   &.showNav {
+    //     display: inline;
+    //   }
+    // }
+
+    @include maxQ(1199px) {
+      display: none;
+
+      &.showNav {
+        display: inline;
+      }
+    }
+  }
+
+  &.active {
+    box-shadow: 2px 2px 20px rgba(38, 59, 58, 0.3);
+    border-radius: 10px;
+
+    .dashboardnavLink__container {
+      &:after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        right: -20px;
+        top: calc(50% - 20px);
+        z-index: -1;
+        background-image: linear-gradient(blue, rgb(0, 204, 255));
+
+        @include maxQ(1200px) {
+          right: -30px;
+        }
+
+        // @include maxQ(1024px) {
+        //   display: none;
+        // }
+
+        @include maxQ(1199px) {
+          display: none;
+        }
+      }
+
+      &.showNav {
+        &:after {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+/**************************************
+End: Styles for dasboard side nav component
+**************************************/

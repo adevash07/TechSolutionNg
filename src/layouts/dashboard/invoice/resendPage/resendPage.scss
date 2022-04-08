@@ -1,0 +1,28 @@
+@use "styles/index" as *;
+
+.invoiceInputs {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+}
+
+.resendPage__header {
+  padding-block-end: 2em;
+  padding-block-start: 2em;
+  @include dFlexRow-AlignCenter;
+  font-size: 1.25rem;
+
+  &__label {
+    font-size: inherit;
+    margin-left: 1em;
+  }
+}
+
+.instruction {
+  padding: 3em 0;
+  font-size: 1.25rem;
+
+  &__text {
+    color: #85979f;
+    font-weight: 900;
+  }
+}

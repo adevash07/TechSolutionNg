@@ -1,0 +1,42 @@
+@use "styles/index.scss" as *;
+//  penComponent start here
+.penComponent {
+  background-color: white;
+  // width: 300px;
+  // width: 100%;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-left: 30px;
+  width: 20rem;
+  // border: 1px solid red;
+}
+.penComponent__Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 10px;
+    color: color(black, light);
+    opacity: 0.8;
+  }
+}
+.penComponentIcon__Pen {
+  box-shadow: 0px 10px 30px #004cff21;
+  background-color: white;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $textColor3;
+}
+.penComponent__Body {
+  padding-top: 10px;
+  font-weight: bold;
+  color: $textColor3;
+  font-size: fontSize(header-6);
+  opacity: 0.8;
+}
+//  penComponent end here

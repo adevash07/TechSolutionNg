@@ -1,0 +1,27 @@
+@use "styles/index" as *;
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  position: relative;
+  padding: 1em 1em;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+
+    &--item {
+      background-color: #455a641a;
+      text-align: center;
+      padding: 0.45em 0.85em;
+      border-radius: 1.5rem;
+      letter-spacing: 1px;
+      font-size: calc(100% - 15%);
+      &:not(:first-child) {
+        margin-left: 0.56em;
+      }
+    }
+  }
+}

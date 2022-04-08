@@ -1,0 +1,143 @@
+@use "styles/index.scss" as *;
+.tr {
+  border-bottom: 0px;
+  margin: 2rem 0px;
+  th,
+  td {
+    padding: 0px;
+    p {
+      display: flex;
+      gap: 10px;
+      span {
+        display: inline-block;
+      }
+      .userName {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        span:nth-child(1) {
+          color: $textColor2;
+        }
+        span:nth-child(2) {
+          color: color(black, lighter);
+          font-weight: weight(regular);
+        }
+      }
+      .imgCon {
+        height: 4.5rem;
+        border-radius: 100%;
+        display: inline-block;
+        img {
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}
+//Data for Tabs style
+.dataTabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+
+  border: 1px solid #b3c9ff;
+  border-radius: 10px;
+  padding: 1rem;
+  .dataTabs__Input {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    p:nth-child(1) {
+      color: color(black, light);
+    }
+    .user {
+      display: flex;
+      margin-top: 1rem;
+    }
+    .amount {
+      margin-bottom: 10%;
+    }
+  }
+  .userName {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    span:nth-child(1) {
+      color: $textColor2;
+    }
+    span:nth-child(2) {
+      color: color(black, lighter);
+      font-weight: weight(regular);
+    }
+  }
+  .imgCon {
+    height: 4rem;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    img {
+      border-radius: 100px;
+      height: 100%;
+    }
+  }
+  svg {
+    vertical-align: middle;
+  }
+}
+
+//placeholder Styles
+%bi {
+  vertical-align: top;
+  color: white;
+}
+
+#biLeft {
+  @extend %bi;
+  background-color: color(green, light);
+  border: 1px solid color(green, light);
+  border-radius: 100%;
+  path:nth-child(2) {
+    fill: white;
+  }
+}
+
+#biRight {
+  @extend %bi;
+  background-color: color(yellow);
+  border: 1px solid color(yellow);
+  border-radius: 100%;
+  path:nth-child(2) {
+    fill: white;
+  }
+}
+
+//Cursor styles for data arrows
+.downSpan {
+  background-color: color(green, lighter);
+  padding: 2px 20px 2px 15px;
+  border-radius: 10px;
+  color: color(green);
+  width: fit-content;
+  @include minQ(770px) {
+    padding: 5px 20px 5px 15px;
+  }
+}
+
+.upSpan {
+  background-color: color(yellow, lightbase);
+  padding: 2px 20px 2px 15px;
+  border-radius: 20px;
+  color: color(yellow);
+  width: fit-content;
+  @include minQ(770px) {
+    padding: 5px 20px 5px 15px;
+  }
+}
+
+.dropdown {
+  width: 500%;
+  top: 3em;
+}

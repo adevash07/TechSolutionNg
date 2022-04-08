@@ -1,0 +1,29 @@
+.customSelect {
+  position: relative;
+  &__input {
+    margin-bottom: 2em;
+    font-size: 1rem;
+    padding: 0.45em;
+    outline: none;
+    border: 0;
+    background-color: #f4f5f7;
+    border-radius: 16px;
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Safari, Chrome, Opera */
+    -webkit-appearance: none;
+    width: 110px;
+
+    /* for IE10 */
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  &__arrowDown {
+    position: absolute;
+    top: 0.5rem;
+    right: 3.5rem;
+    pointer-events: none;
+  }
+}

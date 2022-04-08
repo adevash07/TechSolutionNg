@@ -1,0 +1,70 @@
+@use "styles" as *;
+
+/**************************************
+*********** Styles for Rank component
+**************************************/
+.dashboardRank {
+  background-color: $dashboardLightBlue;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include maxQ(1200px) {
+    padding: 10px;
+  }
+
+  .dashboardRank__grade {
+    // line-height: 40px
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    font-family: muli;
+    color: white;
+    font-weight: 600;
+    background-image: linear-gradient(180deg, #1a9fff 0%, #004cff 100%);
+    border-radius: 5px;
+
+    @include maxQ(1300px) {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include maxQ(1100px) {
+      width: 37px;
+      height: 37px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .dashboardRank__details {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+  }
+
+  .dashboardRank__header {
+    font-family: muli;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: color(blue, deep);
+
+    @include maxQ(1100px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .dashboard__headerSpan {
+    font-size: 0.7rem;
+  }
+
+  .dashboardRank__rankName {
+    font-family: muli;
+    font-size: 0.7rem;
+    color: color(black, light);
+  }
+}

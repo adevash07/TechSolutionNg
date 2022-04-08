@@ -1,0 +1,94 @@
+@use "styles" as *;
+
+.heroSection__scrollDown {
+  position: absolute;
+  bottom: 40px;
+  width: 90px;
+  left: calc(50% - 25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    div {
+      &:before {
+        top: 10px;
+      }
+
+      &:after {
+        top: 45px;
+      }
+    }
+  }
+
+  @include maxQ(1500px) {
+    &:hover {
+      div {
+        &:before {
+          top: 4px;
+        }
+        &:after {
+          top: 35px;
+        }
+      }
+    }
+  }
+
+  @include maxQ(1199px) {
+    @include maxHeight(768px) {
+      bottom: 19px;
+    }
+  }
+
+  span {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  div {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 4px;
+      position: absolute;
+      top: 15px;
+      left: calc(50% - 2px);
+      height: 25px;
+      transition: 0.5s ease-in-out;
+      background-image: linear-gradient(color(blue), color(blue, lighter));
+    }
+
+    &:after {
+      content: "";
+      width: 20px;
+      height: 16px;
+      position: absolute;
+      top: 40px;
+      left: calc(50% - 10px);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transition: 0.5s ease-in-out;
+      background-image: linear-gradient(color(blue, lighter), color(blue));
+    }
+
+    @include maxQ(1500px) {
+      width: 55px;
+      height: 55px;
+
+      &:before {
+        top: 7px;
+      }
+
+      &:after {
+        top: 32px;
+      }
+    }
+  }
+}

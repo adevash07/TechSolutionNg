@@ -1,0 +1,25 @@
+@use "styles" as *;
+.edit-talent {
+  display: flex;
+  justify-content: space-between;
+  @include maxQ($tablet) {
+    flex-direction: column-reverse;
+
+  }
+  small {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+  .edit-talent__note {
+      max-width: 40%;
+      @include maxQ($tablet) {
+        max-width: 45%;
+        margin-bottom: 30px;
+      }
+      p{
+          font-size: 0.7rem;
+          font-weight: 600;
+          line-height: 20px;
+      }
+  }
+}

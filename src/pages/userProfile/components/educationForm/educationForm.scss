@@ -1,0 +1,28 @@
+@use "styles" as *;
+.education-form {
+  h4 {
+    font-weight: bold;
+    margin-bottom: 3%;
+  }
+  small {
+    color: 001243;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   
+    .form-group {
+      width: 40%;
+    }
+    @include maxQ($tablet) {
+      flex-direction: column;
+      .form-group {
+        width: 60%;
+      }
+    }
+  }
+  
+}

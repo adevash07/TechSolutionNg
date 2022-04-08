@@ -1,0 +1,121 @@
+@use "styles" as *;
+.account-card {
+  background: #ffffff;
+  box-shadow: 0px 10px 30px #004cff1a;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: $textColor3;
+  font-weight: weight(thick);
+
+  .acc-type-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .formgroup.check.custom {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-bottom: 0px;
+
+    .formgroup--input[type="checkbox"] {
+      padding: 6px;
+
+      &.custom {
+        animation-name: dropIn;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+      }
+
+      &.custom:checked {
+        padding: 7px;
+
+        &:after {
+          font-size: 22px;
+          font-weight: weight(thick);
+          color: $deepBlue;
+          top: -11px;
+          left: 3px;
+        }
+      }
+    }
+    .formgroup--label {
+      margin-bottom: 0px;
+      font-size: unset;
+    }
+  }
+}
+.account-view .accDetailsForm {
+  max-width: 60%;
+  padding: 20px;
+  margin-top: 3%;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-left: 10rem;
+  transition: all 4s ease-in-out;
+}
+.accDetailsForm__containerInner {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: fit-content;
+  small {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #85979f;
+  }
+  button {
+    padding: 8px 14px 8px 13px;
+    font-size: 0.9rem;
+  }
+  button.button--grey {
+    background: #ffffff;
+    border: 1px solid #d4d4d4;
+    color: $textColor3;
+    &:active {
+      animation-name: smoothShift;
+      animation-duration: 0.2s;
+      animation-fill-mode: backwards;
+      animation-timing-function: ease-in-out;
+    }
+  }
+  button.button--medium {
+    animation-name: ShiftIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+}
+.accDetailsForm__containerInner:last-child {
+  width: 100%;
+  align-items: flex-end;
+}
+
+@keyframes ShiftIn {
+  from {
+    transform: translate(-10rem, -2rem);
+  }
+  to {
+    transform: translate(0rem, 0rem);
+  }
+}
+
+@keyframes smoothShift {
+  from {
+    transform: translateX(0rem);
+  }
+  to {
+    transform: translateX(6rem);
+  }
+}
+
+@keyframes dropIn {
+  from {
+    transform: translate(-2rem, -2rem);
+  }
+  to {
+    transform: translate(0rem, 0rem);
+  }
+}

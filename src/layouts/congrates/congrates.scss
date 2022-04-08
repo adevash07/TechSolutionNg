@@ -1,0 +1,104 @@
+// @use "../../style/base/typography" as ;
+// @use "../../sass/style/abstract/variables" as variable;
+// @use "../../sass/style/abstract/function" as function;
+// @use "../../styles/sass/abstracts/variables" as variable;
+// @use "../../styles/sass/abstracts/function" as function;
+
+@use "../../styles" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.congrates {
+  background-color: #f9fcfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  height: 100vh;
+}
+.congrates__Flex--column {
+  display: flex;
+  padding: 2rem 1rem 2rem 3rem;
+  border-radius: 10px;
+  background-color: white;
+  /* box-shadow: 2px 2px 10px rgb(0 0 0 / 50%); */
+  flex-direction: column;
+  grid-gap: 4rem;
+  gap: 4rem;
+  width: 80%;
+  box-shadow: 0px 10px 30px #004cff1a;
+
+  @include minQ(1450px) {
+    width: unset;
+  }
+}
+.congrates__Flex {
+  display: flex;
+  justify-content: space-between;
+  // congrates__container start here
+  .congrates__Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .congrates__Header {
+      margin-top: 30px;
+    }
+    h3 {
+      font-size: fontSize(header-3);
+      // font-size: function.fontSize(header-4);
+      font-weight: weight(bold);
+      // font-weight: function.weight(bold);
+      color: $darkbluecolor;
+      padding-bottom: 20px;
+    }
+
+    button {
+      background-color: $darkbluecolor;
+      border: none;
+      color: white;
+      border-radius: 20px;
+      padding: 5px 30px;
+    }
+  }
+  // congrates__container end here
+
+  // congrates__DivImg start here
+
+  .congrates__DivImg {
+    height: inherit;
+    // height: 10%;
+  }
+  .congrates__Img {
+    width: 100%;
+    height: 250px;
+  }
+  .congrates__Img img {
+    width: 100%;
+    height: inherit;
+  }
+  .Congrates__DivImg p {
+    text-align: right;
+    color: $darkbluecolor;
+    font-weight: weight(bold);
+  }
+  // congrates__DivImg end here
+}
+
+.congrates-btn {
+  .formm-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+
+    button {
+      letter-spacing: 3px;
+      background: transparent linear-gradient(180deg, #1ab3ff 0%, #004cff 100%)
+        0% 0% no-repeat padding-box;
+      box-shadow: 0px 6px 10px #004cff33;
+      border-radius: 30px;
+    }
+  }
+}

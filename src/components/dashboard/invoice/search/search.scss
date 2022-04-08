@@ -1,0 +1,33 @@
+@use "../../../../styles/index" as *;
+
+@use "../../../../styles/sass/base/typography";
+
+.search {
+  display: flex;
+  align-items: center;
+  max-width: 75%;
+  @include primaryShadow;
+  color: color(blue, deeper);
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 3em;
+
+  &--InputField {
+    padding: 0.5em;
+    width: 100%;
+    border: transparent;
+    outline: none;
+    &::placeholder {
+      font-size: fontSize(header-4);
+      color: inherit;
+      font-family: cera_pro_light;
+      font-weight: weight(bold);
+    }
+  }
+
+  &--icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 1em;
+  }
+}

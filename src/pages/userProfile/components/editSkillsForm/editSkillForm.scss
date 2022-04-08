@@ -1,0 +1,26 @@
+.edit-skills {
+  .edit-skills__skills-content {
+    display: flex;
+  }
+  small {
+      font-size: 0.4;
+      color: #001243;
+      font-weight: 600;
+  }
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    .tag-ctn {
+      margin-bottom: 10px;
+    }
+  }
+  input {
+      border: none;
+      outline: none;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      margin-left: 5px;
+  }
+}

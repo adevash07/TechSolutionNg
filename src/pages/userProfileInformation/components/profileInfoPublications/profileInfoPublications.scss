@@ -1,0 +1,47 @@
+@use "styles/index" as *;
+
+/***************************************************************************************************
+START:: Styles for the profile information: Publications
+*****************************************************************************************************/
+.publications {
+  padding: 1.25em;
+  margin-top: var(--block-spacing-top);
+  overflow: hidden;
+  position: relative;
+
+  &__add {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+}
+
+.publications__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  margin-top: var(--block-spacing-top);
+}
+
+.publication__none {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2em;
+
+  & > span:last-child {
+    display: flex;
+    & > :not(:nth-child(1)) {
+      margin-left: 0.35rem;
+    }
+
+    & > span:nth-child(2) a {
+      color: color(blue);
+    }
+  }
+}
+
+/***************************************************************************************************
+END:: Styles for the profile information: Publications
+*****************************************************************************************************/

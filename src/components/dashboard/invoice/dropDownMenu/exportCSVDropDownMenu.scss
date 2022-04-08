@@ -1,0 +1,60 @@
+@use "../../../../styles/index" as *;
+
+.exportCSV{
+    position: absolute;
+    z-index: 90;
+    background: color(white);
+    width: 15em;
+    right: -1em;
+    top: 0;
+    left: -1em;
+    border-radius: 10px;
+    @include primaryShadow;
+
+    &-container{
+       padding-left: 2em;
+
+       h3, h4{
+        padding: 1em 0;
+       }
+
+       h3{
+           font-size: 1em;
+       }
+
+       
+       h4, li{
+        max-width: 10em;
+       }
+
+       h4, li:last-child{
+        border-bottom: 1px dotted color(black, shade);
+       }
+
+            h4{
+                
+                font-size: fontSize(header-4);
+                font-weight: weight(bolder);               
+            }
+
+            li{
+                display: flex;
+                align-items: center;
+                gap: 1em;
+                
+            }
+
+
+            li:not(:last-child){
+                padding: 0.85em 0;
+            }
+
+            li:last-child{
+                padding-bottom: 1.5em;
+               
+            }
+        }
+    
+
+    
+}

@@ -1,0 +1,158 @@
+@use "styles/index.scss" as *;
+.statementTabs {
+  box-shadow: -10px 10px 15px 0.1px #004cff1a;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  .tabHeading {
+    display: flex;
+    background-color: $lightBg;
+    .filter {
+      width: unset;
+      .filter-btn {
+        gap: 0;
+        padding: 0.4rem 0.5rem;
+        width: unset;
+        span:last-child {
+          font-size: 0.5em;
+          font-weight: 900;
+          background-color: #d7d8d8;
+          text-align: center;
+          border-radius: 50%;
+          padding: 0.08em 0.5em;
+          position: absolute;
+          bottom: 2rem;
+          right: 0.001rem;
+
+          @include minQ(753px) {
+            bottom: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .tabsList {
+      display: flex;
+      width: 98%;
+      justify-content: space-between;
+      font-weight: weight(thick);
+
+      li {
+        text-align: center;
+        vertical-align: middle;
+        padding: 0.5rem 2rem;
+        min-width: 8rem;
+
+        a {
+          justify-content: space-between;
+        }
+
+        &.current {
+          border-radius: 10px 10px 0px 0px;
+          box-shadow: 0px 1px 10px 0px hsla(222, 100%, 50%, 0.102);
+          background-color: color(white);
+        }
+      }
+
+      %spanstyle {
+        font-weight: weight(regular);
+        padding: 0.2rem 0.7rem;
+        margin: 0.2rem 0.3rem;
+        margin-left: 1rem;
+        color: white;
+        font-size: 11px;
+        border-radius: 5px;
+      }
+      li:nth-child(1) span {
+        @extend %spanstyle;
+        background-color: $deepBlue;
+      }
+      li:nth-child(2) span {
+        @extend %spanstyle;
+        background-color: color(green, light);
+      }
+      li:nth-child(3) span {
+        @extend %spanstyle;
+        background-color: color(yellow);
+      }
+    }
+    .imgCon {
+      padding: 0 10px;
+      sub {
+        vertical-align: sub;
+        align-self: flex-end;
+        padding: 0rem 0.05rem;
+        border-radius: 100%;
+        background-color: color(black, lightest);
+        font-size: 10px;
+      }
+    }
+  }
+  .tabsContent {
+    background-color: white;
+    height: 47.19rem;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow-y: scroll;
+    padding: 2rem;
+    padding-top: 0px;
+
+    @include minQ(770px) {
+      padding: 1rem 1.5rem;
+      padding-right: 0px;
+      padding-bottom: 0px;
+    }
+
+    .dataTable {
+      width: 100%;
+      box-shadow: none;
+
+      tr:not(:last-child) {
+        border-bottom: 0px;
+      }
+      th,
+      td {
+        padding: 0px;
+        margin: 1.5rem 0px;
+
+        span {
+          svg {
+            vertical-align: middle;
+            height: 100%;
+          }
+        }
+      }
+      th {
+        color: #a2a2a2;
+      }
+      th:nth-child(1) {
+        text-align: left;
+      }
+      th:not(:nth-child(1)) {
+        text-align: center;
+        margin-left: 1rem;
+      }
+      th:nth-child(3) {
+        text-align: center;
+        padding-left: 5%;
+      }
+      th:nth-child(2) {
+        text-align: left;
+      }
+      td:not(:nth-child(1)) {
+        text-align: center;
+      }
+      td:nth-child(3) {
+        text-align: right;
+      }
+      td:nth-child(2) {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.search {
+  padding-left: 0;
+  margin-left: 0;
+}

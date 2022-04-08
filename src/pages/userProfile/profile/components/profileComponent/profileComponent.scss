@@ -1,0 +1,123 @@
+@use "styles" as *;
+.profile-user {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+  width: 100%;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  font-weight: 600;
+  color: #051f64;
+  margin-top: 3%;
+  .av-def,
+  div.user-avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -30px;
+    
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    z-index: 5;
+
+    small {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: #0000000a;
+    }
+  }
+  @include maxQ($tablet) {
+    width: 80%;
+  }
+}
+.user-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  small {
+    font-size: 0.6rem;
+    color: #a2a2a2;
+    margin-bottom: 8px;
+  }
+}
+label {
+  font-weight: 600;
+  color: #051f64;
+  font-size: 1rem;
+}
+img.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.edipt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  top: 40px;
+  right: -4px;
+  background: red;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  z-index: 5;
+  cursor: pointer;
+  svg {
+    font-size: 0.6rem;
+    color: #242424;
+  }
+}
+.picture-pop .comment-content {
+  position: absolute;
+  top: -50px;
+  background-color: #ffffff;
+  font-size: 10px;
+  color: #ffffff;
+  padding: 20px 10px;
+  font-weight: 600;
+  transition: 0.8s;
+  transition-timing-function: ease-in;
+  border: 1px solid #ffffff;
+  opacity: 0;
+  width: 400px;
+  z-index: 3;
+  left: -150px;
+}
+.picture-pop {
+  &:hover .comment-content {
+    top: -120px;
+  }
+}
+.comment .comment-content::after {
+  content: "";
+display: none;
+}

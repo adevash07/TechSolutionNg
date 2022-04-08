@@ -1,0 +1,24 @@
+@use "styles/index" as *;
+
+//style is applied to be custom to the resuable invoice table on the resend Invoice page
+
+@include minQmaxQ(768px, 1024px) {
+  .resendPage__container {
+    font-family: cera_pro_medium;
+    letter-spacing: 0.333px;
+    .dataTable__head__row {
+      .dataTable__invoiceNumber {
+        display: block;
+      }
+    }
+
+    .dataTable__invoiceStatus {
+      width: 20%;
+    }
+    .dataTable__body__row {
+      .invoiceNumber {
+        display: block;
+      }
+    }
+  }
+}

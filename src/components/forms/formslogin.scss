@@ -1,0 +1,41 @@
+@use "../../styles/sass/abstracts/functions" as *;
+@use "../../styles/sass/abstracts/variables" as *;
+
+// form style start here
+
+.form__group {
+  width: 100%;
+
+  .form__control {
+    // background-color: #a2a2a22f;
+    background-color: #f4f5f7;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #a2a2a22f;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin: 5px 0 10px 0;
+  }
+  .form__control:focus {
+    outline: none;
+    background-color: #f4f5f7;
+    border: 1px solid#a2a2a22f;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 10px 10px rgba(#f4f5f7);
+  }
+}
+.form-btn {
+  border-radius: 20px;
+  // background-color: $darkbluecolor;
+  background: transparent linear-gradient(180deg, #1ad9ff 0%, #004cff 100%) 0%
+    0% no-repeat padding-box;
+  box-shadow: 0px 10px 5px #e1f8f5;
+  border: none;
+  color: white;
+  padding: 5px 25px;
+  font-weight: 600;
+  //   margin-top: 30px;
+}
+
+// form style end here

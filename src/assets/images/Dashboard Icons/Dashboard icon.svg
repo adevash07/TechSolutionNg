@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="184" height="184" viewBox="0 0 184 184">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00d4ff"/>
+      <stop offset="1" stop-color="#004cff"/>
+    </linearGradient>
+    <filter id="Rectangle_1043" x="0" y="0" width="184" height="184" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#004cff" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_463" x="73.5" y="63.5" width="23" height="23" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-color="#001243" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_466" x="73.5" y="79.5" width="23" height="23" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-3"/>
+      <feFlood flood-color="#001243" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_464" x="88.5" y="63.5" width="23" height="23" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-4"/>
+      <feFlood flood-color="#001243" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_465" x="88.5" y="79.5" width="23" height="23" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-5"/>
+      <feFlood flood-color="#001243" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Dashboard_icon" data-name="Dashboard icon" transform="translate(1151 111)">
+    <g transform="matrix(1, 0, 0, 1, -1151, -111)" filter="url(#Rectangle_1043)">
+      <rect id="Rectangle_1043-2" data-name="Rectangle 1043" width="64" height="64" rx="17" transform="translate(60 50)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_2579" data-name="Group 2579">
+      <g id="Dashboard" transform="translate(-1 -4)">
+        <g transform="matrix(1, 0, 0, 1, -1150, -107)" filter="url(#Rectangle_463)">
+          <g id="Rectangle_463-2" data-name="Rectangle 463" transform="translate(78 67)" fill="none" stroke="#fff" stroke-width="2">
+            <rect width="14" height="14" rx="2" stroke="none"/>
+            <rect x="1" y="1" width="12" height="12" rx="1" fill="none"/>
+          </g>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, -1150, -107)" filter="url(#Rectangle_466)">
+          <g id="Rectangle_466-2" data-name="Rectangle 466" transform="translate(78 83)" fill="none" stroke="#fff" stroke-width="2">
+            <rect width="14" height="14" rx="2" stroke="none"/>
+            <rect x="1" y="1" width="12" height="12" rx="1" fill="none"/>
+          </g>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, -1150, -107)" filter="url(#Rectangle_464)">
+          <g id="Rectangle_464-2" data-name="Rectangle 464" transform="translate(93 67)" fill="none" stroke="#fff" stroke-width="2">
+            <rect width="14" height="14" rx="2" stroke="none"/>
+            <rect x="1" y="1" width="12" height="12" rx="1" fill="none"/>
+          </g>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, -1150, -107)" filter="url(#Rectangle_465)">
+          <g id="Rectangle_465-2" data-name="Rectangle 465" transform="translate(93 83)" fill="none" stroke="#fff" stroke-width="2">
+            <rect width="14" height="14" rx="7" stroke="none"/>
+            <rect x="1" y="1" width="12" height="12" rx="6" fill="none"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+@use "styles" as *;
+
+.modalComponent {
+  position: fixed;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999999;
+  transition: 0.4s ease-in-out;
+  transition-delay: 0.3s;
+
+  &.show {
+    top: 0;
+  }
+
+  &.left {
+    top: 0;
+    left: -110%;
+
+    &.show {
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@use "styles/index" as *;
+
+.atmContainer {
+  position: relative;
+  display: flex;
+  order: 3;
+  margin-top: 4rem;
+  justify-content: center;
+  min-height: 20rem;
+  margin-bottom: 2rem;
+  @include minQ(1023px) {
+    order: unset;
+    margin-top: 0px;
+    justify-content: unset;
+    margin-bottom: 0px;
+  }
+
+  .emptyCard {
+    padding-top: 10%;
+  }
+}
+
+.atmCard {
+  color: white;
+  width: 29rem;
+  background-image: url("../../../../../../assets/images/WalletIcons/atm-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-position: 40% 25%;
+  border-radius: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding: 15px 1.8rem 1.8rem 1.8rem;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 2px rgb(0 76 255 / 25%);
+  position: relative;
+  z-index: 3;
+
+  @include minQ(1023px) {
+    height: 100%;
+  }
+
+  .atmCard__menu {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
+  .atmCard__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p:nth-child(1) {
+      font-size: 1.4rem;
+      font-weight: weight(thick);
+      letter-spacing: 1.5px;
+    }
+
+    .atmCard__menu {
+      align-items: flex-end;
+      font-weight: weight(thick);
+    }
+
+    .atmCard__userDetails {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 1rem;
+      height: unset;
+
+      @include minQ(992px) {
+        height: 9rem;
+      }
+
+      .atmCard__companyName {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      img {
+        display: inline-block;
+      }
+      .atmCard__panCard {
+        height: 54px;
+        display: flex;
+        transition: all 2s ease-in-out;
+        img:nth-child(1) {
+          transition: all 1s ease-in-out;
+          display: none;
+        }
+        span {
+          display: none;
+          transition: all 1s ease-in-out;
+          font-size: fontSize(header-3);
+        }
+        #atmCard__panEye {
+          width: 30px;
+          transition: all 1s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.atmCard__popUp {
+  top: -30%;
+  right: 29%;
+  z-index: 3;
+  flex-flow: column wrap;
+  gap: 2rem;
+
+  @include minQ(870px) {
+    right: 32%;
+  }
+  @include minQ(1023px) {
+    right: 15%;
+  }
+
+  @include minQ(1347px) {
+    right: -43%;
+    top: 0px;
+    z-index: 2;
+  }
+
+  .button {
+    background-image: none;
+    background-color: $lightBg;
+    color: $lightBlue;
+  }
+}
+
+.atmCard--slot {
+  display: flex !important;
+}
+.atmCard--unslot {
+  display: none !important;
+}
+#atmCard--show {
+  animation-name: FadeIn;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  letter-spacing: 2px;
+
+  & + img {
+    transform: translateX(10px);
+  }
+}
+#atmCard--unshow {
+  animation-name: FadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.modalComponent__body {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 30px;
+  padding: 2rem;
+  text-align: center;
+  h4,
+  small,
+  div {
+    margin: 2rem 0px;
+  }
+
+  .modalComponent_button {
+    display: flex;
+    gap: 2rem;
+
+    button.button--grey {
+      background: #ffffff;
+      border: 1px solid #d4d4d4;
+      color: $textColor3;
+    }
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeOut {
+  from {
+    opacity: 1;
+    display: inline-block;
+  }
+  to {
+    opacity: 0;
+  }
+}

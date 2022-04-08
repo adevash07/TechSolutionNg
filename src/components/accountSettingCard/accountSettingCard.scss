@@ -1,0 +1,104 @@
+// @use "../../styles/sass/abstracts/functions" as *;
+@use "../../styles" as *;
+// accountsettingcard start here
+
+.accountSettingCard {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 15px 25px 10px 25px;
+  margin: 40px 0;
+  width: 70%;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.151);
+  }
+
+  // .accountSettingCard:hover {
+  //   box-shadow: rgba(0, 0, 0, 0.5);
+  // }
+
+  &:hover .accountSettingCard__Icon i {
+    transform: scale(0.9);
+    // border-color: color(blue);
+    animation: animate 5s infinite;
+  }
+  &:hover .accountSettingCard__Icon div > span {
+    display: block;
+    position: absolute;
+    text-align: right;
+    margin-top: -30px;
+    margin-right: -10px;
+    color: color(blue, lighter);
+    transform: rotate(-40deg);
+    width: 40px;
+    font-size: 30px;
+  }
+
+  &:hover .accountSettingCard__Hearder > h4 {
+    color: color(blue);
+  }
+  .accountSettingCard__Icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    margin-right: 20px;
+    padding: 3px 3px 3px 3px;
+    font-size: 20px;
+    color: color(blue);
+    // color: #051f64;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.144);
+    transition: 0.5s ease-in-out;
+    position: relative;
+  }
+
+  .accountSettingCard__Icon div > span {
+    display: none;
+    transition: 0.5s;
+  }
+
+  .accountSettingCard__Hearder > h4 {
+    // color: color(blue);
+
+    font-size: 18px;
+    color: #051e64ec;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  .accountSettingCard__Hearder > p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.397);
+  }
+}
+@keyframes animate {
+  10% {
+    border-color: color(blue);
+    transition: 0.5s;
+  }
+  90% {
+    border: 3px solid rgb(0, 0, 0);
+    transition: 0.5s;
+  }
+}
+// accountsettingcard end here
+
+// destop view start here
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .accountSettingCard {
+    width: 90%;
+
+    .accountSettingCard__Hearder > h4 {
+      // color: color(blue);
+
+      font-size: 17px;
+      color: #051e64ec;
+      padding-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+}
+// destop view end here

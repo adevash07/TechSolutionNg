@@ -1,0 +1,31 @@
+.badge {
+  border: 3px solid var(--white);
+  background: var(--dark) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.badge--active {
+  height: 11px;
+  width: 11px;
+}
+.badge--danger {
+  background: red;
+}
+.badge--primary {
+  background: #1A9FFF;
+}
+.badge--warning {
+  background: yellow;
+}
+.badge--success {
+  background: green;
+}
+.badge--light {
+  background: grey;
+}
+.badge--pink {
+  background: #EE5783;
+}

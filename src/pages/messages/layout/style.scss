@@ -1,0 +1,50 @@
+@use "styles" as *;
+.messages-layout {
+  display: flex;
+  width: 100%;
+  margin-top: 70px;
+  @include maxQ($tablet) {
+    margin-top: 68px;
+  }
+  position: relative;
+  aside {
+    width: 20%;
+    @include maxQ($tablet) {
+      width: 25%;
+    }
+  }
+  aside.right-pane {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 0px;
+    width: 20%;
+    background: #ffffff;
+    visibility: hidden;
+    transition: 0.8s;
+    transition-timing-function: ease-in;
+    @include maxQ($tablet) {
+      width: 60%;
+      margin-top: 65px;
+    }
+  }
+  aside.right-pane--visible {
+    visibility: visible;
+  }
+  .pane-lg {
+    width: 80%;
+    margin-left: 3%;
+    position: relative;
+    height: 100vh;
+    @include maxQ($tablet) {
+      width: 75%;
+      margin-left: 1%;
+    }
+    .top-bar {
+      position: sticky;
+      top: 70px;
+      right: 0px;
+      width: 100%;
+      background: #ffffff;
+    }
+  }
+}

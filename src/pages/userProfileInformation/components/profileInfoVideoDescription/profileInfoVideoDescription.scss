@@ -1,0 +1,74 @@
+@use "styles/index" as *;
+
+/******************************************************************************************************
+START:: Styles for video player, for freelancer review
+*******************************************************************************************************/
+.videoDescription {
+  display: flex;
+  flex-direction: column;
+  padding: 1.35em;
+  margin-top: var(--block-spacing-top);
+  width: 100%;
+  position: relative;
+
+  .player {
+    max-width: 40vw;
+    cursor: pointer;
+    margin-block-start: 1em;
+    margin-block-end: 2em;
+    position: relative;
+
+    video {
+      border-radius: 5px;
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 12px solid #d6d6d6;
+      border-radius: 20px;
+    }
+
+    & > .controls {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.75);
+      visibility: visible;
+    }
+
+    // &:hover > .controls {
+    //   visibility: visible;
+    // }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1.5rem;
+    top: 6rem;
+
+    & > input[type="button"]:first-child {
+      margin-bottom: 3em;
+    }
+
+    & > input[type="button"] {
+      color: color(blue);
+      font-size: 1.035rem;
+      outline: none;
+      border: 0;
+      border-radius: 20px;
+      padding: 0.35em 0.55em;
+      cursor: pointer;
+    }
+  }
+}
+
+/******************************************************************************************************
+END:: Styles for video player, for freelancer review
+*******************************************************************************************************/

@@ -1,0 +1,46 @@
+.profile-info {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  margin-top: 1%;
+  padding: 10px 30px;
+  h4 {
+    font-size: 0.8rem;
+    color: #001243;
+    font-weight: bold;
+  }
+  section>div {
+    margin-top: 10px;
+  }
+  small {
+    font-size: 0.6rem;
+    color: #001243;
+    font-weight: 600;
+  }
+  .profile-content {
+    display: flex;
+  }
+}
+.profile-content {
+  div.info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-top: 15px;
+    small {
+      opacity: 0.5;
+      svg {
+          font-size: 0.8rem;
+          margin-right: 7px;
+      }
+    }
+    label {
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin: 5px 0px;
+    }
+  }
+  div.edit-ic {
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+}

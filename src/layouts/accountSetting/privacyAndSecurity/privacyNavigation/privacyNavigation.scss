@@ -1,0 +1,14 @@
+@use "styles/" as *;
+.privacyNavigation__Pen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
+  @include minQ(1023px) {
+    flex-direction: row;
+    grid-gap: 0px;
+    gap: 0px;
+    justify-content: space-between;
+  }
+  //   border: 1px solid red;
+}

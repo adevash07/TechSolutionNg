@@ -1,0 +1,89 @@
+@use "styles/index" as *;
+
+/***************************************************************************************************
+START:: Styles for the profile information experience
+*****************************************************************************************************/
+
+.experience {
+  margin-top: var(--block-spacing-top);
+  position: relative;
+  padding: 2em;
+}
+
+.experienceInformation {
+  margin-top: calc(var(--block-spacing-top) - 1.5em);
+  display: flex;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+    margin-left: 1em;
+
+    & > span {
+      margin-bottom: calc(var(--block-spacing-top) - 2.25em);
+    }
+
+    & > span:nth-child(2) {
+      display: flex;
+    }
+
+    & > p {
+      text-align: justify;
+    }
+  }
+
+  /**
+    employeer logo styles
+         |
+         V    
+  **/
+  &--logo {
+    flex-basis: 15%;
+    max-width: 100px;
+
+    display: flex;
+    justify-content: center;
+
+    img {
+      border-radius: 50%;
+      border: 1px solid lighten($color: red, $amount: 40);
+      padding: 0.75em 0;
+      align-self: flex-start;
+    }
+  }
+
+  //component
+  &__employer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    max-width: 20rem;
+
+    & > span:nth-child(2) {
+      margin-left: 1.5em;
+    }
+
+    & > span:nth-child(3) {
+      margin-left: 0.85em;
+    }
+
+    .dot {
+      font-size: 0.45rem;
+      margin-top: 0.2em;
+    }
+  }
+
+  &__jobLocation {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      margin-left: 0.45em;
+    }
+  }
+}
+
+/***************************************************************************************************
+END:: Styles for the profile information experience
+*****************************************************************************************************/

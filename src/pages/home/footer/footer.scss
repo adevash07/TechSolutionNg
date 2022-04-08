@@ -1,0 +1,125 @@
+@use "styles" as *;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  min-height: fit-content;
+  // min-height: 80vh;
+  align-items: flex-end;
+  padding: 190px 0 50px;
+  // padding: 50px 0;
+  background-color: #e5eeff;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+
+  // @include maxQ(1199px) {
+  //   min-height: fit-content;
+  //   padding: 250px 0 50px;
+  // }
+
+  // @include maxQ(992px) {
+  //   min-height: fit-content;
+  //   padding: 250px 0 50px;
+  // }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: -40%;
+    z-index: -1;
+    left: 10%;
+    transform: rotate(-19deg);
+    background-image: linear-gradient(180deg, #ffffff 0%, #cdf3fb 100%);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    transform: rotate(-17deg);
+    right: -10%;
+    bottom: -70%;
+    background-color: #cde2fb;
+    // background: linear-gradient(154deg, #cde2fb 0%, #f1f7fe 100%, #ffffff 100%);
+  }
+
+  .footer__container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+  }
+
+  .footer__column {
+    &:last-child {
+      .footer__list {
+        flex-direction: row;
+
+        span {
+          margin-right: 10px;
+
+          svg {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: cera_pro_bold;
+  }
+
+  .footer__socialContainer {
+    display: flex;
+    padding: 5px 10px;
+    width: 140px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  .footer__socialIcon {
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+
+  .footer__socialInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__socialHeader {
+    font-size: 0.7rem;
+    margin-bottom: -7px;
+  }
+
+  .footer__listHeader {
+    font-family: cera_pro_bold;
+    margin-bottom: 10px;
+  }
+
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      margin-bottom: 10px;
+    }
+  }
+}

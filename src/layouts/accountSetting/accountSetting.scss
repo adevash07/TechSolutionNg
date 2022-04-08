@@ -1,0 +1,28 @@
+@use "styles/index.scss" as *;
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+.accountSetting__Div {
+  margin-top: 6rem;
+
+  padding: 4rem 2rem 0 11rem;
+  background-color: #f9fcfc;
+  font-family: "muli";
+
+  .accountSetting__DivAccount {
+    display: flex;
+    // justify-content: space-between;
+    padding: 20px 0;
+    padding-right: 10%;
+  }
+}
+
+// destop view start here
+@media (min-width: 540px) and (max-width: 900px) {
+  .accountSetting__Div {
+    padding: 4rem 2rem 0 5rem;
+  }
+}
+// destop view ends here

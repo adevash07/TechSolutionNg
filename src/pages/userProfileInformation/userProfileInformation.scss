@@ -1,0 +1,339 @@
+@use "styles/index" as *;
+
+:root {
+  --block-spacing-top: 3em;
+}
+
+//content area
+.profileInformation {
+  font-size: 1.2rem;
+  padding: 8em 2em 2em 2em;
+  color: #051f64;
+  font-weight: 900;
+  background-color: #f9fcfc;
+
+  &__containerFlex {
+    display: flex;
+
+    position: relative;
+  }
+
+  &__firstContent__infoCenter {
+    position: relative;
+    flex-basis: 20%;
+    padding-top: 0.55em;
+  }
+
+  &__otherInfo {
+    max-width: 77%;
+    position: relative;
+    top: -11rem;
+  }
+
+  //profile header
+  &__header {
+    position: relative;
+
+    //background-cover
+    &--backgroundCover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+    &__content {
+      padding: 2em 0 0 0;
+    }
+  }
+
+  //make a text blue in color
+  &--lightBlue {
+    color: color(blue, light-1) !important;
+  }
+
+  &__cta--filter,
+  &__cta--link {
+    display: flex;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ADA7A7FF' stroke-width='3' stroke-dasharray='1%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  &__cta--link {
+    padding: 0.15em 0.95em;
+    span:first-child {
+      margin-right: 4em;
+    }
+  }
+
+  &__cta--filter {
+    padding: 0.15em 0.95em;
+    span:first-child {
+      margin-right: 2em;
+    }
+  }
+}
+
+.ceraProMediumFontFamily {
+  font-family: cera_pro_medium;
+}
+
+.profileInformation__successMetrics--percent {
+  border: 3px solid color(blue, light-1);
+  color: inherit;
+  border-radius: 50%;
+  font-size: 1rem;
+  padding: 0.75em 0.25rem;
+  font-weight: 900;
+}
+
+.textFocused {
+  font-size: 1.35rem;
+}
+
+.subset {
+  position: relative;
+  top: 0.35em;
+}
+
+/*
++
++
++
+
+/***************************************************************************************************
+START:: Styles for the profile information: PROJECTS
+*****************************************************************************************************/
+.profileInformation__secondContent {
+  padding: 1.25em;
+}
+.projects {
+  position: relative;
+}
+
+.projects__carouselContainer {
+  width: 180%;
+  display: flex;
+  transition: display 0.9s cubic-bezier(0, 1.84, 0.49, -0.06);
+  gap: 8em;
+
+  &.right1 {
+    transform: translateX(0%);
+  }
+
+  &.right2 {
+    flex-flow: row-reverse;
+  }
+
+  .visualProject__grid,
+  .designProject__grid {
+    display: grid;
+    gap: 0.15em;
+  }
+
+  .designProject__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  .visualProject__grid {
+    --visualProject-grid-itemHeight: 400px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: var(--visualProject-grid-itemHeight) auto;
+  }
+
+  .gridItem--tall {
+    grid-row: span 2 / auto;
+  }
+
+  .designProject__gridItem,
+  .visualProject__gridItem {
+    display: flex;
+    img {
+      width: 100% !important;
+    }
+  }
+}
+
+.projects__carouselArrow {
+  position: absolute;
+  left: -60px;
+  top: 43.5%;
+  width: 96%;
+  cursor: pointer;
+
+  &__container--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .carouselArrow {
+    width: 7.25rem;
+  }
+
+  &--right {
+    transform: translateY(-15px) rotate(180deg);
+  }
+}
+
+/***************************************************************************************************
+END:: Styles for the profile information: PROJECTS
+*****************************************************************************************************/
+/*
++
++
++
+/***************************************************************************************************
+START:: Styles for the profile information: third Content
+*****************************************************************************************************/
+.profileInformation__thirdContent {
+  padding-right: 19em;
+  margin-top: var(--block-spacing-top);
+}
+
+/***************************************************************************************************
+END:: Styles for the profile information:Recommendations
+*****************************************************************************************************/
+/*
++
++
++
+/***************************************************************************************************
+START:: Styles can be reused for purpose that reapprears along the design
+*****************************************************************************************************/
+.positionAbsolute--topRight {
+  position: absolute;
+  right: 0.65em;
+  top: 0.55em;
+}
+
+.positionAbsolute--bottomRight {
+  position: absolute;
+  right: 0.65em;
+  bottom: 0.55em;
+}
+
+.label--small {
+  color: #85979f;
+  font-size: calc(1rem - 0.1rem);
+}
+.label--medium {
+  color: #85979f;
+  font-size: calc(1.5rem - 0.35rem);
+}
+
+.text-grey {
+  color: #85979f;
+}
+
+.label--smaller {
+  color: #85979f;
+  font-size: calc(1rem - 0.25rem);
+}
+
+.background--dashed {
+  background-color: color(white);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23E9E9E9' stroke-width='2' stroke-dasharray='5%2c 15' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 20px;
+}
+
+.header--title {
+  font-size: map-get($map: $font-sizes, $key: "header-2");
+  font-weight: map-get($map: $font-weight, $key: "bolder");
+}
+
+.moreActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.ringsPositionBottom {
+  position: absolute;
+  bottom: 1em;
+}
+
+.topSpacing {
+  top: 6em;
+}
+/***************************************************************************************************
+END:: Styles can be reused for purpose that reapprears along the design
+*****************************************************************************************************
+/*
++
++
++
+/***************************************************************************************************
+START:: Styles for the profile inforation activity side bar
+*****************************************************************************************************/
+.profileInformation__firstContent__sidebar {
+  padding-block-start: 3em;
+}
+
+.activityCard {
+  background-color: color(white);
+  box-shadow: 0px 10px 40px #004cff0d;
+  border-radius: 20px;
+  max-width: 400px;
+  --primary-top-spacing: 1.35em;
+  --secondary-top-spacing: 3.5em;
+  position: relative;
+  //does not apply style to first element of same card
+  &:nth-child(1) {
+    margin-bottom: var(--secondary-top-spacing);
+  }
+
+  &:nth-child(2) {
+    margin-bottom: calc(var(--secondary-top-spacing) / 3);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1.75em;
+
+    span:not(:first-child) {
+      margin-top: var(--primary-top-spacing);
+    }
+
+    .card__text {
+      max-width: 350px;
+      letter-spacing: 1px;
+
+      &--red {
+        color: color(red);
+      }
+    }
+
+    .card--button {
+      text-align: center;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    right: 1em;
+    top: 3em;
+  }
+
+  .mileStone {
+    &__list {
+      display: flex;
+      align-items: center;
+      margin-top: 1em;
+    }
+
+    &--label {
+      margin-left: 0.65em;
+      cursor: pointer;
+      color: #051f64;
+    }
+  }
+}
+/***************************************************************************************************
+END:: Styles for the profile information activity side bar
+*****************************************************************************************************/

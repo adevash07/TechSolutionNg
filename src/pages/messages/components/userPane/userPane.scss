@@ -1,0 +1,49 @@
+@use "styles" as *;
+.user-pane {
+  display: flex;
+  flex-direction: column;
+  
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+
+  .user-pane__close-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #455a64;
+    color: #455a64;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    align-self: flex-end;
+    justify-self: flex-end;
+    outline: none;
+  }
+  .user-pane__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    h5 {
+      color: #004cff;
+      font-weight: 600;
+      @include maxQ($tablet) {
+        margin-top: 40px;
+        font-weight: 800;
+      }
+    }
+    small {
+      color: #030b20;
+      font-weight: 600;
+      font-size: 0.6rem;
+    }
+  }
+  .user-pane__info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+}

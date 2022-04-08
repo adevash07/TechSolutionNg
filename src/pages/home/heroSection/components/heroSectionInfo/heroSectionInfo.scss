@@ -1,0 +1,138 @@
+@use "styles" as *;
+
+.heroSection__info {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  div {
+    position: relative;
+    top: -5%;
+
+    @include maxQ(1199px) {
+      width: 100%;
+
+      @include maxHeight(768px) {
+        top: 0;
+      }
+    }
+
+    @include maxQ(992px) {
+      width: 100%;
+    }
+  }
+
+  @include maxQ(1199px) {
+    width: 100%;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 105px;
+
+    @include minQ(993px) {
+      @include maxHeight(768px) {
+        width: 48%;
+        align-items: center;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include maxQ(992px) {
+    position: relative;
+    top: -6%;
+    margin-bottom: 51px;
+    width: 100%;
+  }
+
+  .heroSection__mainHeader {
+    margin: 20px 0;
+    font-size: 3.5rem;
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      line-height: 1.3;
+      font-family: cera_pro_medium;
+
+      span {
+        color: color(blue);
+      }
+    }
+
+    @include maxQ(1500px) {
+      font-size: 3rem;
+    }
+
+    @include maxQ(1250px) {
+      font-size: 2.5rem;
+    }
+
+    @include maxQ(1199px) {
+      display: block;
+
+      @include maxHeight(768px) {
+        display: flex;
+      }
+    }
+  }
+
+  .heroSection__subHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+    font-size: 1.5rem;
+
+    img {
+      transform: translate(21px, 13px);
+      width: 150px;
+
+      @include maxQ(1500px) {
+        width: 120px;
+      }
+
+      @include maxQ(1200px) {
+        width: 100px;
+      }
+    }
+
+    @include maxQ(1250px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .heroSection__checkList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin: 20px 0;
+
+    @include maxQ(1199px) {
+      grid-template-columns: repeat(4, 1fr);
+
+      @include maxHeight(768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @include maxQ(992px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .heroSection__checkItem {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+
+    svg {
+      color: white;
+      background-color: color(blue);
+      background-image: linear-gradient(color(blue, light), color(blue));
+      border-radius: 50%;
+      box-shadow: 0 0 15px color(blue, lighter);
+      margin-right: 15px;
+    }
+  }
+}

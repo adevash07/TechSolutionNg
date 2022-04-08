@@ -1,0 +1,141 @@
+.emptyCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  %cardStyle {
+    width: 25rem;
+    height: 15rem;
+    border: 2px solid rgb(37, 102, 255);
+    border-radius: 2rem;
+  }
+
+  .emptyCard__firstCard,
+  .emptyCard__secondCard,
+  .emptyCard__thirdCard {
+    @extend %cardStyle;
+  }
+
+  .emptyCard__firstCard {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 70px 15px 20px;
+    justify-content: space-between;
+
+    &::before //.secondCard::before, .thirdCard::before
+    {
+      content: " ";
+      display: inline-block;
+      min-width: 5rem;
+      min-height: 5rem;
+      position: absolute;
+      bottom: -7%;
+      right: -7%;
+      background-color: #ffffff;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%232566FFFF' stroke-width='4' stroke-dasharray='2%25%2c 10%25' stroke-dashoffset='100' stroke-linecap='square'/%3e%3c/svg%3e");
+      border-radius: 100px;
+    }
+
+    &::after {
+      content: " ";
+      display: inline-block;
+      min-width: 4rem;
+      height: 4rem;
+      position: absolute;
+      background-color: rgb(37, 102, 255);
+      border-radius: 100%;
+      background-image: url("../../../../../../../assets/images/WalletIcons/icons8.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      bottom: -8px;
+      right: -20px;
+    }
+
+    .emptyCard__secondCard {
+      position: absolute;
+      border-radius: 2rem;
+      top: -8%;
+      right: -4%;
+      border-color: rgba(37, 102, 255, 0.3);
+      border-bottom: 0px;
+      border-left: transparent;
+      border-right: 0px;
+
+      &::before {
+        content: " ";
+        display: inline-block;
+        height: 11rem;
+        width: 2px;
+        border-right: solid 2px rgba(37, 102, 255, 0.3);
+        position: absolute;
+        border-top-right-radius: 100rem;
+        right: 1px;
+        top: 15px;
+      }
+    }
+
+    .emptyCard__thirdCard {
+      position: absolute;
+      top: -19%;
+      right: -8%;
+      border-bottom: 0px;
+      border-left: transparent;
+      border-right: 0px;
+
+      &::before {
+        content: " ";
+        display: inline-block;
+        height: 10rem;
+        width: 2px;
+        border-right: solid 2px rgb(37, 102, 255);
+        position: absolute;
+        border-top-right-radius: 100rem;
+        right: 0.2px;
+        top: 15px;
+      }
+    }
+
+    .emptyCard__Logo {
+      position: relative;
+      display: inline-block;
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: rgb(152, 183, 255);
+      border-radius: 100%;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: " ";
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: rgba(220, 235, 252, 0.5);
+        border-radius: 100%;
+        left: 65%;
+      }
+    }
+
+    .emptyCard__addCard {
+      display: flex;
+      justify-content: space-between;
+
+      .emptyCard__dash {
+        align-self: flex-end;
+        display: inline-block;
+        height: 2px;
+        width: 10rem;
+        border: 2px;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23E0EEFDFF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(81, 133, 255);
+      }
+    }
+  }
+}

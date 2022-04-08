@@ -1,0 +1,77 @@
+@use "styles" as *;
+
+.submenuLink {
+  margin-bottom: 10px;
+  // background-color: rgb(136, 60, 60);
+  background-color: color(black, lighter);
+  position: relative;
+
+  .child1 {
+    display: flex;
+    padding: 11px;
+    // padding: 20px;
+    align-items: center;
+    background-color: white;
+  }
+
+  .submenu--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 20px;
+    // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    svg {
+      font-size: 1.3rem;
+      z-index: 2;
+      color: white;
+      transform: scale(2.5) translate(0px, 2px);
+    }
+
+    .submenu__numberBadge {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      font-size: 0.6rem;
+      top: -1px;
+      z-index: 2;
+      right: -32px;
+      text-align: center;
+      border-radius: 50%;
+      color: white;
+      font-weight: 500;
+      background-color: red;
+
+      @include maxQ(1024px) {
+        right: -8px;
+        top: -4px;
+      }
+    }
+
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 5px;
+    //   left: 5px;
+    //   bottom: 5px;
+    //   border-radius: 50%;
+    //   z-index: 0;
+    //   right: 5px;
+    //   // background-color: rgb(136, 60, 60);
+    // }
+  }
+
+  .submenu--info {
+    width: 70%;
+    h5 {
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+}

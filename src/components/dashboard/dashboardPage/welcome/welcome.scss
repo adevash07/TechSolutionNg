@@ -1,0 +1,27 @@
+@use "styles" as *;
+
+/**************************************
+*********** Styles for Welcome component
+**************************************/
+.dashboardWelcome {
+  grid-column: 1/5;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: $btnShadow2;
+
+  .dashboardWelcome__salutation {
+    color: color(blue);
+    font-family: muli;
+    margin-bottom: 5px;
+  }
+
+  .dashboardWelcome__name {
+    color: lighten(color(blue), 20%);
+  }
+
+  .dashboardWelcome__greetings {
+    color: color(black, light);
+    font-family: muli;
+  }
+}

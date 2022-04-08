@@ -1,0 +1,30 @@
+@use "../../../../styles/index" as *;
+.containerFlex{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+    font-family: muli, sans-serif;
+    &--label{
+        font-size: fontSize(calc(header-4 - 0.2em));
+        font-weight: weight(bolder);
+        color: #85979F;
+        letter-spacing: 1px;
+    }
+
+    .amount{
+        font-size: fontSize(header-3);
+        font-family: cera_pro_bold;
+        color: color(blue, deep);
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            background: transparent linear-gradient(180deg, #00D4FF 0%, #004cff 100%);
+            width: 25px;
+            height: 3px;
+            bottom: -0.01em;
+            left: 0;
+            border-radius: 10px;
+        }
+    }
+}

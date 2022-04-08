@@ -1,0 +1,11 @@
+@use "styles/index" as *;
+
+#moreMenuIcon{
+    background-color: #F4F5F7;
+    border-radius: 50%;
+   display: flex;
+   align-items: center;
+   padding: 0.35em;
+   color: color(black, lighter);
+   font-size: 1.25rem !important;
+}

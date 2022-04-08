@@ -1,0 +1,14 @@
+.level {
+  font-size: 1.15rem;
+  &:not(:first-child) {
+    margin-left: 1em;
+  }
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.talentLevel__form {
+  margin: 1em 0;
+}

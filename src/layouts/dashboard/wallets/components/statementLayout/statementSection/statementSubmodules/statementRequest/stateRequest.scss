@@ -1,0 +1,49 @@
+@use "styles/index.scss" as *;
+.statementRequest {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 40px #004cff1a;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  width: 100%;
+
+  @include minQ(826px) {
+    width: 50%;
+  }
+
+  @include minQ(1349px) {
+    width: unset;
+  }
+
+  .headerName {
+    display: flex;
+    gap: 5%;
+  }
+  .formgroup {
+    margin: 2rem auto;
+    width: 100%;
+    .formgroup--input {
+      width: 100%;
+    }
+  }
+
+  .button {
+    align-self: center;
+  }
+}
+
+.startCal {
+  position: absolute;
+  right: 10%;
+  top: 46%;
+  // background-color: color(blue, light);
+  z-index: 2;
+}
+.endCal {
+  position: absolute;
+  right: 10%;
+  top: 74%;
+  // background-color:;
+}

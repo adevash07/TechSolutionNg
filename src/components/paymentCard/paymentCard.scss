@@ -1,0 +1,35 @@
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  font-weight: 600;
+  color: #051f64;
+  cursor: pointer;
+  img:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    z-index: 5;
+  }
+  label {
+    font-weight: 600;
+    color: #051f64;
+    font-size: 0.8rem;
+  }
+}

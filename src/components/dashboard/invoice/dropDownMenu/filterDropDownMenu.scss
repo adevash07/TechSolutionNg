@@ -1,0 +1,41 @@
+@use "../../../../styles/index" as *;
+
+.dropDown {
+  position: absolute;
+  display: inline-block;
+  z-index: 9;
+  background-color: color(white);
+  @include primaryShadow;
+  top: 4.35em;
+  width: 100%;
+  font-size: fontSize(calc(header-4 - 0.2em));
+  font-weight: weight(bold);
+  ul {
+    padding: 0.65em 0 0.65em 1em;
+    li > label {
+      cursor: pointer;
+    }
+    & > li:first-child {
+      font-size: 0.7em;
+      font-weight: weight(bolder);
+      color: darken(color(black, shade), 30%);
+      padding: 0.25em 0;
+    }
+
+    & > li:not(:first-child) {
+      color: color(blue, deeper);
+      display: flex;
+      align-items: center;
+      gap: 0.35em;
+      padding: 0.4em 0;
+    }
+  }
+
+  .icon {
+    font-size: 1.65rem;
+  }
+
+  & > ul:not(:last-child) {
+    border-bottom: 1px solid color(black, shade);
+  }
+}

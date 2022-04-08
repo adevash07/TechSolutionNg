@@ -1,0 +1,159 @@
+@use "styles/index" as *;
+.formContainer {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 38px 68px 38px 68px;
+  border: 0.5px solid rgba(0, 76, 255, 0.078);
+  border-top: none;
+  border-radius: 30px;
+  box-shadow: (0px 10px 60px rgba(0, 76, 255, 0.078));
+  background-color: white;
+  width: 100%;
+  @include minQ(1023px) {
+    width: unset;
+  }
+
+  h3 {
+    color: $textColor3;
+    font-weight: 600;
+    font-family: "cera_pro_medium";
+    font-family: "cera_pro_medium";
+    font-size: 1.5rem;
+
+    span {
+      display: inline-block;
+      height: 24px;
+
+      img {
+        height: 100%;
+        display: unset;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+
+  .formContainer__Social {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 30px auto;
+    @include minQ(992px) {
+      width: 75%;
+    }
+
+    .formContainer__BtnSocial {
+      width: 6rem;
+
+      @include maxQ(992px) {
+        overflow: hidden;
+        height: 5rem;
+        position: relative;
+
+        img {
+          max-width: none;
+          position: absolute;
+          width: 200%;
+          left: -50%;
+          top: -50%;
+        }
+      }
+    }
+  }
+
+  .hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(162, 162, 162, 0.4);
+    margin-bottom: 2rem;
+  }
+
+  .hr:after {
+    background: #fff;
+    content: "Or";
+    padding: 0 15px;
+    position: relative;
+    top: -13px;
+    left: 45%;
+    color: $textColor3;
+    font-size: fontSize(header-4);
+    font-weight: weight(thick);
+  }
+
+  .formContainer__form {
+    .formgroup {
+      width: 100%;
+      gap: 5%;
+      margin-bottom: 0;
+      font-weight: weight(thick);
+      color: $textColor3;
+
+      .formgroup--label {
+        font-size: 1rem;
+        font-family: "cera_pro_medium";
+      }
+
+      .passwordEye {
+        @include maxQ(992px) {
+          top: 60%;
+        }
+      }
+
+      .formgroup--input:not([type="checkbox"]) {
+        width: 100%;
+        background-color: #f4f5f7;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        color: inherit;
+        transition-duration: 0s;
+
+        @include maxQ(992px) {
+          font-size: 1.5rem;
+          letter-spacing: 0.2rem;
+        }
+      }
+    }
+    .formgroup:not(.row) {
+      margin-bottom: 2rem;
+    }
+
+    .formgroup:not(.row):nth-child(4) {
+      // margin-bottom: 5px;
+
+      .formgroup--input {
+        letter-spacing: 5px;
+        -webkit-text-security: asterisks;
+        font-size: 16px;
+      }
+    }
+
+    .formgroup.row .formgroup:nth-child(1) {
+      width: 55%;
+    }
+
+    .formgroup.row .formgroup:nth-child(2) {
+      width: 45%;
+    }
+
+    .formContainer__btnDiv {
+      @include maxQ(992px) {
+        text-align: right;
+        margin: 30px 0 0;
+
+        .button {
+          box-shadow: 0px 10px 5px #e1f8f5;
+          padding: 1rem 5rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .formContainer__otherLink {
+    text-align: center;
+    margin-top: 30px;
+
+    a {
+      color: color(blue);
+    }
+  }
+}

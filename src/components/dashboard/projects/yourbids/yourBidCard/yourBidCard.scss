@@ -1,0 +1,158 @@
+@use "styles" as *;
+
+/**************************************
+Start: Styles for yourBidCard component
+**************************************/
+.yourbidCard {
+  padding: 30px 15px;
+  background-color: color(white);
+  box-shadow: 0px 10px 30px #0012431a;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  &.openbids {
+    &:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border-radius: 50%;
+      background-color: color(green);
+      box-shadow: 0 5px 10px color(green, lightbase);
+    }
+  }
+
+  &.completedOffers {
+    .yourbidCard__completed {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: color(green);
+      background-color: color(green, lightbase);
+      font-size: 0.7rem;
+      padding: 5px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  }
+
+  &.closedbids {
+    &:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border-radius: 50%;
+      background-color: color(green);
+      box-shadow: 0 5px 10px color(green, lightbase);
+    }
+  }
+
+  &.activeoffers {
+    .yourbidCard__activeOffersTime {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: color(red);
+      font-size: 0.8rem;
+      max-width: 50px;
+      text-align: center;
+    }
+  }
+
+  .yourbidCard__small {
+    font-size: 0.8rem;
+    color: color(black);
+    margin-bottom: 15px;
+  }
+
+  .yourbidCard__header {
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+
+  .yourbidCard__paragraph {
+    margin-bottom: 15px;
+    line-height: 150%;
+    font-size: 0.9rem;
+    color: color(black);
+  }
+
+  .yourbidCard__info {
+    display: flex;
+    align-items: center;
+    color: color(black);
+    margin-bottom: 15px;
+
+    svg {
+      font-size: 1.3rem;
+      transform: translateY(-2px);
+    }
+  }
+
+  .yourbidCard__infoDetails {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    font-size: 0.7rem;
+    // justify-content: space-between;
+    padding-left: 5px;
+
+    li {
+      margin-right: 20px;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: color(black);
+          top: calc(50% - 2.5px);
+          left: -10px;
+        }
+      }
+    }
+  }
+
+  .yourbidCard__ratings {
+    display: flex;
+    align-items: center;
+
+    .ratings {
+      margin-left: 10px;
+
+      .ratings__value {
+        font-size: 0.8rem;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .yourbidCard__btn {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    .button {
+      padding: 7px 20px;
+    }
+  }
+}
+/**************************************
+End: Styles for yourBidCard component
+**************************************/

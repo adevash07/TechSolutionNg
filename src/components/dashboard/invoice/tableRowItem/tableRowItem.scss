@@ -1,0 +1,43 @@
+@use "styles/index" as *;
+
+#clientInitials {
+  background-color: #004cff1a;
+  padding: 0 0.35em;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 0.65em;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+
+#status {
+  width: 20%;
+  text-align: center;
+}
+
+#actions {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  gap: 1em;
+
+  span {
+    background-color: #004cff1a;
+    border-radius: 50%;
+    padding: 0.25em 0.45em 0 0.45em;
+  }
+}
+
+:is(#fullname, #clientInitials) {
+  color: color(blue);
+}
+
+@include minQmaxQ(768px, 1024px) {
+  :is(.invoiceNumber, .invoiceAmount, .invoiceDate) {
+    display: none;
+  }
+}

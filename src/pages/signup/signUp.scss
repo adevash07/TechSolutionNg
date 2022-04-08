@@ -1,0 +1,215 @@
+@use "styles/index" as *;
+
+.signUpContainer {
+  // line-height: normal;
+  // background-color: rgb(235, 255, 252);
+  background: #ebfffc 0% 0% no-repeat padding-box;
+  padding-bottom: 4rem;
+  @include minQ(1023px) {
+    background-color: white;
+    padding-bottom: unset;
+  }
+
+  // * {
+  //   z-index: 99;
+  // }
+  .header {
+    // padding-top: 10px;
+    // padding-bottom: 0px;
+    position: static;
+    padding: 0px;
+
+    @include minQ(1023px) {
+      position: fixed;
+    }
+
+    .registerNav {
+      display: flex;
+    }
+
+    .header__container {
+      width: 96%;
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @include minQ(1023px) {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .signUp__Aside {
+    // background-image: url(../../Assets/girl.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    padding: 0;
+    margin-top: 40px;
+    width: 100%;
+    position: relative;
+    box-shadow: 16px 0px 25px 34px rgba(235, 255, 252, 0.58);
+    -webkit-box-shadow: 16px 0px 25px 34px rgba(235, 255, 252, 0.58);
+    -moz-box-shadow: 16px 0px 25px 34px rgba(235, 255, 252, 0.58);
+    z-index: 1;
+
+    @include minQ(1023px) {
+      width: 40%;
+      padding-top: 6rem;
+      background-color: rgb(235, 255, 252);
+      background-image: url(../../assets/images/SignUpIcons/signupBG.svg.svg);
+      background-size: contain;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      height: 102%;
+      margin-top: 0px;
+    }
+    @media screen and (max-height: 789px) {
+      height: 105%;
+    }
+
+    .signUp__Aside__content {
+      display: flex;
+      height: 80%;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right: 10%;
+      margin-top: 2rem;
+      width: 85%;
+      margin: 0 auto;
+      padding: 0;
+      @include minQ(1023px) {
+        flex-direction: column;
+        padding-right: unset;
+        margin: unset;
+        width: unset;
+      }
+
+      @include maxQ(1023px) {
+      }
+      @media screen and (max-height: 789px) {
+        margin-top: 0px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    // .blur {
+    //   position: absolute; /* Sit on top of the page content */
+    //   display: none; /* Hidden by default */
+    //   width: 100%; /* Full width (cover the whole page) */
+    //   height: 90%; /* Full height (cover the whole page) */
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   background-color: rgb(235, 255, 252); /* Black background with opacity */
+    //   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    //   cursor: pointer; /* Add a pointer on hover */
+    //   filter: blur(15px);
+
+    //   @include minQ(1023px) {
+    //     display: block;
+    //   }
+    // }
+
+    .asideHeading {
+      position: relative;
+
+      text-align: start;
+      color: #051f64;
+      opacity: 1;
+
+      font-weight: weight(bolder);
+      z-index: 100;
+      padding: 0;
+      font-size: 3.25rem;
+      span {
+        color: #014dff;
+      }
+
+      @include minQ(1023px) {
+        padding-left: 3rem;
+        font-size: fontSize(header-2);
+      }
+    }
+
+    .imgContainer--RocketGirl {
+      position: relative;
+      height: 15rem;
+      width: 18rem;
+      transition: all 2s ease-in-out;
+
+      @include minQ(1023px) {
+        margin-top: 2rem;
+        height: 100vh;
+        width: unset;
+        z-index: 99;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      svg {
+        width: 100%;
+        transition: all 1s ease-in-out;
+        height: 100%;
+
+        &:focus {
+          #Girl {
+            transition: all 2s ease-in-out;
+            transform: translateX(15px);
+          }
+        }
+      }
+    }
+  }
+
+  .signUp__Content {
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    z-index: 1;
+
+    .signUp__form {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      width: 85%;
+      border: none;
+      box-shadow: none;
+      margin: 0 auto;
+
+      @include minQ(1023px) {
+        width: 100%;
+        margin: unset;
+      }
+    }
+  }
+}
+#Girl,
+#Rocket {
+  transition: all 1s ease-in-out;
+}
+
+.signUp__Aside:hover {
+  #Girl {
+    cursor: pointer;
+    transform: translateX(30px);
+  }
+  #Rocket {
+    cursor: pointer;
+    transform: translate(-20px, -20px);
+  }
+}
+
+// @include minQ(1327px) {
+//   .imgContainer-RocketGirl {
+//     align-self: center;
+//   }
+// }

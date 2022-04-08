@@ -1,0 +1,262 @@
+@use "styles" as *;
+
+.makeABid {
+  font-family: muli;
+  .makeABid__arrowContainer {
+    margin-bottom: 20px;
+    div {
+      width: 40px;
+      height: 40px;
+      background-color: color(white);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 10px 20px #004cff0d;
+
+      svg {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .makeABid__contentContainer {
+    background-color: color(white);
+    padding: 20px 40px;
+    border-radius: 15px;
+  }
+
+  .makeABid__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .makeABid__header {
+    font-family: muli;
+    font-size: 1.7rem;
+  }
+
+  .makeABid__headDetails {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .makeABid__report {
+    background-color: lighten(color(blue), 45%);
+    color: color(blue);
+    padding: 5px 20px;
+    display: flex;
+    font-family: muli;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .makeABid__headerTime {
+    background-color: lighten(color(blue), 45%);
+    color: color(blue);
+    padding: 5px 20px;
+  }
+
+  .makeABid__info {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeABid__infoHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .makeABid__paragraph {
+    color: color(black);
+    font-family: muli;
+  }
+
+  .makeABid__skills {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeABid__skillsHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 20px;
+      color: color(black);
+      transform: translate(0px, -2px);
+    }
+  }
+
+  .makeABid__skillsContent {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  .makeABid__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 20px 0 20px 3px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeABid__detailContainer {
+    display: flex;
+  }
+
+  .makeABid__detailIcon {
+    margin-right: 23px;
+
+    svg {
+      transform: translate(0, 2px);
+    }
+  }
+
+  .makeABid__detailHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .makeABid__detailbody {
+    font-family: muli;
+    color: color(black);
+  }
+
+  .makeABid__questionsHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .makeABid__questions {
+    padding: 20px 0;
+    // position: relative;
+    // overflow: hidden;
+
+    // &:before {
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 2px;
+    //   content: "";
+    //   border-bottom: 1px dashed lighten(color(black), 50%);
+    //   transform: scaleX(3);
+    //   bottom: 0;
+    // }
+  }
+
+  .makeABid__questionsItem {
+    color: color(black);
+    position: relative;
+    padding-left: 30px;
+    font-family: muli;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: color(black);
+      top: calc(50% - 3px);
+      left: 5px;
+    }
+  }
+
+  .makeABid__form {
+    padding: 20px 0;
+
+    .formgroup--label,
+    .formgroup--labelText {
+      color: color(black);
+      font-size: 0.8rem;
+    }
+
+    .formgroup--input {
+      border: 1px solid #cde2fb;
+      background-color: #fafbfd;
+      width: 100%;
+    }
+  }
+
+  .makeABid__formHeader {
+    font-family: muli;
+    font-size: 1.7rem;
+
+    &:nth-child(1) {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        transform: translate(10px, 3px);
+      }
+    }
+
+    span {
+      color: color(black);
+      font-size: 0.9rem;
+    }
+  }
+
+  .makeABid__formSubHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+
+  .makeABid__formBtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+}

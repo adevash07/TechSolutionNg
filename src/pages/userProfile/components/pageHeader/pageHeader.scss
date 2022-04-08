@@ -1,0 +1,29 @@
+//@use "../../styles" as *;
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background: #FFFFFF;
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  div {
+    display: flex;
+    h3 {
+      color: #004cff;
+      font-weight: bolder;
+      margin-right: 10px;
+    }
+    img {
+      height: 30px;
+    }
+
+  }
+  small {
+    color: #a2a2a2;
+  }
+  
+}
+.bg {
+  background: #F9FCFC;
+}

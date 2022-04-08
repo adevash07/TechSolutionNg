@@ -1,0 +1,77 @@
+.deviceSharing {
+  padding-top: 10rem;
+  background-color: #f9fcfc;
+
+  .deviceSharing__Search {
+    padding: 0 30px;
+  }
+
+  .deviceSharing__ParagraphyDiv {
+    padding: 30px 0px 20px 100px;
+    p {
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+  // deviceSharing__Date start here
+  .deviceSharing__Date {
+    background-color: white;
+    border-radius: 10px;
+    margin: 30px 0 10px 0;
+    padding: 20px 30px;
+    width: 75%;
+  }
+  .deviceSharing__LocationDate {
+    display: flex;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.068);
+    padding: 10px 0;
+    p {
+      color: rgba(0, 0, 0, 0.418);
+    }
+    p:nth-child(1) {
+      width: 36%;
+    }
+    p:nth-child(2) {
+      width: 14%;
+    }
+  }
+  // deviceSharing__Date end here
+
+  // deviceSharing__Button start here
+
+  .deviceSharing__Button {
+    width: 75%;
+
+    display: flex;
+    justify-content: flex-end;
+    .button-grey {
+      padding: 2px 20px;
+      margin: 20px 0;
+      background-image: linear-gradient(#f9fcfc, #f9fcfc);
+      border: 1px solid #ebebeb;
+    }
+  }
+  // deviceSharing__Button end here
+}
+
+// start Destop view
+@media (min-width: 768px) and (max-width: 900px) {
+  .deviceSharing {
+    .deviceSharing__Search {
+      padding: 0 30px;
+    }
+
+    .deviceSharing__ParagraphyDiv {
+      padding: 30px 0px 0px 30px;
+    }
+
+    .deviceSharing__Date {
+      background-color: white;
+      border-radius: 10px;
+      margin: 30px 0 10px 0;
+      padding: 20px 30px;
+      width: 95%;
+    }
+  }
+}
+// end Destop view

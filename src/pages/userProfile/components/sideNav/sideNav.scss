@@ -1,0 +1,39 @@
+@use "styles" as *;
+.sidenav {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: #ffffff;
+  width: 16%;
+  padding: 130px 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 1px 0 40px rgba(14, 14, 73, 0.274);
+  overflow-y: auto;
+  .menu-icon {
+    display: none;
+  }
+  @include maxQ($tablet) {
+    padding-left: 0px;
+    left: -30px;
+    width: 200px;
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 90px;
+      border: none;
+      background: #ffffff;
+      svg {
+        color: blue;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+.sidenav--collapse {
+  @include maxQ($tablet) {
+    width: 15%;
+    left: -2px;
+  }
+}

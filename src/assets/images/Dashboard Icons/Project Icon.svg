@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="184" height="184" viewBox="0 0 184 184">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00d4ff"/>
+      <stop offset="1" stop-color="#004cff"/>
+    </linearGradient>
+    <filter id="Rectangle_1044" x="0" y="0" width="184" height="184" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#004cff" flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Project_Icon" data-name="Project Icon" transform="translate(1121 -80)">
+    <g transform="matrix(1, 0, 0, 1, -1121, 80)" filter="url(#Rectangle_1044)">
+      <rect id="Rectangle_1044-2" data-name="Rectangle 1044" width="64" height="64" rx="17" transform="translate(60 55)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="rocket" transform="translate(-1044 151.951)">
+      <path id="Path_769" data-name="Path 769" d="M29.119.05A23.714,23.714,0,0,0,12.208,7.317L10.623,8.9,8.938,7.217l-4.974,1.4L0,12.585l3.47,3.471h0l.179.179L2.017,19.6l1.076,1.076L.461,23.311,1.7,24.555l2.632-2.632L5.609,23.2.036,28.77l1.243,1.243,5.573-5.574,1.273,1.273L5.493,28.344l1.243,1.243,2.632-2.632,1.076,1.076L13.811,26.4l3.649,3.65,3.963-3.964,1.409-4.971-1.69-1.69,1.585-1.585A24.146,24.146,0,0,0,28,10.282,23.438,23.438,0,0,0,30,.049ZM4.882,10.189l3.541-1,.956.956L4.713,14.813,2.486,12.585ZM10.8,25.9,4.145,19.245l.821-1.693,7.53,7.531Zm10.057-4.276-1,3.538-2.4,2.4-2.227-2.227L19.9,20.668Zm.643-5.049-1.6,1.6h0l-5.909,5.91L5.956,16.056l5.91-5.911,1.6-1.6A22,22,0,0,1,28.221,1.829,21.955,21.955,0,0,1,21.5,16.579Z" transform="translate(0 0)" fill="#fff"/>
+      <path id="Path_770" data-name="Path 770" d="M257.871,131.388a4.13,4.13,0,1,0-5.839,0A4.138,4.138,0,0,0,257.871,131.388Zm-2.917-5.241a2.316,2.316,0,1,1-2.319,2.316C252.635,127.844,253.685,126.147,254.954,126.147Z" transform="translate(-236.289 -117.082)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

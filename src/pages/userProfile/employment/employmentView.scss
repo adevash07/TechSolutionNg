@@ -1,0 +1,31 @@
+@use "styles" as *;
+.employment-view {
+  margin-bottom: 10%;
+  width: 70%;
+  background-color: #ffffff;
+  @include maxQ($tablet) {
+    width: 95%;
+  }
+}
+.employment-view .action-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 3%;
+  button {
+    height: 40px;
+    padding-top: 8px;
+    font-weight: 600;
+  }
+  button.button-grey {
+    height: 38px;
+    padding-top: 7px;
+    background-color: #004cff33;
+    width: 100px;
+  }
+  @include maxQ($tablet) {
+    width: 100%;
+    padding: 0px 20px;
+    margin-top: 20px;
+  }
+}

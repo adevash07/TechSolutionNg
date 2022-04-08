@@ -1,0 +1,108 @@
+@use "styles" as *;
+
+.landingNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+
+  @include maxQ(1250px) {
+    width: 50%;
+  }
+
+  @include maxQ(900px) {
+    width: 60%;
+  }
+
+  .landingNav__link {
+    color: color(blue, deeper);
+    font-family: cera_pro_medium;
+    font-weight: 600;
+    transition: 0.3s;
+
+    a {
+      position: relative;
+      color: color(blue, deeper);
+
+      &:before {
+        position: absolute;
+        content: "";
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background-color: color(blue);
+        width: 100%;
+        transform: scaleX(0);
+        transition: 0.3s;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      color: color(blue);
+
+      a {
+        color: color(blue);
+
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  div {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+
+    // span {
+    //   // color: color(blue, deeper);
+    //   font-family: cera_pro_medium;
+    //   font-weight: 600;
+    //   transition: 0.3s;
+
+    //   a {
+    //     position: relative;
+    //     color: color(blue, deeper);
+
+    //     &:before {
+    //       position: absolute;
+    //       content: "";
+    //       bottom: -10px;
+    //       left: 0;
+    //       height: 2px;
+    //       background-color: color(blue);
+    //       width: 100%;
+    //       transform: scaleX(0);
+    //       transition: 0.3s;
+    //     }
+    //   }
+
+    //   &:hover {
+    //     font-size: 1.1rem;
+    //     color: color(blue);
+
+    //     a {
+    //       color: color(blue);
+
+    //       &:before {
+    //         transform: scaleX(1);
+    //       }
+    //     }
+    //   }
+    // }
+    span {
+      &:nth-child(2) {
+        width: 1px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        left: 49%;
+        top: -12px;
+      }
+    }
+  }
+}

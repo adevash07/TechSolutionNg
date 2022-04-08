@@ -1,0 +1,29 @@
+.tag {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  width: fit-content;
+  background: #f4f5f7;
+  color: #051f64;
+  padding: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-right: 5px;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    align-self: center;
+    border: none;
+    outline: none;
+  }
+}
+.tag--grey {
+  background-color: #f4f5f7;
+  color: #051f64;
+}

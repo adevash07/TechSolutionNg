@@ -1,0 +1,26 @@
+@use "styles/index.scss" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerFluid {
+  padding-top: 10rem;
+  background-color: #f9fcfc;
+
+  .containerSearch {
+    padding: 0 30px;
+  }
+
+  .containerTabs {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 30px 0px 20px 100px;
+    gap: 2rem;
+    p {
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+}

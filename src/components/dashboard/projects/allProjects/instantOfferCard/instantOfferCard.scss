@@ -1,0 +1,152 @@
+@use "styles" as *;
+
+/**************************************
+Start: Styles for instant offer card component
+**************************************/
+.instantCard {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  margin: 30px 0;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+  z-index: 3;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 100%;
+      top: -28%;
+      left: -17%;
+      transform: rotate(4deg);
+      border-radius: 102px;
+      background-color: white;
+      z-index: 2;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #e9edf7;
+      z-index: 1;
+    }
+  }
+
+  .instantCard__container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    width: 95%;
+    z-index: 3;
+
+    @include maxQ(1023px) {
+      grid-template-columns: 1fr 7fr 1fr;
+    }
+  }
+
+  .instantCard__iconContainer {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #faa515;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 10px #faa51533;
+
+    svg {
+      font-size: 1.6rem;
+      color: #faa515;
+      background-color: transparent;
+      transform: rotate(20deg);
+    }
+  }
+  // }
+
+  // .instantCard__body {
+  //   grid-column: 2/7;
+  // }
+  .instantCard__header {
+    margin-bottom: 10px;
+  }
+
+  .instantCard__paragraph {
+    line-height: 150%;
+    margin-bottom: 10px;
+  }
+
+  .instantCard_details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .instantCard__detailsContainer {
+    margin-bottom: 10px;
+    display: flex;
+
+    align-items: center;
+
+    &:nth-child(1) {
+      span {
+        color: red;
+        font-weight: 600;
+      }
+    }
+
+    &:nth-child(5),
+    &:nth-child(4) {
+      grid-column: 1/3;
+    }
+  }
+  .instantCard__detailsText {
+    font-size: 0.8rem;
+    color: #455a64;
+  }
+
+  .instantCard__detailsImg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+
+    svg {
+      transform: translate(-9px, -6px);
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .instantCard__budget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .instantCard__budgetHeader {
+    color: #455a64;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .instantCard__budgetAmount {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}
+/**************************************
+End: Styles for instant offer card component
+**************************************/

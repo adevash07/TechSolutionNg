@@ -1,0 +1,54 @@
+@use "styles" as *;
+
+.heroSection {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+
+  @include minQmaxQ(1200px, 1900px) {
+    @include minHeight(1000px) {
+      height: fit-content;
+    }
+  }
+
+  @include maxQ(1199px) {
+    height: fit-content;
+
+    @include maxHeight(768px) {
+      height: 100vh;
+    }
+  }
+
+  @include maxQ(992px) {
+    height: fit-content;
+    min-height: 86vh;
+
+    @include maxHeight(1100px) {
+      min-height: 80vh;
+    }
+  }
+
+  .heroSection__container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxQ(1199px) {
+      flex-direction: column-reverse;
+      min-height: 85vh;
+
+      @include maxHeight(768px) {
+        flex-direction: row;
+        padding: 0;
+      }
+    }
+
+    @include maxQ(992px) {
+      flex-direction: column-reverse;
+    }
+  }
+}

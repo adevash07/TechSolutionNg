@@ -1,0 +1,45 @@
+.message-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #cde2fb;
+  padding: 5px 15px;
+  margin: 0px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+    padding-left: -20px;
+    margin: 0px;
+    li {
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+  .message--out {
+   justify-self: flex-start;
+    align-self: flex-end;
+    max-width: 80%;
+    margin-right: 40px;
+  }
+  .message--in {
+    justify-self: flex-start;
+    align-self: flex-start;
+    max-width: 80%;
+  }
+  .message-list__date {
+    justify-self: center;
+    align-self: center;
+    background: #455a64;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .message-list__typing-text {
+    color: #455a64;
+    margin: 10px 0px;
+  }
+}

@@ -1,0 +1,47 @@
+@use "styles" as *;
+
+.makeAnOffer2Modal {
+  background-color: color(white);
+  display: flex;
+  width: 50%;
+  padding: 20px 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+
+  .makeAnOffer2Modal__container {
+    width: 90%;
+  }
+
+  .makeAnOffer2Modal__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .makeAnOffer2Modal__header {
+    color: color(blue, deep);
+    font-size: 1.3rem;
+    font-family: muli;
+  }
+
+  .makeAnOffer2Modal__icon {
+    svg {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+
+  .makeAnOffer2Modal__paragraph {
+    color: color(blue, deep);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .makeAnOffer2Modal__btnContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+  }
+}

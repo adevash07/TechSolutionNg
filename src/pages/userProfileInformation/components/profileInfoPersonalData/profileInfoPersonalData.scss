@@ -1,0 +1,60 @@
+/*************************************************************************************
+START:: Styles for freelancer personal data
+***************************************************************************************/
+.personalData {
+  &__container > div {
+    margin-top: 3em;
+  }
+
+  &__containerFlex-r,
+  &__containerFlex-c {
+    display: flex;
+  }
+
+  &__containerFlex-c {
+    flex-direction: column;
+  }
+
+  &__containerFlex-r {
+    justify-content: space-between;
+  }
+  &__item,
+  &--overview {
+    position: relative;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 100px;
+    padding-top: 1.5em;
+    padding-bottom: 5em;
+    padding-left: 1.5em;
+
+    & > span:nth-child(2) {
+      margin-top: 0.75em;
+    }
+  }
+
+  &--overview {
+    padding-left: 1.5em;
+    padding-right: 6em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+
+    P {
+      text-align: justify;
+      padding-top: 1em;
+    }
+  }
+
+  &__item--edit {
+    width: 450px;
+    height: 190px;
+    position: relative;
+    padding: 1.5em 1.5em 3em 1.5em;
+  }
+}
+/********************************************************************************************************
+END:: Styles for freelancer personal data
+******************************************************************************************************/

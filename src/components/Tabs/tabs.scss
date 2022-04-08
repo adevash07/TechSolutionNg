@@ -1,0 +1,31 @@
+.tabs__box {
+  margin: 0 -20px 5px -5px;
+}
+
+.tabs__tab {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  border: none;
+
+  background: transparent;
+  color: #030b20;
+  margin: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.tabs__tab-active {
+  color: #004cff;
+}
+
+.tabs__tab-active:after {
+  content: "";
+  display: block;
+  padding-top: 1px;
+  margin-bottom: -16px;
+  border-bottom: 2px solid #004cff;
+}
+button:focus {
+  outline: none;
+}

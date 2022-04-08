@@ -1,0 +1,30 @@
+/***************************************************************************************************
+START:: Styles for the profile information: Service Category
+*****************************************************************************************************/
+.serviceCategory {
+  padding: 1.25em;
+  margin-top: var(--block-spacing-top);
+}
+
+.serviceCategory__info {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: var(--block-spacing-top);
+}
+
+.info--textDefined,
+.info--imgDefined {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  gap: 1em;
+}
+
+.stackedData {
+  display: flex;
+  flex-direction: column;
+}
+
+/***************************************************************************************************
+END:: Styles for the profile information: Service Category
+*****************************************************************************************************/

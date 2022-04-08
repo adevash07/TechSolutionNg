@@ -1,0 +1,253 @@
+@use "styles" as *;
+
+.landingSolution {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 40px 0;
+  min-height: 80vh;
+  overflow: hidden;
+
+  .landingSolution__container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+
+    @include maxQ(1199px) {
+      flex-direction: column-reverse;
+
+      @include minQ(992px) {
+        @include maxHeight(768px) {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  .landingSolution__avatar {
+    width: 50%;
+    position: relative;
+    height: 100%;
+
+    svg {
+      position: absolute;
+      width: 78%;
+      top: 20%;
+      right: 11%;
+      transition: 0.5s ease-in-out;
+
+      .rectangle {
+        fill: rgb(166, 236, 255);
+        opacity: 0.9;
+        fill-opacity: 0.9;
+      }
+
+      .semiCircleGroup {
+        opacity: 0.8;
+      }
+    }
+
+    .yoga-arrowHead,
+    .yoga-arrowBody,
+    #Path_1787 {
+      transition: 0.5s ease-in-out;
+    }
+
+    img {
+      position: absolute;
+      top: 0%;
+      right: 4%;
+      width: 100%;
+      transition: 0.5s ease;
+    }
+
+    &:hover {
+      svg {
+        transform: translate(-55px, -31px);
+      }
+
+      img {
+        transform: translate(-25px, -31px);
+      }
+    }
+
+    @include maxQ(1800px) {
+      svg {
+        top: 12%;
+      }
+    }
+
+    @include maxQ(1650px) {
+      svg {
+        top: 13%;
+      }
+
+      img {
+        top: 3%;
+      }
+    }
+
+    @include maxQ(1550px) {
+      img {
+        top: 6%;
+      }
+    }
+
+    @include maxQ(1300px) {
+      svg {
+        top: 3%;
+      }
+    }
+
+    @include maxQ(1199px) {
+      width: 700px;
+      height: 700px;
+
+      @include minQ(992px) {
+        @include maxHeight(768px) {
+          width: 450px;
+          height: 500px;
+        }
+      }
+    }
+
+    @include maxQ(992px) {
+      width: 600px;
+      height: 600px;
+    }
+
+    @include maxQ(850px) {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  .landingSolution__info {
+    width: 50%;
+
+    @include maxQ(1199px) {
+      width: 90%;
+
+      @include minQ(992px) {
+        @include maxHeight(768px) {
+          width: 50%;
+        }
+      }
+    }
+
+    @include maxQ(992px) {
+      width: 90%;
+      margin-top: 35px;
+    }
+  }
+
+  .landingSolution__subHeader {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-family: cera_pro_medium;
+    display: flex;
+    align-items: center;
+
+    span {
+      border-radius: 10px;
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      box-shadow: 0px 5px 10px #004cff26;
+      background-color: rgba(255, 255, 255, 0.3);
+      margin-left: 10px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .landingSolution__mainHeader {
+    font-size: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: cera_pro_medium;
+    letter-spacing: 2px;
+    line-height: 1.2;
+
+    span {
+      @include maxQ(1199px) {
+        margin-right: 8px;
+      }
+
+      span {
+        color: color(blue);
+      }
+    }
+
+    @include maxQ(1500px) {
+      font-size: 3rem;
+    }
+
+    @include maxQ(1199px) {
+      display: block;
+    }
+  }
+
+  .landingSolution__paragraphs {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 80%;
+
+    @include maxQ(1199px) {
+      width: 100%;
+      display: block;
+
+      p {
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .landingSolution__list {
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    @include maxQ(1199px) {
+      width: 100%;
+    }
+  }
+
+  .landingSolution__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 0;
+
+    span {
+      &:nth-child(1) {
+        border-radius: 50%;
+        display: inline-flex;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 5px 10px #004cff26;
+        background-color: rgba(255, 255, 255, 0.3);
+        margin-right: 10px;
+
+        img {
+          width: 50%;
+        }
+      }
+
+      &:nth-child(2) {
+        font-family: cera_pro_medium;
+      }
+    }
+  }
+
+  .landingSolution__button {
+    margin-top: 40px;
+  }
+}

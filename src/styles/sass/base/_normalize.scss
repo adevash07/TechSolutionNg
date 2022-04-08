@@ -1,0 +1,11 @@
+@use "../base/typography";
+
+body {
+  font-family: cera_pro_light, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #001243;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+}

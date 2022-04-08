@@ -1,0 +1,32 @@
+@use "styles" as *;
+.info-ctn {
+  margin-top: 3%;
+  small {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #051f64;
+  }
+  .info-ctn__main {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 10px 20px;
+  }
+  .content-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    .tag-ctn {
+      margin-bottom: 10px;
+    }
+  }
+  .icons {
+      display: flex;
+      flex-direction: column;
+      span:nth-child(2) {
+          margin-top: 50px;
+      }
+  }
+}

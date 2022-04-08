@@ -1,0 +1,15 @@
+@use "styles" as *;
+
+/**************************************
+Start: Styles for rating component
+**************************************/
+.ratings {
+  .ratings__stars {
+    svg {
+      color: color(yellow, medium);
+    }
+  }
+}
+/**************************************
+End: Styles for rating component
+**************************************/

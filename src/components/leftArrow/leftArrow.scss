@@ -1,0 +1,13 @@
+@use "styles/index" as *;
+
+#leftArrow{
+    font-family: cera_pro_black, sans-serif;
+    border-radius: 50%;
+    background-color: color(white);
+    border: none;
+    @include primaryShadow-2;
+    padding: 0.76em 0.6em 0.25em 0.6em;
+    font-size: 1.4em;
+    height: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,230 @@
+@use "styles" as *;
+
+.makeAnOffer2 {
+  // padding: 30px 0;
+  .makeAnOffer2__container {
+    width: 90%;
+  }
+  .makeAnOffer2__arrowContainer {
+    margin-bottom: 20px;
+    div {
+      width: 40px;
+      height: 40px;
+      background-color: color(white);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 10px 20px #004cff0d;
+
+      svg {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .makeAnOffer2__contentContainer {
+    background-color: color(white);
+    padding: 40px 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .makeAnOffer2__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .makeAnOffer2__header {
+    font-family: muli;
+    font-size: 1.7rem;
+  }
+
+  .makeAnOffer2__headDetails {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .makeAnOffer2__report {
+    background-color: lighten(color(blue), 45%);
+    color: color(blue);
+    padding: 5px 20px;
+    display: flex;
+    font-family: muli;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .makeAnOffer2__headerTime {
+    background-color: lighten(color(red), 35%);
+    color: color(red);
+    padding: 5px 20px;
+  }
+
+  .makeAnOffer2__info {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeAnOffer2__infoHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .makeAnOffer2__paragraph {
+    color: color(black);
+    font-family: muli;
+  }
+
+  .makeAnOffer2__skills {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeAnOffer2__skillsHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 20px;
+      color: color(black);
+      transform: translate(0px, -2px);
+    }
+  }
+
+  .makeAnOffer2__skillsContent {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  .makeAnOffer2__priceFormat {
+    display: flex;
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      content: "";
+      border-bottom: 1px dashed lighten(color(black), 50%);
+      transform: scaleX(3);
+      bottom: 0;
+    }
+  }
+
+  .makeAnOffer2__price,
+  .makeAnOffer2__format {
+    display: flex;
+  }
+
+  .makeAnOffer2__price {
+    width: 25%;
+  }
+
+  .makeAnOffer2__priceIcon,
+  .makeAnOffer2__formatIcon {
+    color: color(black);
+    margin-right: 24px;
+  }
+
+  .makeAnOffer2__priceHeader,
+  .makeAnOffer2__formatHeader {
+    font-family: muli;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .makeAnOffer2__priceAmount,
+  .makeAnOffer2__formatAmount {
+    color: color(black);
+    font-family: muli;
+  }
+
+  .makeAnOffer2__form {
+    padding: 20px 0;
+
+    .makeAnOffer2__formGroup {
+      margin: 20px 0;
+    }
+
+    .makeAnOffer2__btnDiv {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .formgroup--label {
+      font-family: muli;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .formgroup--input {
+      background-color: #fafbfd;
+      border: 1px solid #cde2fb;
+      padding: 10px 25px;
+
+      &::placeholder {
+        font-size: 1rem;
+        color: color(black);
+        font-family: muli;
+      }
+    }
+  }
+
+  input.formgroup--input {
+    width: 50%;
+
+    &[type="file"] {
+      // width: 100%;
+
+      padding: 15px 25px;
+
+      &::before {
+        content: "";
+      }
+    }
+  }
+
+  .blackColor {
+    fill: color(blue, deeper);
+  }
+}

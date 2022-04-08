@@ -1,0 +1,126 @@
+@use "styles" as *;
+
+.activeOffersModalBody {
+  display: flex;
+  font-family: muli;
+  background-color: color(white);
+  padding: 30px;
+  width: 60%;
+  border-radius: 20px;
+
+  .activeOffersModalBody__aside {
+    width: 20%;
+  }
+
+  .activeOffersModalBody__asideContainer {
+    width: 85px;
+    height: 85px;
+    box-shadow: 0 0 10px lighten(color(yellow), 35%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    svg {
+      width: 180px;
+      transform: translate(0, 8px);
+    }
+  }
+
+  .activeOffersModalBody__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .activeOffersModalBody__headClose {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .activeOffersModalBody__headStatus {
+    color: color(blue);
+    padding: 7px 20px;
+    background-color: lighten(color(blue), 45%);
+  }
+
+  .activeOffersModalBody__header {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .activeOffersModalBody__paragraph {
+    margin-bottom: 15px;
+  }
+
+  .activeOffersModalBody__price {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .activeOffersModalBody__priceHeader {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .activeOffersModalBody__priceAmount {
+    font-weight: 600;
+  }
+
+  .activeOffersModalBody__skills {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .activeOffersModalBody__skillsHeader {
+    font-weight: 600;
+  }
+
+  .activeOffersModalBody__skillsIcon,
+  .activeOffersModalBody__timeOutIcon,
+  .activeOffersModalBody__entriesIcon,
+  .activeOffersModalBody__jobsIcon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      transform: translate(-10px, 2px);
+    }
+  }
+
+  .activeOffersModalBody__bodyDetails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin-bottom: 20px;
+  }
+
+  .activeOffersModalBody__timeOut,
+  .activeOffersModalBody__entries,
+  .activeOffersModalBody__jobs {
+    display: flex;
+    align-items: center;
+  }
+
+  .activeOffersModalBody__timeOutDetail {
+    color: color(red);
+  }
+
+  .activeOffersModalBody__btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

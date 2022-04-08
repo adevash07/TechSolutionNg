@@ -1,0 +1,13 @@
+@use "styles" as *;
+
+.savedoffers {
+  display: none;
+
+  > div:nth-child(1) {
+    margin-bottom: 40px;
+  }
+}
+
+.savedoffers.active {
+  display: block;
+}

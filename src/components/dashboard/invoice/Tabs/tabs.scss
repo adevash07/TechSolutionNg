@@ -1,0 +1,131 @@
+@use "styles/index" as *;
+
+.buttonTabs {
+  section {
+    .content {
+      visibility: visible;
+      margin: 0;
+      max-width: 100% !important;
+      background-color: transparent;
+    }
+  }
+  .buttonTabs__lists {
+    font-size: fontSize(header-4);
+    font-weight: weight(bold);
+    color: color(blue, deep);
+    display: flex;
+    align-items: center;
+    padding: 0.35em 0;
+
+    //styles gives other tab buttons margin except the first tab button
+    & > li:not(:first-child) {
+      @include minQ(1440px) {
+        margin-left: auto;
+      }
+
+      @include minQmaxQ(768px, 1024px) {
+        font-size: 14px;
+        margin-left: auto;
+      }
+    }
+
+    & > li {
+      display: flex;
+
+      button {
+        padding: 0.65em 2em;
+        @include minQmaxQ(768px, 1024px) {
+          padding: 0.65em 0.65em;
+        }
+        width: 100%;
+        outline: none;
+        border: 0;
+        background-color: transparent;
+
+        & > span:first-child {
+          text-transform: capitalize;
+        }
+        & > span:last-child {
+          font-size: 75%;
+          margin-left: 1em;
+          color: color(white);
+          border-radius: 5px;
+
+          &.confirmed {
+            background-color: color(blue);
+          }
+
+          &.all {
+            background-color: color(blue, deep);
+          }
+
+          &.pending {
+            background-color: color(yellow, medium);
+          }
+
+          &.cancelled,
+          &.critical {
+            background-color: color(red);
+          }
+
+          &:is(.confirmed, .all, .pending) {
+            padding: 0.25em 0.45em;
+            box-shadow: 0px 10px 40px #0000001a;
+          }
+
+          &:is(.cancelled, .critical, .positive) {
+            padding: 0.25em 0.65em;
+          }
+          &.positive {
+            background-color: color(green);
+          }
+        }
+      }
+
+      //style indicates active tab when clicked
+      &.current {
+        border-radius: 20px 20px 0px 0px;
+        @include minQmaxQ(768px, 1024px) {
+          border-radius: 10px 10px 0px 0px;
+        }
+        box-shadow: 0px 1px 10px 0px hsla(222, 100%, 50%, 0.102);
+        background-color: color(white);
+      }
+    }
+
+    //style indicated text color for the all invoice tab button
+    .all-invoices,
+    .all-text {
+      color: color(blue, deeper);
+    }
+
+    //style indicated text color for the confirmed invoice tab button
+    .confirmed-invoice,
+    .confirmed-text {
+      color: color(blue);
+    }
+
+    //style indicated text color for the pending invoice tab button
+    .pending-invoice,
+    .pending-text {
+      color: color(yellow, medium);
+    }
+
+    //style indicated text color for the cancelled invoice tab button and th critical-reviews
+    .cancelled-invoice,
+    .critical-reviews,
+    .cancelled-text {
+      color: color(red);
+    }
+
+    //style indicated text color for the all-reviews tab button
+    .all-reviews {
+      color: color(blue);
+    }
+
+    //style indicated text color for the positive-reviews tab button
+    .positive-reviews {
+      color: color(green);
+    }
+  }
+}

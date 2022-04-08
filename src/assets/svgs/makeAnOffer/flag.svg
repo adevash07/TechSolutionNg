@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#004cff"/>
+      <stop offset="1" stop-color="#00d4ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Page-1" transform="translate(0 0.05)">
+    <g id="_037---Waypoint-Flag" data-name="037---Waypoint-Flag" transform="translate(0 -0.05)">
+      <path id="Shape" d="M5.319,28.26l.387-.108a.7.7,0,0,0,.486-.862L1.768,11.459A.875.875,0,0,0,.69,10.852l-.05.014a.875.875,0,0,0-.607,1.078l4.424,15.83A.7.7,0,0,0,5.319,28.26Z" transform="translate(0 -7.286)" fill="url(#linear-gradient)"/>
+      <path id="Shape-2" data-name="Shape" d="M25.022,10.9a16.76,16.76,0,0,1-3.855-2.652.344.344,0,0,1-.1-.351,49.588,49.588,0,0,0,1.272-6.587c.043-.37-.156-.478-.366-.225-4.123,4.932-11.258-.9-15.5,3.58a1.446,1.446,0,0,1,.12.3l2.87,10.276c4.254-4.428,11.363,1.37,15.479-3.551.21-.254.25-.717.083-.79Z" transform="translate(-4.126 -0.95)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

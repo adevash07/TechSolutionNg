@@ -1,0 +1,182 @@
+@use "styles/index.scss" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.accountVerfication {
+  margin-top: 6rem;
+  padding: 3rem 0;
+
+  background-color: #f9fcfc;
+  height: 100vh;
+  //   font-family: "muli";
+  .accountVerfication__Search {
+    padding: 3rem 2rem;
+  }
+  .accountVerfication__IconParagraphDiv {
+    background-color: white;
+    margin-left: 5rem;
+
+    width: 40%;
+    position: relative;
+
+    .accountVerfication__IconParagraph {
+      display: flex;
+      padding: 2rem 1rem;
+      // accountVerfication__Icon start here
+      .accountVerfication__Icon {
+        display: flex;
+        padding: 0 2rem;
+
+        i {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: blue;
+          font-size: 20px;
+          padding: 5px;
+          border-radius: 50%;
+          border: 1px solid rgba(0, 0, 255, 0.452);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.404);
+        }
+      }
+    } // accountVerfication__Icon end here
+    // accountVerfication__Paragraph start here
+    .accountVerfication__Paragraph {
+      h4 {
+        font-size: 15px;
+        // padding-bottom: 20px;
+      }
+      p {
+        font-size: 12px;
+        padding: 4px 0;
+      }
+    }
+    // accountVerfication__Paragraph end here
+    // acheckbox start here
+
+    .checkbox__Container {
+      .checkbox__Switch {
+        // background-color: red;
+        display: inline-block;
+        height: 8px;
+        width: 20px;
+        position: relative;
+        input {
+          display: none;
+        }
+
+        .checkbox__SlideSpan {
+          background-color: rgba(0, 0, 0, 0.144);
+          border-radius: 30%;
+
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          &::before {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: white;
+            border: 1px solid #004cff;
+            height: 10px;
+            width: 10px;
+            top: -1px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+        input:checked + .checkbox__SlideSpan::before {
+          transform: translateX(12px);
+        }
+        input:checked + .checkbox__SlideSpan {
+          background-color: #004cff;
+        }
+      }
+    }
+  }
+  // acheckbox end here
+
+  .accountVerfication__Vissibility {
+    visibility: none;
+  }
+  // accountVerfication__PenEmailPhone start here
+
+  .accountVerfication__PenEmailPhone {
+    animation: animatepenloader 0.5s;
+    // position: absolute;
+    .accountVerfication__PenEmail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    p {
+      font-size: 12px;
+      padding: 4px 0;
+    }
+    span {
+      color: black;
+      font-weight: bold;
+    }
+    .accountVerfication__PenSpan {
+      i {
+        font-size: 13px;
+        background-color: rgba(0, 0, 0, 0.144);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 5px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .accountVerfication__Button {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+      button {
+        color: white;
+        background-image: linear-gradient(#1ab3ff 20%, #004cff);
+        border: none;
+        padding: 2px 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+  @keyframes animatepenloader {
+    0% {
+      transition: all 2s ease-in-out;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+
+      transition: all 2s ease-in-out;
+    }
+  }
+}
+// accountVerfication__PenEmailPhone end here
+
+//  destop view start here
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .accountVerfication {
+    height: 120vh;
+
+    .accountVerfication__Search {
+      padding: 3rem 5rem;
+    }
+    .accountVerfication__IconParagraphDiv {
+      background-color: white;
+      margin-left: 5rem;
+      width: 60%;
+    }
+  }
+}
+// destop view end here

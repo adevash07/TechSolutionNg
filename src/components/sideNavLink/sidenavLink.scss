@@ -1,0 +1,149 @@
+@use "styles" as *;
+.sidenavLink {
+  display: flex;
+  //width: 170px;
+  flex-direction: column;
+  .sidenavLink--child1 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 100%;
+      height: 100%;
+      border-right: 2px solid #004cff;
+    }
+    @include maxQ($tablet) {
+       //width: 170px;
+    }
+  }
+
+  .sidenavLink--child2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      display: flex;
+      align-items: center;
+
+      span:nth-child(1) {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+        svg {
+          color: #004cff;
+          font-size: 1rem;
+          background: #ffffff;
+        }
+      }
+      .title {
+        @include maxQ($tablet) {
+          display: none;
+        }
+      }
+      .title--visible {
+        @include maxQ($tablet) {
+          display: inline-block;
+        }
+      }
+      span:nth-child(2) {
+        color: #004cff;
+        font-weight: 600;
+        font-size: 0.8rem;
+      }
+
+      .icon {
+        color: #004cff;
+        font-size: 1.3rem;
+      }
+    }
+
+    .check {
+      display: flex;
+      align-items: center;
+      input {
+        appearance: none;
+        padding: 8px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid #004cff;
+        box-shadow: 0 0 3px #004cff;
+        display: inline-block;
+        position: relative;
+        left: -5px;
+        &:after {
+          content: "\2714";
+          background-color: #004cff;
+          position: absolute;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          height: 100%;
+          color: white;
+          font-size: 12px;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.sidenavLink.inactive {
+  @extend .sidenavLink;
+  color: gray;
+
+  .sidenavLink--child1 {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -13px;
+      border-right: 2px solid rgba(14, 14, 73, 0.486);
+    }
+  }
+
+  .sidenavLink--child2 {
+    span:nth-child(1),
+    span:nth-child(2) {
+      color: #b3c9ff;
+      //   color: gray;
+
+      svg {
+        //   color: gray;
+        color: #b3c9ff;
+      }
+    }
+
+    .check {
+      input {
+        &:after {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+.sidenavLink--collapse {
+  @include maxQ($tablet) {
+    width: 80px;
+    justify-content: flex-start;
+  }
+}

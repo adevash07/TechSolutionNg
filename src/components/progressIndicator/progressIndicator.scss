@@ -1,0 +1,18 @@
+.progress-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #a2a2a2;
+    margin-right: 5px;
+  }
+  span.active {
+    width: 15px;
+    height: 15px;
+    border: 2px solid blue;
+  }
+}

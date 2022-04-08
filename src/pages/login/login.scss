@@ -1,0 +1,32 @@
+@use "styles" as *;
+.layout--header {
+  // padding-top: 10px;
+  // padding-bottom: 0px;
+
+  .container {
+    width: 96%;
+  }
+}
+
+.loginPage {
+  // height: 100vh;
+  // max-height: 100vh;
+  // min-height: 100vh;
+  overflow-y: hidden;
+  background-color: #ebfffc;
+}
+.loginPage__AsideForm {
+  display: flex;
+  // height: 100vh;
+  flex-direction: column;
+
+  @include minQ(1023px) {
+    flex-direction: row;
+  }
+
+  @include maxQ(1023px) {
+    width: 85%;
+    margin: 0 auto;
+    min-height: calc(100vh - 127px);
+  }
+}

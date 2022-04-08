@@ -1,0 +1,12 @@
+.message-pane {
+  display: flex;
+  flex-direction: column;
+  background: #cde2fb;
+  padding: 20px 30px;
+  padding-bottom: 0px;
+  .input-box {
+    position: sticky;
+    bottom: 0;
+    padding-bottom: 1px;
+  }
+}

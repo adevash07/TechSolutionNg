@@ -1,0 +1,54 @@
+@use "styles" as *;
+
+.projectBtnSection {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  transition: 0.5s;
+  &:before {
+    position: absolute;
+    height: 100%;
+    width: 110px;
+    // right: 0;
+    // left: 176px;
+    box-shadow: 0px 5px 10px #71747a26;
+    content: "";
+    transition: 0.5s;
+    background-image: linear-gradient(#00aaff, color(blue));
+  }
+  .projectBtn:nth-child(1) {
+    margin-right: 40px;
+  }
+}
+
+.projectBtnSection.active1 {
+  &:before {
+    left: 6px;
+    width: 124px;
+
+    @include maxQ(1023px) {
+      width: 116px;
+    }
+  }
+}
+
+.projectBtnSection.active2 {
+  &:before {
+    left: 190px;
+    width: 141px;
+
+    @include maxQ(1400px) {
+      left: 186px;
+      width: 135px;
+    }
+
+    // @include maxQ(1023px) {
+    //   left: 193px;
+    // }
+
+    @include maxQ(1000px) {
+      left: 178px;
+      width: 129px;
+    }
+  }
+}

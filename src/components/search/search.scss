@@ -1,0 +1,106 @@
+@use "styles/index.scss" as *;
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // search arrow start here
+
+  .search__Arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1.5rem;
+
+    @include minQ(1023px) {
+      margin-left: 4rem;
+    }
+    // width: 15%;
+    .search__ArrowDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      margin-right: 50px;
+      border-radius: 15px;
+      color: #051f64;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
+      cursor: pointer;
+    }
+    // search arrow end here
+
+    // search arrow heading start here
+
+    .search__ArrowParagraphy {
+      position: relative;
+      font-weight: bold;
+      color: #051f64;
+      &:after {
+        content: "";
+        border-bottom: 3px solid #1aa0ffbb;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        margin-top: -5px;
+        position: absolute;
+      }
+    }
+    h3 {
+      color: $textColor3;
+      font-size: fontSize(header-3);
+    }
+  }
+  // search arrow heading end here
+
+  // search input field start  here
+
+  .searchIcon__div {
+    background-color: #f4f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 6px;
+    .searchIcon__Icon {
+      padding-top: 8px;
+      padding-right: 5px;
+      color: #051e64ec;
+    }
+    .search__Input {
+      background-color: transparent;
+      border: none;
+      &::placeholder {
+        color: #2f313359;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .search__InputIcon {
+      margin-top: 5px;
+      color: #2f313359;
+    }
+  }
+  // search input field end here
+}
+
+// @media (min-width: 540px) and (max-width: 900px) {
+//   .search {
+//     display: flex;
+//     flex-direction: column;
+
+//     align-items: flex-start;
+
+//     .search__Arrow {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: flex-start;
+//     }
+
+//     .search__ArrowParagraphy {
+//       margin: 20px 0;
+//     }
+//   }
+// }

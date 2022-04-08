@@ -1,0 +1,221 @@
+@use "styles" as *;
+
+.dashboardPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 60px;
+
+  @include maxQ(1400px) {
+    grid-gap: 45px 20px;
+  }
+
+  // @include maxQ(1100px) {
+  //   grid-gap: 20px;
+  // }
+
+  // @include maxQ(1024px) {
+  //   grid-template-rows: auto auto auto auto auto;
+  // }
+
+  @include maxQ(992px) {
+    grid-template-rows: auto auto auto auto auto;
+  }
+
+  .rankSection {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 35px 15px;
+    justify-content: space-between;
+    box-shadow: $btnShadow2;
+
+    // @include maxQ(1024px) {
+    //   grid-column: 3/5;
+    //   margin-left: 20px;
+    // }
+
+    @include maxQ(992px) {
+      grid-column: 3/5;
+      margin-left: 20px;
+    }
+
+    .dashboardRank {
+      margin-bottom: 20px;
+    }
+  }
+
+  section:nth-child(4) {
+    grid-column: 3/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // @include maxQ(1024px) {
+    //   grid-column: 1/5;
+    // }
+
+    @include maxQ(992px) {
+      grid-column: 1/5;
+    }
+
+    > h5 {
+      font-size: 1.2rem;
+      color: color(blue, deep);
+      margin-bottom: 5px;
+      font-family: muli;
+
+      @include maxQ(1100px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    > div {
+      // margin-top: 10px;
+      background-color: white;
+      box-shadow: $btnShadow2;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+      border-radius: 10px;
+
+      .link {
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+          font-family: muli;
+          font-size: 0.8rem;
+
+          a {
+            color: color(blue);
+            // color: $deepBlue;
+            //     color: color(black, light);
+          }
+        }
+      }
+    }
+  }
+
+  section:nth-child(5) {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // @include maxQ(1024px) {
+    //   grid-column: 1/5;
+    // }
+
+    @include maxQ(992px) {
+      grid-column: 1/5;
+    }
+
+    > h5 {
+      font-size: 1.2rem;
+      font-family: muli;
+      color: color(blue, deep);
+      margin-bottom: 5px;
+
+      @include maxQ(1100px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    > div {
+      background-color: white;
+      box-shadow: $btnShadow2;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 85%;
+      border-radius: 10px;
+
+      > div:nth-child(1) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  section:nth-child(6) {
+    grid-column: 3/5;
+    grid-row: 3/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // @include maxQ(1024px) {
+    //   grid-row: auto;
+    //   grid-column: 1/5;
+    // }
+
+    @include maxQ(992px) {
+      grid-row: auto;
+      grid-column: 1/5;
+    }
+
+    > h5 {
+      font-size: 1.2rem;
+      color: color(blue, deep);
+      margin-bottom: 5px;
+      font-family: muli;
+
+      @include maxQ(1100px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  section:nth-child(7) {
+    grid-column: 1/3;
+    background-color: white;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: $btnShadow2;
+
+    // @include maxQ(1024px) {
+    //   grid-column: 1/5;
+    // }
+
+    @include maxQ(992px) {
+      grid-column: 1/5;
+    }
+
+    .button-medium {
+      padding: 8px 35px;
+    }
+
+    > div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      > span {
+        width: 30px;
+        height: 30px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      div {
+        h5 {
+          color: color(blue, deep);
+          font-family: muli;
+          font-size: 1.1rem;
+        }
+        span {
+          color: color(blue, deep);
+          font-family: muli;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

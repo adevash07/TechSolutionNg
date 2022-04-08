@@ -1,0 +1,120 @@
+@use "styles" as *;
+.payment-verification {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 10px;
+  margin-bottom: 2%;
+  .page-heading {
+    width: 78%;
+    @include maxQ($tablet) {
+      width: 100%;
+    }
+  }
+  section {
+    width: 100%;
+
+    .section-row {
+      display: flex;
+      justify-content: space-between;
+      @include maxQ($tablet) {
+        flex-direction: column-reverse;
+      }
+    }
+    form .section-content {
+      margin-top: 2%;
+      width: 78%;
+      padding: 30px;
+      background: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      small {
+        color: #001243;
+        font-weight: 600;
+      }
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+      }
+      @include maxQ($tablet) {
+        width: 100%;
+        .form-row {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    form .section-content {
+      div:first-child {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2%;
+      }
+    }
+    form .table {
+      margin-top: 4%;
+      width: 78%;
+      background: #ffffff;
+      padding: 10px;
+      table {
+        width: 100%;
+        border-spacing: 0 1px;
+        padding: 5px;
+        background: #ffffff;
+        tr td {
+          padding: 5px 0 5px 0;
+          text-align: left;
+          font-size: 0.8rem;
+          color: #001243;
+        }
+        tr.total {
+          font-weight: 600;
+        }
+        tr.total td:first-child {
+          text-align: center;
+        }
+      }
+      .action-btns {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      @include maxQ($tablet) {
+        width: 100%;
+        tr.total td:first-child {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .note-col {
+    width: 20%;
+    @include maxQ($tablet) {
+      width: 100%;
+    }
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    @include maxQ($tablet) {
+      width: 100%;
+    }
+  }
+}
+
+.card-note,
+.verify-note {
+  margin-top: 12px;
+  p,
+  li {
+    font-size: 0.7rem;
+    color: #051f64;
+    font-weight: 600;
+    span {
+      color: #004cff;
+    }
+  }
+}

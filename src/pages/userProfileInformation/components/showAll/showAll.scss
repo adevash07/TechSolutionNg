@@ -1,0 +1,21 @@
+@use "styles/index" as *;
+
+.showAll {
+  color: color(blue);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.1rem;
+  &--toggler {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    max-width: 150px;
+
+    & > span:last-child {
+      padding-top: 0.45em;
+      padding-left: 0.25em;
+    }
+  }
+}

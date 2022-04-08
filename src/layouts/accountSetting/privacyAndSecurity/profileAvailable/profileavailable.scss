@@ -1,0 +1,130 @@
+.profile {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 40%;
+}
+// profile__penContainer  start here
+.profile__penContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-size: 13px;
+    color: #2f3133a1;
+  }
+}
+// profile__penContainer  end here
+// profile__iconpen  start here
+.profile__iconPen {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.profile__transition {
+  opacity: 0;
+  animation: Animate 0.8s forwards;
+}
+@keyframes Animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// profile__iconpen  end here
+
+//profile__toggleProfileStatus  start here
+.profile__toggleProfileStatus {
+  margin-top: 20px;
+  border-top: 1px dotted rgba(0, 0, 0, 0.158);
+  padding-top: 10px;
+  animation: Animatetoggle 0.8s ease-in-out;
+}
+
+@keyframes Animatetoggle {
+  0% {
+    opacity: 0;
+    transition: 0.15s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transition: 0.15s ease-in-out;
+  }
+}
+//profile__toggleProfileStatus  end here
+
+// profile__divContainer start here
+.profile__divContainer {
+  width: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile__containerDay {
+  background-color: white;
+  width: 120px;
+  margin-top: 5px;
+  border-radius: 10px;
+  margin-left: 28px;
+  padding: 0 10px;
+  animation: Animatetoggle 0.8s ease-in-out;
+
+  .profile__spancolor {
+    font-size: 13px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  }
+  .spancolor {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.041);
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.363);
+  }
+}
+//  profile__spanArrowdownIcon start here
+.profile__spanArrowdownIcon {
+  .profile__spanArrowdownIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  .profile__arrowdownIcon {
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.5s ease;
+  }
+  .rotate {
+    @extend .profile__arrowdownIcon;
+    transform: rotate(180deg);
+  }
+}
+//  profile__spanArrowdownIcon end here
+
+.profile__durationBtn {
+  width: 110px;
+  margin-left: 28px;
+  padding: 0 10px;
+
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 10px;
+  animation: Animatetoggle 0.8s ease-in-out;
+}
+
+// profile__divContainer end here

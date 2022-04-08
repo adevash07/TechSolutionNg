@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React, { useEffect, useState } from "react";
 import propTypes from "prop-types";
 import { BsArrowUp } from "react-icons/bs";
@@ -67,7 +68,7 @@ const ReportTabContent = ({ month }) => {
                 </span>
                 <span>
                   &#x2b; {item.growthPercentage}
-                  &#37;
+                  &#37;s
                 </span>
               </span>
               <span className="growthLabel">

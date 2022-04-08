@@ -21,61 +21,62 @@ const AccountDetailsForm = ({
   };
 
   return (
-    <section className='accDetailsForm'>
-      <div className='accDetailsForm__containerInner'>
+    <section className="accDetailsForm">
+      <div className="accDetailsForm__containerInner">
         <small>Your account type</small>
-        <div className='account-card'>
+        <div className="account-card">
           <RadioButtonGroup
             onChange={handleChange}
-            customClass='acc-type-group'>
+            customClass="acc-type-group"
+          >
             <RadioButton
-              name='accountType'
-              value='Solution providers'
-              labelText='Solution providers'
+              name="accountType"
+              value="Solution providers"
+              labelText="Solution providers"
             />
             <RadioButton
-              name='accountType'
-              value='Enterprise client'
-              labelText='Enterprise client'
+              name="accountType"
+              value="Enterprise client"
+              labelText="Enterprise client"
             />
           </RadioButtonGroup>
         </div>
       </div>
 
-      <div className='accDetailsForm__containerInner'>
+      <div className="accDetailsForm__containerInner">
         <small>Your directory settings</small>
-        <div className='account-card'>
+        <div className="account-card">
           <Input
-            inputType='checkboxCustom'
+            inputType="checkboxCustom"
             customCheckBox={true}
-            inputName='solutionProviderFollow'
+            inputName="solutionProviderFollow"
             value={solutionsValue}
             onChange={(e) => handleChange(e)}
-            labelText='Please tick if you want other solution providers to follow you'
+            labelText="Please tick if you want other solution providers to follow you"
           />
           <Input
-            inputType='checkboxCustom'
-            inputName='projectNotification'
+            inputType="checkboxCustom"
+            inputName="projectNotification"
             customCheckBox={true}
             value={projectValue}
             onChange={(e) => handleChange(e)}
-            labelText='Please tick if you want to be notified for projects and instant offers'
+            labelText="Please tick if you want to be notified for projects and instant offers"
           />
         </div>
       </div>
-      <div className='accDetailsForm__containerInner'>
+      <div className="accDetailsForm__containerInner">
         <small>Close your account</small>
         <Button
           onClick={closeHandler}
-          btnText='Close account'
-          btnClass='grey'
+          btnText="Close account"
+          btnClass="grey"
         />
       </div>
-      <div className='accDetailsForm__containerInner'>
+      <div className="accDetailsForm__containerInner">
         <Button
           onClick={saveHandler}
-          btnText='Save changes'
-          btnClass='medium'
+          btnText="Save changes"
+          btnClass="medium"
         />
       </div>
     </section>
@@ -87,6 +88,6 @@ AccountDetailsForm.propTypes = {
   closeHandler: propTypes.func.isRequired,
   saveHandler: propTypes.func.isRequired,
   onChange: propTypes.func.isRequired,
-  solutionsValue: propTypes.boolen,
-  projectValue: propTypes.boolen,
+  solutionsValue: propTypes.bool,
+  projectValue: propTypes.bool,
 };

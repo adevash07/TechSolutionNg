@@ -42,7 +42,7 @@ export default function AtmSlotter({
 
   //To toggle the state of card(empty or filled) -->
   useEffect(() => {
-    cardState === 0 ? toggler() : null;
+    cardState === 0 && toggler();
   }, [cardState]);
 
   const changeCard = (card) => {
@@ -56,10 +56,10 @@ export default function AtmSlotter({
     return (
       <>
         <span onClick={() => toggler()}>
-          <Button btnText='Change card' />
+          <Button btnText="Change card" />
         </span>
         <span onClick={() => setIsModal(!isModal)}>
-          <Button btnText='Delete card  x' />
+          <Button btnText="Delete card  x" />
         </span>
       </>
     );
@@ -68,22 +68,22 @@ export default function AtmSlotter({
   //load content into model -->
   const modalContentLoader = () => {
     return (
-      <div className='modalComponent__body'>
+      <div className="modalComponent__body">
         <h4>Are You sure you want to delete this card</h4>
         <small>you cannot undo this action</small>
-        <div className='modalComponent_button'>
+        <div className="modalComponent_button">
           <Button
             onClick={() => setIsModal(!isModal)}
-            btnText='Close account'
-            btnClass='grey'
+            btnText="Close account"
+            btnClass="grey"
           />
           <Button
             onClick={() => {
               setIsModal(!isModal);
               changeCard(0);
             }}
-            btnText='Close account'
-            btnClass='medium'
+            btnText="Close account"
+            btnClass="medium"
           />
         </div>
       </div>
@@ -92,33 +92,34 @@ export default function AtmSlotter({
 
   //Page content -->
   return (
-    <div className='atmContainer'>
+    <div className="atmContainer">
       <div
         className={`atmCard ${
           cardState === 0 ? "atmCard--unslot" : "atmCard--slot"
-        }`}>
-        <div className='atmCard__details'>
+        }`}
+      >
+        <div className="atmCard__details">
           <p>{userName}</p>
-          <p className='atmCard__menu'>
+          <p className="atmCard__menu">
             <span>
-              <img onClick={() => toggler()} src={assets.Dot} alt='dot' />
+              <img onClick={() => toggler()} src={assets.Dot} alt="dot" />
             </span>
             <span>{cardName}</span>
           </p>
         </div>
-        <div className='atmCard__details'>
-          <div className='atmCard__userDetails'>
-            <p className='atmCard__companyName'>{companyName}</p>
+        <div className="atmCard__details">
+          <div className="atmCard__userDetails">
+            <p className="atmCard__companyName">{companyName}</p>
             <p>
               {firstFourDigit + " "}
-              <img src={assets.Stars} alt='nsjsjs' />
+              <img src={assets.Stars} alt="nsjsjs" />
               &nbsp;{" " + lastFourDigit}
             </p>
-            <p className='atmCard__panCard'>
+            <p className="atmCard__panCard">
               <img
                 id={pinState ? "atmCard--unshow" : "atmCard--show"}
                 src={assets.Asterisk}
-                alt='dsd'
+                alt="dsd"
               />
               <span id={pinState ? "atmCard--show" : "atmCard--unshow"}>
                 {currency}
@@ -126,15 +127,15 @@ export default function AtmSlotter({
               </span>{" "}
               &nbsp;
               <img
-                id='atmCard__panEye'
+                id="atmCard__panEye"
                 onClick={() => setpinState(!pinState)}
                 src={assets.Eye}
-                alt=' '
+                alt=" "
               />
             </p>
           </div>
-          <div className='bankLogo'>
-            <img src={assets.PlanLogo} alt='' />
+          <div className="bankLogo">
+            <img src={assets.PlanLogo} alt="" />
           </div>
         </div>
       </div>
@@ -145,7 +146,7 @@ export default function AtmSlotter({
       {/* POPUP COMPONENT  */}
       <PopUp
         show={popUpstate}
-        className='atmCard__popUp'
+        className="atmCard__popUp"
         tagPosition={screenSize < 1350 ? "right" : "left"}
         content={popUpContentLoader()}
       />

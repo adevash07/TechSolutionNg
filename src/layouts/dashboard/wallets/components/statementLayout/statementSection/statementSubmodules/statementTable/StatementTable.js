@@ -89,7 +89,7 @@ const data = [
   },
 ];
 
-export default function statementTable({
+export default function StatementTable({
   allTransactionNumber,
   receivedNumber,
   withdrawalsNumber,
@@ -118,37 +118,38 @@ export default function statementTable({
   };
 
   return (
-    <div className='statementTabs'>
-      <div className='tabHeading'>
-        <ul className='tabsList'>
+    <div className="statementTabs">
+      <div className="tabHeading">
+        <ul className="tabsList">
           <li className={activeTab === "allTransaction" ? "current" : " "}>
             <a
-              href='#'
+              href="#"
               onClick={(e) => handleClick(e, "allTransaction")}
-              label='allTransaction'>
+              label="allTransaction"
+            >
               All transactions<span>{allTransactionNumber}</span>
             </a>
           </li>
           <li className={activeTab === "Received" ? "current" : " "}>
-            <a onClick={(e) => handleClick(e, "Received")} href=''>
+            <a onClick={(e) => handleClick(e, "Received")} href="">
               Received<span>{receivedNumber}</span>
             </a>
           </li>
           <li className={activeTab === "WithDrawals" ? "current" : " "}>
-            <a onClick={(e) => handleClick(e, "WithDrawals")} href=''>
+            <a onClick={(e) => handleClick(e, "WithDrawals")} href="">
               WithDrawals<span>{withdrawalsNumber}</span>
             </a>
           </li>
         </ul>
 
         <Filter>
-          <InvoiceFilterButton toggle={toggleFilterMenu} filterRange='3' />
+          <InvoiceFilterButton toggle={toggleFilterMenu} filterRange="3" />
           {openFilterMenu && <FilterDropDownMenu search={true} />}
         </Filter>
       </div>
-      <div className='tabsContent'>
+      <div className="tabsContent">
         {screenSize > 770 ? (
-          <table className='dataTable'>
+          <table className="dataTable">
             <thead>
               <tr>
                 <th>Client</th>
@@ -192,7 +193,7 @@ export default function statementTable({
             </tbody>
           </table>
         ) : (
-          <div className='dataTable'>
+          <div className="dataTable">
             {data ? (
               data.map((user) => (
                 <>
@@ -231,7 +232,7 @@ export default function statementTable({
   );
 }
 
-statementTable.propTypes = {
+StatementTable.propTypes = {
   allTransactionNumber: propTypes.any,
   receivedNumber: propTypes.any,
   withdrawalsNumber: propTypes.any,

@@ -13,7 +13,7 @@ import { Input, Button } from "components/index";
 import MakeAnOffer2Modal from "./makeAnOffer2Modal/MakeAnOffer2Modal";
 import { Link } from "react-router-dom";
 
-const makeAnOffer2 = ({ match }) => {
+const MakeAnOffer2 = ({ match }) => {
   const displayedData = makeAnOfferData.find((data) => {
     return parseInt(match.params.id) === data.id;
   });
@@ -138,4 +138,4 @@ const makeAnOffer2 = ({ match }) => {
   );
 };
 
-export default makeAnOffer2;
+export default MakeAnOffer2;

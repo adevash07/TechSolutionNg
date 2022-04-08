@@ -108,9 +108,10 @@ const Input = ({
         <div
           className={
             select ? "formgroup select transparent" : "formgroup select"
-          }>
+          }
+        >
           <input
-            type='text'
+            type="text"
             placeholder={inputPlaceholder}
             name={inputName}
             id={inputId}
@@ -119,30 +120,32 @@ const Input = ({
             disabled
           />
           <div
-            className='formgroup__transparentBg'
-            onClick={toggleSelect}></div>
+            className="formgroup__transparentBg"
+            onClick={toggleSelect}
+          ></div>
           <div
             className={
               select
                 ? "formgroup__selectOptions active"
                 : "formgroup__selectOptions"
-            }>
+            }
+          >
             {selectOptions}
           </div>
           <img
             src={triangleIcon}
             className={select ? "triangleicon rotate" : "triangleicon"}
-            alt=''
+            alt=""
           />
           {/* <TriangleIcon toggleSelect={toggleSelect} select={select} /> */}
         </div>
       ) : inputType === "file" ? (
-        <div className='formgroup'>
-          <label className='formgroup--label' htmlFor={inputId}>
+        <div className="formgroup">
+          <label className="formgroup--label" htmlFor={inputId}>
             {labelText}
           </label>
           <input
-            className='formgroup--input'
+            className="formgroup--input"
             type={inputType}
             placeholder={inputPlaceholder}
             name={inputName}
@@ -151,28 +154,28 @@ const Input = ({
           <FiUpload />
         </div>
       ) : inputType === "customFile" ? (
-        <div className='formgroup customFile'>
-          <div className='formgroup--labelText'>{labelText}</div>
-          <label className='formgroup--label' htmlFor={inputId}>
-            <div className='formgroup--fileGroup'>
-              <span className='formgroup--fileText'>
+        <div className="formgroup customFile">
+          <div className="formgroup--labelText">{labelText}</div>
+          <label className="formgroup--label" htmlFor={inputId}>
+            <div className="formgroup--fileGroup">
+              <span className="formgroup--fileText">
                 <Cloud />
                 Drag your files here or{" "}
-                <span className='formGroup--fileUnderline'>Browse files</span>
+                <span className="formGroup--fileUnderline">Browse files</span>
               </span>
             </div>
             <input
               name={inputName}
               id={inputId}
-              className='formgroup--input'
-              type='file'
+              className="formgroup--input"
+              type="file"
             />
           </label>
         </div>
       ) : inputType === "checkbox" ? (
-        <div className='formgroup check'>
+        <div className="formgroup check">
           <input
-            className='formgroup--input'
+            className="formgroup--input"
             type={inputType}
             name={inputName}
             id={inputId}
@@ -180,17 +183,17 @@ const Input = ({
             onChange={handleChange}
             required={isRequired}
           />
-          <label className='formgroup--label' htmlFor={inputId}>
+          <label className="formgroup--label" htmlFor={inputId}>
             {labelText}
           </label>
         </div>
       ) : inputType === "textArea" ? (
-        <div className='formgroup'>
-          <label htmlFor={inputId} className='formgroup--label'>
+        <div className="formgroup">
+          <label htmlFor={inputId} className="formgroup--label">
             {labelText}
           </label>
           <textarea
-            className='formgroup--input formgroup--input--textarea'
+            className="formgroup--input formgroup--input--textarea"
             onChange={handleChange}
             name={inputName}
             value={value}
@@ -198,19 +201,20 @@ const Input = ({
             required={isRequired}
             rows={rows || 6}
             cols={cols || 20}
-            maxLength={maxLength}></textarea>
-          <small className='counter-label'>
+            maxLength={maxLength}
+          ></textarea>
+          <small className="counter-label">
             {getCharsLength()} out of {maxLength}{" "}
           </small>
         </div>
       ) : inputType === "checkboxCustom" ? (
         <div className={`formgroup check ${customCheckBox ? "custom" : " "}`}>
-          <label className='formgroup--label' htmlFor={inputId}>
+          <label className="formgroup--label" htmlFor={inputId}>
             {labelText}
           </label>
           <input
             className={`formgroup--input ${customCheckBox ? "custom" : " "}`}
-            type='checkbox'
+            type="checkbox"
             name={inputName}
             id={inputId}
             checked={value || false}
@@ -219,29 +223,30 @@ const Input = ({
           />
         </div>
       ) : inputType === "toggler" ? (
-        <div className='toggler'>
-          <label className='toggler__Switch' htmlFor={inputId}>
+        <div className="toggler">
+          <label className="toggler__Switch" htmlFor={inputId}>
             <input
-              className='toggler__Input'
-              type='checkbox'
+              className="toggler__Input"
+              type="checkbox"
               name={inputName}
               id={inputId}
               checked={value || false}
               onChange={handleChange}
               required={isRequired}
             />
-            <div className='toggler__Slide'></div>
+            <div className="toggler__Slide"></div>
           </label>
         </div>
       ) : inputType === "date" ? (
         <div
           className={
             select ? "formgroup select transparent" : "formgroup select"
-          }>
+          }
+        >
           <input
-            className='formgroup--input'
+            className="formgroup--input"
             name={inputName}
-            type='text'
+            type="text"
             value={
               date === currentDate
                 ? inputPlaceholder
@@ -249,16 +254,18 @@ const Input = ({
             }
             id={inputId}
             onFocus={(e) => {
-              handleChange(e), toggleSelect();
+              handleChange(e);
+              toggleSelect();
             }}
-            required={isRequired}></input>
+            required={isRequired}
+          ></input>
 
           {triangle ? (
             <img
               onClick={toggleSelect}
               src={triangleIcon}
               className={select ? "triangleicon rotate" : "triangleicon"}
-              alt=''
+              alt=""
             />
           ) : (
             // <TriangleIcon toggleSelect={toggleSelect} select={select} />
@@ -273,11 +280,12 @@ const Input = ({
 
               //               }
               //               }
-              className='startCal'>
+              className="startCal"
+            >
               <Calendar
-                className='Calender'
+                className="Calender"
                 onClickDay={changeDate}
-                name='Calender'
+                name="Calender"
               />
             </div>
           ) : (
@@ -285,12 +293,12 @@ const Input = ({
           )}
         </div>
       ) : inputType === "password" ? (
-        <div className='formgroup'>
-          <label className='formgroup--label' htmlFor={inputId}>
+        <div className="formgroup">
+          <label className="formgroup--label" htmlFor={inputId}>
             {labelText}
           </label>
           <input
-            className='formgroup--input'
+            className="formgroup--input"
             type={select ? "text" : inputType}
             placeholder={inputPlaceholder}
             name={inputName}
@@ -298,7 +306,7 @@ const Input = ({
             id={inputId}
             onFocus={onFocus}
             onBlur={() => {
-              onBlur;
+              onBlur();
               setSelect(false);
             }}
             onChange={handleChange}
@@ -308,26 +316,28 @@ const Input = ({
           {select ? (
             <label
               htmlFor={inputId}
-              className='passwordEye'
-              onClick={toggleSelect}>
+              className="passwordEye"
+              onClick={toggleSelect}
+            >
               <BsEyeFill />
             </label>
           ) : (
             <label
               htmlFor={inputId}
-              className='passwordEye'
-              onClick={toggleSelect}>
-              <BsEyeSlashFill id='passwordEye' />
+              className="passwordEye"
+              onClick={toggleSelect}
+            >
+              <BsEyeSlashFill id="passwordEye" />
             </label>
           )}
         </div>
       ) : (
-        <div className='formgroup'>
-          <label className='formgroup--label' htmlFor={inputId}>
+        <div className="formgroup">
+          <label className="formgroup--label" htmlFor={inputId}>
             {labelText}
           </label>
           <input
-            className='formgroup--input'
+            className="formgroup--input"
             type={inputType}
             placeholder={inputPlaceholder}
             name={inputName}

@@ -1,0 +1,2 @@
+(this["webpackJsonpit-solutions"]=this["webpackJsonpit-solutions"]||[]).push([[6],{220:function(t,i,n){"use strict";n.d(i,"a",(function(){return a}));var s=n(99);function a(t){return Object(s.a)({tag:"svg",attr:{viewBox:"0 0 512 512"},child:[{tag:"path",attr:{d:"M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"}}]})(t)}}}]);
+//# sourceMappingURL=6.4cfe47c5.chunk.js.map

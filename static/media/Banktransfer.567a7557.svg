@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <filter id="Ellipse_456" x="0" y="0" width="200" height="200" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#001243" flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00d4ff"/>
+      <stop offset="1" stop-color="#004cff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1863" data-name="Group 1863" transform="translate(-1523 -681)">
+    <g transform="matrix(1, 0, 0, 1, 1523, 681)" filter="url(#Ellipse_456)">
+      <g id="Ellipse_456-2" data-name="Ellipse 456" transform="translate(45 35)" fill="#fff" stroke="#00b2ff" stroke-width="1">
+        <circle cx="55" cy="55" r="55" stroke="none"/>
+        <circle cx="55" cy="55" r="54.5" fill="none"/>
+      </g>
+    </g>
+    <g id="bank-building" transform="translate(1590 737.988)">
+      <g id="Layer_1_78_" transform="translate(0 0.012)">
+        <g id="Group_1862" data-name="Group 1862">
+          <path id="Path_6920" data-name="Path 6920" d="M62.018,42.718H2.954a2.955,2.955,0,0,0,0,5.911H62.017a2.955,2.955,0,0,0,0-5.911Z" transform="translate(0 16.371)" fill="url(#linear-gradient)"/>
+          <path id="Path_6921" data-name="Path 6921" d="M5.623,45.357a2.956,2.956,0,0,0,0,5.912H57.3a2.956,2.956,0,0,0,0-5.912h-.737V18.764H57.3a1.476,1.476,0,0,0,0-2.953H5.623a1.476,1.476,0,0,0,0,2.953h.738V45.355H5.623ZM50.656,18.764V45.355H41.8V18.764Zm-14.766,0V45.355H27.031V18.764Zm-23.623,0h8.859V45.355H12.266Z" transform="translate(1.024 6.049)" fill="url(#linear-gradient)"/>
+          <path id="Path_6922" data-name="Path 6922" d="M2.954,19.215H62.046A2.956,2.956,0,0,0,63,13.464L33.7.271a2.958,2.958,0,0,0-2.423,0L1.743,13.566a2.955,2.955,0,0,0,1.211,5.649Z" transform="translate(0 -0.012)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

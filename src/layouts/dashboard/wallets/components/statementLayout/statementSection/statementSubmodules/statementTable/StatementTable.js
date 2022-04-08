@@ -122,23 +122,23 @@ export default function StatementTable({
       <div className="tabHeading">
         <ul className="tabsList">
           <li className={activeTab === "allTransaction" ? "current" : " "}>
-            <a
+            <button
               href="#"
               onClick={(e) => handleClick(e, "allTransaction")}
               label="allTransaction"
             >
               All transactions<span>{allTransactionNumber}</span>
-            </a>
+            </button>
           </li>
           <li className={activeTab === "Received" ? "current" : " "}>
-            <a onClick={(e) => handleClick(e, "Received")} href="">
+            <button onClick={(e) => handleClick(e, "Received")} href="">
               Received<span>{receivedNumber}</span>
-            </a>
+            </button>
           </li>
           <li className={activeTab === "WithDrawals" ? "current" : " "}>
-            <a onClick={(e) => handleClick(e, "WithDrawals")} href="">
+            <button onClick={(e) => handleClick(e, "WithDrawals")} href="">
               WithDrawals<span>{withdrawalsNumber}</span>
-            </a>
+            </button>
           </li>
         </ul>
 

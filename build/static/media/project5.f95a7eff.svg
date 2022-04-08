@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="95" viewBox="0 0 90 95">
+  <defs>
+    <filter id="Rectangle_983" x="0" y="5" width="90" height="90" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#455a64" flood-opacity="0.149"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#455a64"/>
+      <stop offset="1" stop-color="#455a64"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1272" data-name="Group 1272" transform="translate(-259 -1328)">
+    <rect id="Rectangle_916" data-name="Rectangle 916" width="80" height="80" rx="40" transform="translate(264 1328)" fill="#455a64" opacity="0.05"/>
+    <g transform="matrix(1, 0, 0, 1, 259, 1328)" filter="url(#Rectangle_983)">
+      <g id="Rectangle_983-2" data-name="Rectangle 983" transform="translate(15 10)" fill="#fff" stroke="#455a64" stroke-width="1">
+        <rect width="60" height="60" rx="30" stroke="none"/>
+        <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" fill="none"/>
+      </g>
+    </g>
+    <g id="smartphone_2" data-name="smartphone 2" transform="translate(173 1348)" opacity="0.6">
+      <circle id="Ellipse_301" data-name="Ellipse 301" cx="1" cy="1" r="1" transform="translate(130.915 30.893)" fill="url(#linear-gradient)"/>
+      <path id="Path_4831" data-name="Path 4831" d="M124.5,40h14a3.512,3.512,0,0,0,3.5-3.516V3.516A3.512,3.512,0,0,0,138.5,0h-14A3.512,3.512,0,0,0,121,3.516V36.484A3.512,3.512,0,0,0,124.5,40Zm4.667-35.312h4.667a1.172,1.172,0,0,1,0,2.344h-4.667a1.172,1.172,0,0,1,0-2.344ZM131.5,28.281A3.516,3.516,0,1,1,128,31.8,3.512,3.512,0,0,1,131.5,28.281Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

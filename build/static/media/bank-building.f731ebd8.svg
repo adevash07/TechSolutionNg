@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00d4ff"/>
+      <stop offset="1" stop-color="#004cff"/>
+    </linearGradient>
+  </defs>
+  <g id="bank-building" transform="translate(0 -0.011)">
+    <g id="Layer_1_78_" transform="translate(0 0.012)">
+      <g id="Group_1862" data-name="Group 1862">
+        <path id="Path_6920" data-name="Path 6920" d="M62.018,42.718H2.954a2.955,2.955,0,0,0,0,5.911H62.017a2.955,2.955,0,0,0,0-5.911Z" transform="translate(0 16.371)" fill="url(#linear-gradient)"/>
+        <path id="Path_6921" data-name="Path 6921" d="M5.623,45.357a2.956,2.956,0,0,0,0,5.912H57.3a2.956,2.956,0,0,0,0-5.912h-.737V18.764H57.3a1.476,1.476,0,0,0,0-2.953H5.623a1.476,1.476,0,0,0,0,2.953h.738V45.355H5.623ZM50.656,18.764V45.355H41.8V18.764Zm-14.766,0V45.355H27.031V18.764Zm-23.623,0h8.859V45.355H12.266Z" transform="translate(1.024 6.049)" fill="url(#linear-gradient)"/>
+        <path id="Path_6922" data-name="Path 6922" d="M2.954,19.215H62.046A2.956,2.956,0,0,0,63,13.464L33.7.271a2.958,2.958,0,0,0-2.423,0L1.743,13.566a2.955,2.955,0,0,0,1.211,5.649Z" transform="translate(0 -0.012)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>

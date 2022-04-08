@@ -19,9 +19,9 @@ const Header = ({
   return (
     <header className={loginPage || registerPage ? "header none" : "header"}>
       <div className="header__container">
-        <div className="header__brand">
+        <a href="/" className="header__brand">
           <img src={BrandLogo} alt="Brand Logo" />
-        </div>
+        </a>
         {landingPage ? (
           <LandingNav />
         ) : dashboardPage ? (
